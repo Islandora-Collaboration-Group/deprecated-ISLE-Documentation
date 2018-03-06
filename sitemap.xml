@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/about/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Glossary/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/System_Requirements/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/00Host_Server/Host_Server_Setup/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00Host_Server/Host_Server_Ubuntu/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00Host_Server/Host_Server_CentOS/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/00Host_Server/Host_Server_Setup_Ansible/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/01_Installation_Migration/01_0_Installation/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/01_Installation_Migration/01_1_testsite_guide/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_Installation_Migration/01_2_testsite_user_story/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/01_Installation_Migration/01_3_new_site_guide/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_Installation_Migration/01_4_newsite_user_story/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/01_Installation_Migration/Migration_Guide/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_Installation_Migration/Migration_User_Story/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_Installation_Migration/migration_export_checklist/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_Installation_Migration/migration_merge_checklist/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/Isle_Containers_Description/</loc>
+     <lastmod>2018-03-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>
