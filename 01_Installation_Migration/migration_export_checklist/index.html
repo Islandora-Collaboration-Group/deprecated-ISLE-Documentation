@@ -464,7 +464,8 @@
     Fedora
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#gsearch" title="Gsearch" class="md-nav__link">
@@ -477,6 +478,11 @@
   <a href="#mysql" title="MySQL" class="md-nav__link">
     MySQL
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2517,7 +2523,8 @@
     Fedora
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#gsearch" title="Gsearch" class="md-nav__link">
@@ -2530,6 +2537,11 @@
   <a href="#mysql" title="MySQL" class="md-nav__link">
     MySQL
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2555,14 +2567,14 @@
                 
                   <h1>Migration Export Checklist</h1>
                 
-                <h3 id="migration-export-checklist">Migration Export Checklist</h3>
+                <h2 id="migration-export-checklist">Migration Export Checklist</h2>
 <p>This section is a checklist of materials to <strong>COPY</strong> from the current running institutional Islandora Production server(s) to the appropriate storage location / directory on the new ISLE directory.</p>
 <p><strong>Please Note:</strong> <em>Ubuntu / Debian style paths are used for all examples file locations below, endusers might have different locations for these files HOWEVER the file and directory names etc should be roughly the same.</em></p>
 <p><strong>Caution</strong>: While the ISLE Project recommends use of export methods or tools such as rsync, scp etc., it assumes that endusers are familiar with them and are aware of possible dangers of improperly exporting or copying production data.
 Ensure adequate backups of any production system(s) are made prior to any attempts. If you are not familiar or are uncomfortable with these processes, it is highly advisable to work with an appropriate IT resource.</p>
 <p><strong>Finally also please note:</strong> Instructions below call for you to <strong>COPY</strong> data from your running Islandora environment into a folder: <code>current-production-config</code> located on your workstation. You will then work from this copy for future steps.</p>
 <hr />
-<h4 id="apache">Apache</h4>
+<h3 id="apache">Apache</h3>
 <p>Copy the following below from the Islandora Production Server(s) to the suggested directory <code>/current-production-config/apache/</code> on the ISLE directory.</p>
 <p>This data will be used in conjunction with an Apache container.</p>
 <table>
@@ -2633,7 +2645,7 @@ Ensure adequate backups of any production system(s) are made prior to any attemp
 </li>
 </ul>
 <hr />
-<h4 id="fedora">Fedora</h4>
+<h3 id="fedora">Fedora</h3>
 <p>Copy the following below from the Islandora Production Server(s) to the suggested directory <code>current-production-config/fedora/</code> on the ISLE directory.</p>
 <p>This data will be used in conjunction with a Fedora container.  </p>
 <table>
@@ -2647,13 +2659,6 @@ Ensure adequate backups of any production system(s) are made prior to any attemp
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>yoursite.conf</td>
-<td>Apache webserver vhost file</td>
-<td>/etc/apache2/sites-available/</td>
-<td>/current-production-config/fedora/</td>
-<td><em>see below</em></td>
-</tr>
 <tr>
 <td>data</td>
 <td>Entire Fedora data directory</td>
@@ -2684,10 +2689,6 @@ Ensure adequate backups of any production system(s) are made prior to any attemp
 </tr>
 </tbody>
 </table>
-<p><strong>Fedora Notes</strong>:</p>
-<ul>
-<li><code>yoursite.conf</code> (<em>if you use Adore-Djatoka with a reverse proxy otherwise it is possible this file is not necessary</em>)</li>
-</ul>
 <hr />
 <h4 id="gsearch">Gsearch</h4>
 <p>Copy the following below from the Islandora Production Server(s) to the suggested directory <code>current-production-config/gsearch/</code> on the ISLE directory.</p>
@@ -2823,13 +2824,6 @@ Ensure adequate backups of any production system(s) are made prior to any attemp
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>server.xml</td>
-<td>Tomcat server config file</td>
-<td>/var/lib/tomcat7/conf/server.xml</td>
-<td>/current-production-config/tomcat/</td>
-<td>--</td>
-</tr>
 <tr>
 <td>tomcat-users.xml</td>
 <td>Tomcat server config file</td>

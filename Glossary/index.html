@@ -196,6 +196,26 @@
     ISLE Basics
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualization" title="Virtualization" class="md-nav__link">
+    Virtualization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -2462,6 +2482,26 @@
     ISLE Basics
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtualization" title="Virtualization" class="md-nav__link">
+    Virtualization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -2484,14 +2524,45 @@
                 <h2 id="isle-basics">ISLE Basics</h2>
 <p>In simple terms, ISLE is a set of resources that allow one to build a fully functioning Islandora system fairly quickly using a system building tool called [Docker] (https://docker.com)</p>
 <p><strong>Glossary of Terms</strong></p>
+<h3 id="virtualization">Virtualization</h3>
 <ul>
-<li><strong>Docker</strong>: System virtualization software used to build ISLE - Docker is used to create virtual servers called containers based on pre-built images. A "recipe" file called docker-compose.yml orchestrates the setting up and networking of the containers.</li>
-<li><strong>Containers</strong>: virtual "servers" created by Docker - each major component of Islandora runs in its own container.</li>
-<li><strong>Images</strong>: source for the containers - these are built and updated by ISLE developers and stored on Dockerhub.</li>
-<li><strong>Dockerhub</strong>: website/repository that provides access to the latest images for the ISLE containers.</li>
-<li><strong>ISLE on GitHub</strong>: the ISLE repository on github.com contains documentation and configuration files necessary to build ISLE.</li>
-<li><strong>Host Server</strong>: Also called "the host" - this is the base computer upon which the entire ISLE stack is built - this can be a virtual machine on a laptop (LOCAL), or a server you connected to via ssh (REMOTE).</li>
-<li><strong>Volume</strong> a Docker controlled place to hold data on the local file system. Used to persist data across containers.</li>
+<li>
+<p><strong>VM</strong>: Virtual Machine - A virtual machine is a software computer that, similar to a physical computer, runs an operating system and applications comprised of specification and configuration files backed by the resources of a host (the physical computer).</p>
+</li>
+<li>
+<p><strong>Virtualbox</strong>: <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</p>
+</li>
+<li>
+<p><strong>Vagrant</strong>: <a href="https://www.vagrantup.com/">Vagrant</a> provides easy to configure, reproducible, and portable work environments. Vagrant works on Mac, Linux, Windows, and more. Within the ISLE project there is a vagrant folder.</p>
+</li>
+<li>
+<p><strong>Docker for Mac</strong>: <a href="https://www.docker.com/docker-mac">Docker for Mac</a> is an easy-to-install desktop app for building, debugging and testing Dockerized apps on a Mac. Docker for Mac is a complete development environment deeply integrated with the MacOS Hypervisor framework, networking and filesystem</p>
+</li>
+</ul>
+<h3 id="docker">Docker</h3>
+<ul>
+<li>
+<p><strong>Docker</strong>: System virtualization software used to build ISLE - Docker is used to create virtual servers called containers based on pre-built images. A "recipe" file called docker-compose.yml orchestrates the setting up and networking of the containers.</p>
+</li>
+<li>
+<p><strong>Containers</strong>: virtual "servers" created by Docker - each major component of Islandora runs in its own container.</p>
+</li>
+<li>
+<p><strong>Images</strong>: source for the containers - these are built and updated by ISLE developers and stored on Dockerhub.</p>
+</li>
+<li>
+<p><strong>Dockerhub</strong>: website/repository that provides access to the latest images for the ISLE containers.</p>
+</li>
+<li>
+<p><strong>ISLE on GitHub</strong>: the ISLE repository on github.com contains documentation and configuration files necessary to build ISLE.</p>
+</li>
+<li>
+<p><strong>Host Server</strong>: Also called "the host" - this is the base computer upon which the entire ISLE stack is built - this can be a virtual machine on a laptop (LOCAL), or
+a server you connected to via ssh (REMOTE).</p>
+</li>
+<li>
+<p><strong>Volume</strong> a Docker controlled place to hold data on the local file system. Used to persist data across containers.</p>
+</li>
 <li>
 <p><strong>Network</strong> refers to a defined Docker network that is controlled by docker. ThIS has powerful implications in production.</p>
 <ul>

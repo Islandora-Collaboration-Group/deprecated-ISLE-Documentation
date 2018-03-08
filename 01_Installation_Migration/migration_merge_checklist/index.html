@@ -2750,13 +2750,6 @@
 <td>/yourdomain-config/fedora/</td>
 <td><em>see below</em></td>
 </tr>
-<tr>
-<td>site.conf</td>
-<td>Apache webserver vhost file</td>
-<td>/etc/apache2/sites-available/</td>
-<td>/yourdomain-config/fedora/</td>
-<td><em>see below</em></td>
-</tr>
 </tbody>
 </table>
 <p><strong>Fedora Notes</strong>:</p>
@@ -2813,23 +2806,7 @@
 </code></pre>
 
 <ul>
-<li>
-<p><code>fedora/repository-policies</code> - endusers can edit the files contained within for more granular or customized Fedora user permissions or repository access.</p>
-</li>
-<li>
-<p><code>site.conf</code> - endusers will want to edit this Apache vhost for the fedora proxy site name (if using Djatoka)</p>
-<ul>
-<li>
-<p>The filename can stay the same or can be changed. Please note that Line 37 of the associated <code>docker-compose.yml</code> will need to be updated if the file is renamed</p>
-</li>
-<li>
-<p>Lines 2, 3, 6, 7, 34 - 37, 39, 40, 44 &amp; 45:  endusers will edit this file as directed in the (# enduser please edit this and then remove this comment) instructions.</p>
-</li>
-<li>
-<p>Do remove (# enduser please edit this and then remove this comment) after editing or adding the appropriate values.</p>
-</li>
-</ul>
-</li>
+<li><code>fedora/repository-policies</code> - endusers can edit the files contained within for more granular or customized Fedora user permissions or repository access.</li>
 </ul>
 <h4 id="solr">Solr</h4>
 <pre><code>   Copy the following below from the `current-production-config/solr/`
