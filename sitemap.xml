@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,59 +12,23 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/Glossary/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/glossary/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
-     <loc>/System_Requirements/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-        
-    <url>
-     <loc>/00Host_Server/Host_Server_Setup/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/00Host_Server/Host_Server_Ubuntu/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/00Host_Server/Host_Server_CentOS/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/00Host_Server/Host_Server_Setup_Ansible/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-    <url>
-     <loc>/01_Installation_Migration/01_0_Installation/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/install_start_here/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -72,14 +36,38 @@
     
         
     <url>
-     <loc>/01_Installation_Migration/01_1_testsite_guide/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/01_installation_host_server/host_server_system_specifications/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/01_Installation_Migration/01_2_testsite_user_story/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/01_installation_host_server/install_on_centos/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_installation_host_server/install_on_ubuntu/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_installation_host_server/install_docker_for_mac/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_installation_host_server/install_docker_for_windows/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/01_installation_host_server/install_macos_vagrant/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -88,14 +76,42 @@
     
         
     <url>
-     <loc>/01_Installation_Migration/01_3_new_site_guide/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/02_installation_test/ild_example_user_story/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/01_Installation_Migration/01_4_newsite_user_story/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/02_installation_test/ild_installation_guide/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/02_installation_test/ild_resources/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/03_installation_new_site/new_site_example_user_story/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03_installation_new_site/new_site_installation_guide_single/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/03_installation_new_site/new_site_installation_guide_multi/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -104,62 +120,166 @@
     
         
     <url>
-     <loc>/01_Installation_Migration/Migration_Guide/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/04_installation_migration/migration_example_user_story/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/01_Installation_Migration/Migration_User_Story/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/04_installation_migration/migration_installation_guide/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/01_Installation_Migration/migration_export_checklist/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/04_installation_migration/migration_export_checklist/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/01_Installation_Migration/migration_merge_checklist/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/04_installation_migration/migration_merge_checklist/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04_installation_migration/migration_docker_compose_edit_checklist/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/04_installation_migration/migration_reindex_process/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
     <url>
-     <loc>/Isle_Containers_Description/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>/05_developer_docs/dev_contributing_to_project/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_documentation_overview/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_documentation_editing_online/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_documentation_editing_local/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_documentation_mkdocs/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_about_maintainers/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_about_project/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_release_process/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_example_user_story/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_policies/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_build_guide/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_testing_guide/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_push_images_dockerhub/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_announcements_releases/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/05_developer_docs/dev_ansible_guide/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
+     <loc>/06_specifications/specs_dockerfiles/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
+     <loc>/06_specifications/specs_docker_containers_images/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
+     <loc>/06_specifications/specs_diagram_network/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc></loc>
-     <lastmod></lastmod>
+     <loc>/06_specifications/specs_supported_software_matrix/</loc>
+     <lastmod>2018-04-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/06_specifications/specs_supported_drupal_modules_matrix/</loc>
+     <lastmod>2018-04-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

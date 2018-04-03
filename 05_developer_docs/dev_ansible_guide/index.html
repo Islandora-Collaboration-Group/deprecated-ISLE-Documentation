@@ -1,0 +1,1826 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for Islandora Enterprise (ISLE)">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>Ansible Guide - Islandora Enterprise (ISLE)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.78aab2dc.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#prerequisites-assumptions" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Islandora Enterprise (ISLE)" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Islandora Enterprise (ISLE)
+              </span>
+              <span class="md-header-nav__topic">
+                Ansible Guide
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Islandora Enterprise (ISLE)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="Glossary of Terms and Variables" class="md-nav__link">
+      Glossary of Terms and Variables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../install_start_here/" title="Installation Start Here" class="md-nav__link">
+      Installation Start Here
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_installation_host_server/host_server_system_specifications/" title="Host Server Specifications" class="md-nav__link">
+      Host Server Specifications
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_installation_host_server/install_on_centos/" title="Install ISLE Host Server Dependencies on CentOS" class="md-nav__link">
+      Install ISLE Host Server Dependencies on CentOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_installation_host_server/install_on_ubuntu/" title="Install ISLE Host Server Dependencies on Ubuntu" class="md-nav__link">
+      Install ISLE Host Server Dependencies on Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac" class="md-nav__link">
+      Docker for Mac
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_installation_host_server/install_docker_for_windows/" title="Docker for Windows" class="md-nav__link">
+      Docker for Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_installation_host_server/install_macos_vagrant/" title="Vagrant & VirtualBox on MacOS" class="md-nav__link">
+      Vagrant & VirtualBox on MacOS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Installation - Test (isle.localdomain)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Installation - Test (isle.localdomain)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02_installation_test/ild_example_user_story/" title="Example User Story" class="md-nav__link">
+      Example User Story
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02_installation_test/ild_installation_guide/" title="Test Site Installation Guide" class="md-nav__link">
+      Test Site Installation Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02_installation_test/ild_resources/" title="Test Site Resources" class="md-nav__link">
+      Test Site Resources
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Installation - New Site
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Installation - New Site
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03_installation_new_site/new_site_example_user_story/" title="Example User Story" class="md-nav__link">
+      Example User Story
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03_installation_new_site/new_site_installation_guide_single/" title="New Site Installation Guide - w/ Single ISLE Environment" class="md-nav__link">
+      New Site Installation Guide - w/ Single ISLE Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03_installation_new_site/new_site_installation_guide_multi/" title="New Site Installation Guide - w/ multiple ISLE Environments" class="md-nav__link">
+      New Site Installation Guide - w/ multiple ISLE Environments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Installation - Migration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Installation - Migration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_installation_migration/migration_example_user_story/" title="Example User Story" class="md-nav__link">
+      Example User Story
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Installation Guide" class="md-nav__link">
+      Installation Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_installation_migration/migration_export_checklist/" title="Export Checklist" class="md-nav__link">
+      Export Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_installation_migration/migration_merge_checklist/" title="Merge Checklist" class="md-nav__link">
+      Merge Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_installation_migration/migration_docker_compose_edit_checklist/" title="Docker Composer Edit Checklist" class="md-nav__link">
+      Docker Composer Edit Checklist
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_installation_migration/migration_reindex_process/" title="Reindex Process" class="md-nav__link">
+      Reindex Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      Developer Docs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Developer Docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_contributing_to_project/" title="Contributing to Project" class="md-nav__link">
+      Contributing to Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_documentation_overview/" title="Documentation Overview" class="md-nav__link">
+      Documentation Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_documentation_editing_online/" title="Documentation Editing - Online" class="md-nav__link">
+      Documentation Editing - Online
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_documentation_editing_local/" title="Documentation Editing - Local" class="md-nav__link">
+      Documentation Editing - Local
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_documentation_mkdocs/" title="Installing Mkdocs" class="md-nav__link">
+      Installing Mkdocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_about_maintainers/" title="About Maintainers" class="md-nav__link">
+      About Maintainers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_about_project/" title="About Project" class="md-nav__link">
+      About Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_release_process/" title="Release process" class="md-nav__link">
+      Release process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_example_user_story/" title="Example User Story" class="md-nav__link">
+      Example User Story
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_policies/" title="Policies" class="md-nav__link">
+      Policies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_build_guide/" title="Build Guide" class="md-nav__link">
+      Build Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+      Testing Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_push_images_dockerhub/" title="Pushing images to Dockerhub Guide" class="md-nav__link">
+      Pushing images to Dockerhub Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev_announcements_releases/" title="Announcements of new releases" class="md-nav__link">
+      Announcements of new releases
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Ansible Guide
+      </label>
+    
+    <a href="./" title="Ansible Guide" class="md-nav__link md-nav__link--active">
+      Ansible Guide
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-assumptions" title="Prerequisites / Assumptions" class="md-nav__link">
+    Prerequisites / Assumptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-deploy-script-explanation" title="Ansible Deploy Script Explanation" class="md-nav__link">
+    Ansible Deploy Script Explanation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installs-software-dependencies-tools-including" title="Installs software dependencies &amp; tools including:" class="md-nav__link">
+    Installs software dependencies &amp; tools including:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makes-isle-host-service-changes" title="Makes ISLE Host service changes" class="md-nav__link">
+    Makes ISLE Host service changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adds-users-groups-and-updates-permissions" title="Adds users, groups and updates permissions" class="md-nav__link">
+    Adds users, groups and updates permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installs-additional-software" title="Installs additional software" class="md-nav__link">
+    Installs additional software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible-script-directory-structure" title="Ansible script directory structure" class="md-nav__link">
+    Ansible script directory structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-ansible-script-to-deploy-to-isle-host" title="Configure Ansible Script to deploy to ISLE Host" class="md-nav__link">
+    Configure Ansible Script to deploy to ISLE Host
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ansibledocker_installyml" title="ansible/docker_install.yml" class="md-nav__link">
+    ansible/docker_install.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansibleinventoryyml" title="ansible/inventory.yml" class="md-nav__link">
+    ansible/inventory.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansibleisle-prod-projectinstitutionyml" title="ansible/isle-prod-project.institution.yml" class="md-nav__link">
+    ansible/isle-prod-project.institution.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible-commands-to-test-connection" title="Ansible commands to test connection" class="md-nav__link">
+    Ansible commands to test connection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-commands-for-deploy" title="Ansible commands for deploy" class="md-nav__link">
+    Ansible commands for deploy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qc-review-checklist" title="QC Review checklist" class="md-nav__link">
+    QC Review checklist
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" title="Docker Compose" class="md-nav__link">
+    Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islandora-user" title="Islandora user" class="md-nav__link">
+    Islandora user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isle-project-directory" title="ISLE Project directory" class="md-nav__link">
+    ISLE Project directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#walkthrough-using-ansible-on-a-macos-control-machine" title="Walkthrough: Using Ansible on a MacOS control machine" class="md-nav__link">
+    Walkthrough: Using Ansible on a MacOS control machine
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Specifications
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Specifications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_specifications/specs_dockerfiles/" title="Dockerfiles" class="md-nav__link">
+      Dockerfiles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_specifications/specs_docker_containers_images/" title="Docker Containers & Images" class="md-nav__link">
+      Docker Containers & Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_specifications/specs_diagram_network/" title="Diagram of network and connections" class="md-nav__link">
+      Diagram of network and connections
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_specifications/specs_supported_software_matrix/" title="Supported ISLE Software Matrix" class="md-nav__link">
+      Supported ISLE Software Matrix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_specifications/specs_supported_drupal_modules_matrix/" title="Supported Drupal Modules on Test Site Matrix" class="md-nav__link">
+      Supported Drupal Modules on Test Site Matrix
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-assumptions" title="Prerequisites / Assumptions" class="md-nav__link">
+    Prerequisites / Assumptions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-deploy-script-explanation" title="Ansible Deploy Script Explanation" class="md-nav__link">
+    Ansible Deploy Script Explanation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installs-software-dependencies-tools-including" title="Installs software dependencies &amp; tools including:" class="md-nav__link">
+    Installs software dependencies &amp; tools including:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#makes-isle-host-service-changes" title="Makes ISLE Host service changes" class="md-nav__link">
+    Makes ISLE Host service changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adds-users-groups-and-updates-permissions" title="Adds users, groups and updates permissions" class="md-nav__link">
+    Adds users, groups and updates permissions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installs-additional-software" title="Installs additional software" class="md-nav__link">
+    Installs additional software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible-script-directory-structure" title="Ansible script directory structure" class="md-nav__link">
+    Ansible script directory structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-ansible-script-to-deploy-to-isle-host" title="Configure Ansible Script to deploy to ISLE Host" class="md-nav__link">
+    Configure Ansible Script to deploy to ISLE Host
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ansibledocker_installyml" title="ansible/docker_install.yml" class="md-nav__link">
+    ansible/docker_install.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansibleinventoryyml" title="ansible/inventory.yml" class="md-nav__link">
+    ansible/inventory.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansibleisle-prod-projectinstitutionyml" title="ansible/isle-prod-project.institution.yml" class="md-nav__link">
+    ansible/isle-prod-project.institution.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible-commands-to-test-connection" title="Ansible commands to test connection" class="md-nav__link">
+    Ansible commands to test connection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-commands-for-deploy" title="Ansible commands for deploy" class="md-nav__link">
+    Ansible commands for deploy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qc-review-checklist" title="QC Review checklist" class="md-nav__link">
+    QC Review checklist
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose" title="Docker Compose" class="md-nav__link">
+    Docker Compose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islandora-user" title="Islandora user" class="md-nav__link">
+    Islandora user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isle-project-directory" title="ISLE Project directory" class="md-nav__link">
+    ISLE Project directory
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#walkthrough-using-ansible-on-a-macos-control-machine" title="Walkthrough: Using Ansible on a MacOS control machine" class="md-nav__link">
+    Walkthrough: Using Ansible on a MacOS control machine
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Ansible Guide</h1>
+                
+                <p>You have the choice of using Ansible to deploy the Docker Host server dependencies instead of performing manual commands on either a CentOS or Ubuntu OS. The Ansible script and configuration files can be found in the root folder of the ISLE git repo in a directory named <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/ansible">ansible</a>. Additionally, the Ansible script is designed to detect the chosen operating system and then install the appropriate dependencies with minimal user interaction or prior configuration.</p>
+<p>Ansible is an free open source automation platform / tool which runs on Linux, Mac or BSD, doesn’t use local or remote agents and is relatively easy to setup. Ansible can help with server configuration management, application deployment, task automation and IT orchestration (<em>running tasks in sequence on several different servers or devices</em>).</p>
+<p>If you are not familiar with the Ansible, it is recommended to start with their documentation.</p>
+<ul>
+<li><a href="https://www.ansible.com/">Ansible website</a></li>
+<li><a href="https://www.ansible.com/overview/how-ansible-works">What is Ansible?</a></li>
+<li><a href="http://docs.ansible.com/ansible/latest/intro.html">Ansible Documentation</a></li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>
+<p>For MacOS users using a local ISLE Host VM on their laptop or workstation, please scroll down to line <strong>395</strong> the section called
+<code>Using Ansible on MacOS</code>.</p>
+</li>
+<li>
+<p>Windows sadly as of yet <a href="http://docs.ansible.com/ansible/latest/intro_installation.html#control-machine-requirements">cannot be used</a> as a Ansible control machine  </p>
+</li>
+<li>
+<p>Do not use this script if running <code>Docker for Mac</code> or <code>Docker for Windows</code> as the dependencies are not required.</p>
+</li>
+<li>
+<p>This script can be used with the supplied Vagrant profiles (Ubuntu or CentOS) found within the <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/vagrant">vagrant</a> directory of the ISLE repo.</p>
+</li>
+</ul>
+<h3 id="prerequisites-assumptions">Prerequisites / Assumptions</h3>
+<ul>
+<li>
+<p>Familiarity or knowledge of Ansible</p>
+</li>
+<li>
+<p>Ansible control workstation, laptop or server that runs only MacOs, BSD or Linux with the following:</p>
+<ul>
+<li><code>Ansible 2.2+</code> (choice of <a href="http://docs.ansible.com/ansible/latest/intro_installation.html#installing-the-control-machine">install methods</a>)</li>
+<li><code>openssh</code> (2.2.x+)</li>
+<li><code>git</code> (2.15.1+)</li>
+<li><code>python</code> (2.7+)</li>
+<li>The <a href="https://github.com/Islandora-Collaboration-Group/ISLE">ISLE project repository</a> cloned to an appropriate location.</li>
+</ul>
+</li>
+<li>
+<p>A previously created ISLE Host Server running either of these operating systems:</p>
+<ul>
+<li>Ubuntu 16.04 LTS</li>
+<li>CentOS 7   </li>
+</ul>
+</li>
+<li>
+<p>An account with ssh access to the ISLE Host Server</p>
+</li>
+<li>
+<p>An account with password-less sudo access on the ISLE Host Server</p>
+</li>
+<li>
+<p>The IP of the ISLE Host server</p>
+</li>
+</ul>
+<hr />
+<h3 id="ansible-deploy-script-explanation">Ansible Deploy Script Explanation</h3>
+<p>Within the <code>docker_install.yml</code> Ansible playbook, there are the following roles which perform different actions or cause different events on the ISLE Host server.</p>
+<table>
+<thead>
+<tr>
+<th>Ansible Role</th>
+<th>Action / Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dependencies</code></td>
+<td><em>Installs software dependencies &amp; tools as described above</em></td>
+</tr>
+<tr>
+<td><code>users_groups</code></td>
+<td><em>Adds users, groups and updates permissions as described above</em></td>
+</tr>
+<tr>
+<td><code>docker</code></td>
+<td><em>Installs Docker</em></td>
+</tr>
+<tr>
+<td><code>docker_compose</code></td>
+<td><em>Installs Docker Compose</em></td>
+</tr>
+<tr>
+<td><code>git_clone</code></td>
+<td><em>Clones the current ISLE git repository to <code>/opt/ISLE</code></em></td>
+</tr>
+<tr>
+<td><code>docker_images</code></td>
+<td><em>Pulls down the latest ISLE Docker Images from Dockerhub.com</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="installs-software-dependencies-tools-including">Installs software dependencies &amp; tools including:</h4>
+<p>The Ansible script will deploy the following to the ISLE Host server:</p>
+<table>
+<thead>
+<tr>
+<th>Ubuntu / Debian</th>
+<th>CentOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>software-properties-common</td>
+<td>libselinux-python</td>
+</tr>
+<tr>
+<td>python-software-properties</td>
+<td>libsemanage-python</td>
+</tr>
+<tr>
+<td>--</td>
+<td>yum-utils</td>
+</tr>
+<tr>
+<td>ntp</td>
+<td>ntp</td>
+</tr>
+<tr>
+<td>openssh-client</td>
+<td>openssh-clients</td>
+</tr>
+<tr>
+<td>rsync</td>
+<td>rsync</td>
+</tr>
+<tr>
+<td>curl</td>
+<td>curl</td>
+</tr>
+<tr>
+<td>wget</td>
+<td>wget</td>
+</tr>
+<tr>
+<td>git</td>
+<td>git</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>zip</td>
+</tr>
+<tr>
+<td>unzip</td>
+<td>unzip</td>
+</tr>
+<tr>
+<td>vim</td>
+<td>vim</td>
+</tr>
+<tr>
+<td>nano</td>
+<td>nano</td>
+</tr>
+<tr>
+<td>emacs24-nox</td>
+<td>emacs</td>
+</tr>
+<tr>
+<td>htop</td>
+<td>htop</td>
+</tr>
+<tr>
+<td>apt-transport-https</td>
+<td>--</td>
+</tr>
+<tr>
+<td>ca-certificates</td>
+<td>--</td>
+</tr>
+</tbody>
+</table>
+<h4 id="makes-isle-host-service-changes">Makes ISLE Host service changes</h4>
+<p><strong>Please Note:</strong> <em>Any of these services can be re-enabled post installation see appropriate documentation for opening ports on firewalls etc.</em></p>
+<table>
+<thead>
+<tr>
+<th>Ubuntu / Debian</th>
+<th>CentOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>enables ntp service</em></td>
+<td><em>enables ntp service</em></td>
+</tr>
+<tr>
+<td><em>disables ufw</em></td>
+<td><em>disables iptables</em></td>
+</tr>
+<tr>
+<td>--</td>
+<td><em>sets selinux to permissive</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="adds-users-groups-and-updates-permissions">Adds users, groups and updates permissions</h4>
+<ul>
+<li>Creates the <code>islandora</code> user</li>
+<li>Along with an appropriate password</li>
+<li>generates a ssh key</li>
+<li>bestows sudo password-less access</li>
+<li>
+<p>Gives the <code>islandora</code> user the ability to run Docker &amp; Docker Compose by adding the account to the Docker group.  </p>
+</li>
+<li>
+<p>Disables <code>root</code> user access via ssh</p>
+</li>
+<li>Disables use of passwords with ssh.</li>
+<li><em>key based access only to the ISLE Host server</em></li>
+</ul>
+<h4 id="installs-additional-software">Installs additional software</h4>
+<ul>
+<li>
+<p>Docker</p>
+</li>
+<li>
+<p>Docker Compose</p>
+</li>
+<li>
+<p>Git clones the ISLE repo to <code>/opt/ISLE</code></p>
+</li>
+<li>
+<p>Pulls down the most recent ISLE images</p>
+</li>
+</ul>
+<h4 id="ansible-script-directory-structure">Ansible script directory structure</h4>
+<pre><code>ansible
+├── docker_install.yml
+├── host_vars
+│   ├── host_local_macos_isle_localdomain.yml
+│   └── isle-prod-project.institution.yml
+├── inventory
+└── roles
+    ├── dependencies
+    │   └── tasks
+    │       ├── ubuntu.yml
+    │       ├── main.yml
+    │       └── centos.yml
+    ├── docker
+    │   └── tasks
+    │       ├── install.yml
+    │       └── main.yml
+    ├── docker_compose
+    │   └── tasks
+    │       ├── install.yml
+    │       └── main.yml
+    ├── docker_images
+    │   └── tasks
+    │       ├── images_pull.yml
+    │       └── main.yml
+    ├── git_clone
+    │   └── tasks
+    │       ├── git_clone.yml
+    │       └── main.yml
+    └── users_groups
+        ├── files
+        │   └── islandora
+        └── tasks
+            ├── groups.yml
+            ├── main.yml
+            ├── secure.yml
+            ├── ssh.yml
+            └── users.yml
+</code></pre>
+
+<h3 id="configure-ansible-script-to-deploy-to-isle-host">Configure Ansible Script to deploy to ISLE Host</h3>
+<p>To configure the Ansible script to deploy to one's institutional ISLE Host Server, please review and edit the following files within the <code>ansible</code> directory.</p>
+<ul>
+<li><code>ansible/docker_install.yml</code></li>
+<li><code>ansible/inventory</code></li>
+<li><code>ansible/host_vars/isle-prod-project.institution.yml</code></li>
+</ul>
+<p>Basically wherever <code>isle-prod-project.institution</code> appears as a value in these three files, please replace with the appropriate ISLE Host server fully qualified domain name (<strong>fqdn</strong>) e.g. <code>yourislesite.institution.com</code></p>
+<p>One can open up and edit all files in a text editor e.g. Atom, Textedit, Textwrangler etc.</p>
+<h4 id="ansibledocker_installyml">ansible/docker_install.yml</h4>
+<p><em>This is the Ansible playbook necessary to deploy software to the ISLE host server.</em></p>
+<ul>
+<li>At the top of the file remove <code>isle-prod-project.institution</code> and replace with the appropriate <strong>fqdn</strong>.  </li>
+</ul>
+<h4 id="ansibleinventoryyml">ansible/inventory.yml</h4>
+<p><em>This is the possible list of server(s) to deploy to using Ansible and its associated playbook(s).</em></p>
+<p><strong>Please Note:</strong> These instructions below are repeated within the file itself.</p>
+<ul>
+<li>
+<p>Line 7: remove <code>isle-prod-project.institution</code> from in between the brackets and replace with the appropriate <strong>fqdn</strong></p>
+</li>
+<li>
+<p>Line 8: Add the appropriate ISLE Host server user account that has <code>sudo</code> passwordless permissions to the end of <code>ansible_ssh_user=</code></p>
+<p><strong>Example</strong>: <code>ansible_ssh_user=janesmith</code></p>
+</li>
+<li>
+<p>Line 8: Add the appropriate path to this ISLE Host Server user accounts public ssh key to the end of <code>ansible_ssh_private_key_file=</code></p>
+</li>
+<li>
+<p><strong>Example</strong> of inventory using settings for local Ansible deploy laptop:</p>
+</li>
+</ul>
+<pre><code>ansible_ssh_private_key_file=/home/janesmith/.ssh/id_rsa.pub
+</code></pre>
+
+<p><strong>Please Note:</strong> This key is typically found on the local control (Ansible deploy laptop / workstation) system and should have been previously copied to the appropriate ISLE Host server user account's <code>/home/islehostserver_user/.ssh/authorized_keys</code> file.</p>
+<ul>
+<li><strong>Final Example</strong> end result for inventory file with all settings above</li>
+</ul>
+<pre><code>[yourislesite.institution.com]   
+yourislesite.institution.com ansible_connection=ssh ansible_ssh_user=janesmith ansible_ssh_private_key_file=/home/janesmith/.ssh/id_rsa.pub
+</code></pre>
+
+<h4 id="ansibleisle-prod-projectinstitutionyml">ansible/isle-prod-project.institution.yml</h4>
+<ul>
+<li>
+<p>Copy this file and rename the copy to with the appropriate <strong>fqdn</strong></p>
+</li>
+<li>
+<p><strong>Example</strong> of how <code>host_vars</code> directory should now contain two files:  </p>
+</li>
+</ul>
+<pre><code>ansible
+├── docker_install.yml
+├── host_vars
+│   ├── isle-prod-project.institution.yml
+│   └── yourislesite.institution.com.yml
+├── inventory
+└── roles
+</code></pre>
+
+<ul>
+<li>
+<p>Edit the following lines within the newly created file i.e. <code>yourislesite.institution.com.yml</code> and remove the comments (#) as asked</p>
+</li>
+<li>
+<p><strong>Please Note:</strong> <em>The <strong>fqdn</strong> in the <code>inventory</code> file should match this filename as well.</em></p>
+</li>
+</ul>
+<p><strong>Examples ONLY</strong> (<em>Do not enter these literal values</em>)  </p>
+<ul>
+<li>
+<p>Line 9: <code>ansible_ssh_host: 192.168.1.16</code></p>
+<ul>
+<li><em>This is the IP address of the ISLE Host server</em></li>
+</ul>
+</li>
+<li>
+<p>Line 10: <code>ansible_ssh_user: janesmith</code>  </p>
+<ul>
+<li><em>This is the appropriate ISLE Host server user account that has <code>sudo</code> passwordless permissions.</em></li>
+</ul>
+</li>
+<li>
+<p>Line 15: <code>pub_locale: /home/janesmith/.ssh/id_rsa.pub</code></p>
+<ul>
+<li><em>This is the key found on the local control (Ansible deploy laptop / workstation) system which has been previously copied to the appropriate ISLE Host server user account's <code>/home/islehostserver_user/.ssh/authorized_keys</code> file.</em></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="ansible-commands-to-test-connection">Ansible commands to test connection</h4>
+<ul>
+<li>Test if the Ansible control laptop / workstation can connect to the ISLE Host server by running these commands. On the local Ansible control laptop / workstation, open a terminal window and enter the following:</li>
+</ul>
+<pre><code>cd /path/to/ISLE/repo/ansible
+
+ansible -i inventory isle-host-server -m ping
+</code></pre>
+
+<ul>
+<li><strong>Example</strong> output of above command (<em>IGNORE THE WARNING</em>)</li>
+</ul>
+<pre><code>[WARNING]: Found both group and host with same name: isle-host-server   
+
+isle-host-server | SUCCESS =&gt; {
+     &quot;changed&quot;: false,
+     &quot;ping&quot;: &quot;pong&quot;
+   }
+</code></pre>
+
+<p><strong>Please Note:</strong> <em>If SUCCESS doesn't appear as a value or if the wording of the prompt is in RED with "host doesn't exist ...", review all steps above and check the settings. Do not advance until the <strong>Example</strong> output above matches.</em>  </p>
+<h3 id="ansible-commands-for-deploy">Ansible commands for deploy</h3>
+<ul>
+<li>
+<p>To deploy to the ISLE Host Server, run this command.</p>
+<p><code>ansible-playbook -i inventory docker_install.yml</code></p>
+</li>
+</ul>
+<p>Ansible will start displaying output within the terminal. If any turn red and the script terminates, please review the above settings and connectivity to the server. Attempt to rerun the script.</p>
+<h3 id="qc-review-checklist">QC Review checklist</h3>
+<p>To ensure a successful deploy to the ISLE Server, please review the following to ensure that the deploy to the Islandora Host server was successful.</p>
+<p>Open a terminal window on the Ansible control laptop /workstation and <code>ssh</code> into the Islandora Host server using the appropriate enduser account setup prior to the deploy.</p>
+<p><strong>Example</strong>:</p>
+<p><code>ssh enduser@isle-prod-project.institution</code></p>
+<hr />
+<h4 id="docker">Docker</h4>
+<ul>
+<li>
+<p>To check where Docker has been installed to, enter:  </p>
+<p><code>which docker</code>    </p>
+<p><strong>Example</strong> output:      </p>
+<p><code>/usr/bin/docker</code></p>
+</li>
+<li>
+<p>To check which version of Docker has been installed, enter:</p>
+<p><code>docker --version</code></p>
+<p><strong>Example</strong> output:</p>
+<p><code>Docker version 17.12.0-ce, build c97c6d6</code></p>
+</li>
+<li>
+<p>To check if Docker is running, enter:</p>
+<p><code>service docker status</code>   </p>
+<p><strong>Example</strong> output:</p>
+</li>
+</ul>
+<pre><code>Redirecting to /bin/systemctl status docker.service
+● docker.service - Docker Application Container Engine
+  Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; vendor preset: disabled)
+  Active: active (running) since Thu 2018-03-18 14:36:55 EST; 1 weeks 4 days ago
+    Docs: https://docs.docker.com
+Main PID: 23066 (dockerd)
+  Memory: 55.3M
+....
+</code></pre>
+
+<ul>
+<li>
+<p>To check if the ISLE images have been downloaded on the ISLE Host server, enter:</p>
+<p><code>docker image ls</code></p>
+<p><strong>Example</strong> output:  </p>
+</li>
+</ul>
+<pre><code>REPOSITORY                         TAG                 IMAGE ID            CREATED             SIZE
+islandoracollabgroup/isle-fedora   latest              6e2749ca2c2f        2 weeks ago         2.43GB
+islandoracollabgroup/isle-apache   latest              82fe4ae16932        2 weeks ago         2.18GB
+islandoracollabgroup/isle-solr     latest              7fba26c10433        2 weeks ago         784MB
+islandoracollabgroup/isle-mysql    latest              f34162f1e0f8        2 weeks ago         299MB
+islandoracollabgroup/isle-proxy    latest              5gdc45f1a074        2 weeks ago         199MB
+</code></pre>
+
+<h4 id="docker-compose">Docker Compose</h4>
+<ul>
+<li>
+<p>To check where Docker-compose has been installed to, enter:  </p>
+<p><code>which docker-compose</code></p>
+<p><strong>Example</strong> output:</p>
+<p><code>/usr/local/bin/docker-compose</code></p>
+</li>
+<li>
+<p>To check which version of Docker-compose has been installed, enter:</p>
+<p><code>docker-compose -version</code></p>
+<p><strong>Example</strong> output:</p>
+<p><code>docker-compose version 1.20.1, build 1719ceb</code></p>
+</li>
+</ul>
+<h4 id="islandora-user">Islandora user</h4>
+<ul>
+<li>
+<p>To check if the <code>islandora</code> user has been created, enter:</p>
+<p><code>cat /etc/passwd</code>  </p>
+<p><strong>Example</strong> output:</p>
+<p><code>islandora:x:1002:1002::/home/islandora:/bin/bash</code></p>
+</li>
+</ul>
+<h4 id="isle-project-directory">ISLE Project directory</h4>
+<ul>
+<li>
+<p>To check if the ISLE project git repo has been cloned to <code>/opt/ISLE</code>, enter:</p>
+<p><code>ls -lh /opt/ISLE</code></p>
+<p><strong>Example</strong> output:</p>
+</li>
+</ul>
+<pre><code>total 24K
+drwxr-xr-x. 3 islandora islandora  110 Jan 17 09:17 apache
+drwxr-xr-x. 5 islandora islandora   84 Jan 23 13:44 config
+-rwxr-xr-x. 1 islandora islandora 2.0K Jan 18 16:58 docker-compose.yml
+drwxr-xr-x. 7 islandora islandora  143 Jan 17 09:17 docs
+drwxr-xr-x. 7 islandora islandora  102 Jan 17 09:17 fedora
+-rwxr-xr-x. 1 islandora islandora  12K Jan 17 09:17 mkdocs.yml
+drwxr-xr-x. 3 islandora islandora   54 Jan 17 09:17 mysql
+drwxr-xr-x. 3 islandora islandora   54 Jan 17 09:17 proxy
+-rwxr-xr-x. 1 islandora islandora 4.1K Jan 17 09:17 README.md
+drwxr-xr-x. 4 islandora islandora   50 Jan 17 09:17 solr
+</code></pre>
+
+<p>Once this script has finished one can:</p>
+<ul>
+<li>
+<p>Add any appropriate public ssh keys to <code>/home/islandora/.ssh/authorized_keys</code> prior to attempting to ssh to the Islandora Host server as the <code>islandora</code> user.</p>
+</li>
+<li>
+<p>Add the <code>/home/islandora/.ssh/id_rsa.pub</code> key to any git repository contained within the Migration Guide. (Additional instructions appear in that guide if this process is unfamiliar.)</p>
+</li>
+</ul>
+<p>Proceed to bottom of this page for next steps.</p>
+<hr />
+<h3 id="walkthrough-using-ansible-on-a-macos-control-machine">Walkthrough: Using Ansible on a MacOS control machine</h3>
+<ul>
+<li>
+<p>To install <code>Ansible</code> on the enduser's MacOS laptop / workstation.</p>
+<ul>
+<li>
+<p>Install Ansible via Python pip</p>
+<ul>
+<li>Follow here <a href="http://docs.ansible.com/ansible/latest/intro_installation.html#latest-releases-via-pip">http://docs.ansible.com/ansible/latest/intro_installation.html#latest-releases-via-pip</a></li>
+</ul>
+</li>
+<li>
+<p>Or install Ansible via Homebrew (better)</p>
+<ul>
+<li><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></li>
+<li><code>brew install ansible</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>There is a ready made Ansible script for the MacOS hosted isle.localdomain called <code>ansible/host_vars/host_local_macos_isle_localdomain.yml</code></p>
+<ul>
+<li>
+<p>Use <code>vagrant</code> for the <code>ansible_ssh_user=</code> value in the <code>ansible/inventory</code> file</p>
+</li>
+<li>
+<p>Use <code>~/Users/enduser/.vagrant.d/insecure_private_key</code> for the <code>ansible_ssh_private_key_file</code> value in the <code>ansible/inventory</code> file</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<pre><code>[host_local_macos_isle_localdomain]
+host_local_macos_isle_localdomain ansible_connection=ssh ansible_ssh_user=vagrant ansible_ssh_private_key_file=/Users/enduser/.vagrant.d/insecure_private_key
+</code></pre>
+
+<ul>
+<li>
+<p><strong>Line 13</strong> in the <code>ansible/host_vars/host_local_macos_isle_localdomain.yml</code> file will need to be edited with the correct path to the enduser's id_rsa.pub  file. Change the <code>enduser</code> value to the real username. (<em>assumes the</em> <code>id_rsa.pub</code> <em>file exists!</em>)</p>
+</li>
+<li>
+<p><strong>Line 3</strong> in the <code>ansible/docker_install.yml</code> file will need to be edited, change the value of <code>isle-prod-project.institution</code> to <code>host_local_macos_isle_localdomain</code></p>
+</li>
+<li>
+<p>Once these files have been edited, open a terminal and enter:</p>
+<ul>
+<li><code>cd path_to/ISLE/ansible/</code></li>
+</ul>
+</li>
+<li>
+<p>Test the connection to the ISLE Host Vagrant Ubuntu VM</p>
+<ul>
+<li><code>ansible -i inventory host_local_macos_isle_localdomain -m ping</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Example</strong> output of above command (<em>IGNORE THE WARNING</em>)</p>
+<pre><code>[WARNING]: Found both group and host with same name: host_local_macos_isle_localdomain   
+host_local_macos_isle_localdomain | SUCCESS =&gt; {
+   &quot;changed&quot;: false,
+   &quot;ping&quot;: &quot;pong&quot;
+ }
+</code></pre>
+
+<p><strong>Please Note:</strong> <em>If SUCCESS doesn't appear as a value or if the wording of the prompt is in RED with "host doesn't exist ...", review all steps above and check the settings. Do not advance until the <strong>Example</strong> output above matches.</em>  </p>
+<ul>
+<li>To deploy to the ISLE Host Server, run this command.</li>
+</ul>
+<p><code>ansible-playbook -i inventory docker_install.yml</code></p>
+<p>Ansible will start displaying output within the terminal. If any turn red and the script terminates, please review the above settings and connectivity to the server. Attempt to rerun the script.</p>
+<hr />
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../dev_announcements_releases/" title="Announcements of new releases" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Announcements of new releases
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../06_specifications/specs_dockerfiles/" title="Dockerfiles" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dockerfiles
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.8eb9be28.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
