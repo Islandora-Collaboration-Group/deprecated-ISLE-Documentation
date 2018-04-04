@@ -581,6 +581,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mysql" title="MySQL" class="md-nav__link">
+    MySQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mysql-initscripts" title="Mysql -initscripts" class="md-nav__link">
+    Mysql -initscripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#solr" title="Solr" class="md-nav__link">
     Solr
   </a>
@@ -1010,6 +1030,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mysql" title="MySQL" class="md-nav__link">
+    MySQL
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mysql-initscripts" title="Mysql -initscripts" class="md-nav__link">
+    Mysql -initscripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#solr" title="Solr" class="md-nav__link">
     Solr
   </a>
@@ -1409,6 +1449,44 @@ SSLCertificateKeyFile /certs/newsite-sample-key.pem
 
 <ul>
 <li><code>fedora/repository-policies</code> - endusers can edit the files contained within for more granular or customized Fedora user permissions or repository access.</li>
+</ul>
+<h2 id="mysql">MySQL</h2>
+<p>The <code>mysql</code> subdirectory contains all specific configurations and overrides necessary for the ISLE mysql image and resulting container to function properly with your changes. This is the Mysql database server that will contain at least two databases, one for the Islandora / Drupal website and the other for the Fedora repository. If you are running Drupal multi-sites, you'll need to create the additional users and database creation scripts.</p>
+<ul>
+<li>(<em>Optional</em>) Edit the Mysql configuration file <code>my.cnf</code> as needed otherwise leave alone.</li>
+</ul>
+<h4 id="mysql-initscripts">Mysql -initscripts</h4>
+<p>This subdirectory houses SQL scripts necessary for a one time creation of your associated new site and <code>fedora3</code> database.</p>
+<p>You'll want to rename <code>newsite_sample_db.sql</code> to the database or domain name of your choice.</p>
+<ul>
+<li>
+<p>Edit the contents of <code>newsite_sample_db.sql</code> to create the new drupal site database and user.</p>
+<ul>
+<li>
+<p>Line 1: Change the database name from <code>newsite_sample_db</code> to the database name of your choice.</p>
+</li>
+<li>
+<p>Line 2: Change the database user name from <code>newsite_sample_db_user</code> to the database user name of your choice.</p>
+</li>
+<li>
+<p>Line 3: At almost the end of the line, change the value of <code>newsite_sample_db.*</code> to the to the database name of your choice ensuring the <code>.*</code> remain without a space.</p>
+</li>
+<li>
+<p>Line 3: At the end of the line, change the value of <code>newsite_sample_db_user'</code> to the to the database user name of your choice ensuring the values remain with in the <code>''</code>quotes without spaces. Do not alter the remaining code (<code>@'%';'</code>) beyond that point.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Edit the contents of <code>fedora3</code> to change the <code>fedora_admin</code> user password only.</p>
+<ul>
+<li>
+<p>Line 2: Change the <code>fedora_admin</code> user password from <code>newsite_sample_fedora_admin_pw</code> to the password of your choice.</p>
+</li>
+<li>
+<p>It is not recommended to change anything else.</p>
+</li>
+</ul>
+</li>
 </ul>
 <h2 id="solr">Solr</h2>
 <p>Compare, edit, merge or copy the following from the source directory <code>current-production-config/solr/</code> to:</p>
