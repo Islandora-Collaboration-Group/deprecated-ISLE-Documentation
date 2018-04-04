@@ -38,7 +38,7 @@
     
     
       
-        <title>Merge Checklist - Islandora Enterprise (ISLE)</title>
+        <title>Migration Merge Checklist - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -72,7 +72,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#migration-merge-checklist" tabindex="1" class="md-skip">
+      <a href="#apache" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -98,7 +98,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Merge Checklist
+                Migration Merge Checklist
               </span>
             
           
@@ -332,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_example_user_story/" title="Example User Story" class="md-nav__link">
-      Example User Story
+    <a href="../../02_installation_test/ild_example_user_story/" title="Test Site Example User Story" class="md-nav__link">
+      Test Site Example User Story
     </a>
   </li>
 
@@ -392,8 +392,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_example_user_story/" title="Example User Story" class="md-nav__link">
-      Example User Story
+    <a href="../../03_installation_new_site/new_site_example_user_story/" title="New Site Example User Story" class="md-nav__link">
+      New Site Example User Story
     </a>
   </li>
 
@@ -454,8 +454,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_example_user_story/" title="Example User Story" class="md-nav__link">
-      Example User Story
+    <a href="../migration_example_user_story/" title="Migration Example User Story" class="md-nav__link">
+      Migration Example User Story
     </a>
   </li>
 
@@ -466,8 +466,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_installation_guide/" title="Installation Guide" class="md-nav__link">
-      Installation Guide
+    <a href="../migration_installation_guide/" title="Migration Guide" class="md-nav__link">
+      Migration Guide
     </a>
   </li>
 
@@ -478,8 +478,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_export_checklist/" title="Export Checklist" class="md-nav__link">
-      Export Checklist
+    <a href="../migration_export_checklist/" title="Migration Export Checklist" class="md-nav__link">
+      Migration Export Checklist
     </a>
   </li>
 
@@ -497,11 +497,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Merge Checklist
+        Migration Merge Checklist
       </label>
     
-    <a href="./" title="Merge Checklist" class="md-nav__link md-nav__link--active">
-      Merge Checklist
+    <a href="./" title="Migration Merge Checklist" class="md-nav__link md-nav__link--active">
+      Migration Merge Checklist
     </a>
     
       
@@ -513,16 +513,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migration-merge-checklist" title="Migration Merge Checklist" class="md-nav__link">
-    Migration Merge Checklist
+  <a href="#apache" title="Apache" class="md-nav__link">
+    Apache
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#apache-edits" title="Apache Edits" class="md-nav__link">
+    Apache Edits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-sites-enabled" title="Apache - sites-enabled" class="md-nav__link">
+    Apache - sites-enabled
   </a>
   
 </li>
@@ -535,21 +542,68 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fedora" title="Fedora" class="md-nav__link">
-    Fedora
+  <a href="#apache-ssl-certs" title="Apache - ssl-certs" class="md-nav__link">
+    Apache - ssl-certs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solr" title="Solr" class="md-nav__link">
-    Solr
+  <a href="#apache-ssl-certs-multi" title="Apache - ssl-certs (multi)" class="md-nav__link">
+    Apache - ssl-certs (multi)
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fedora" title="Fedora" class="md-nav__link">
+    Fedora
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fedora-edits" title="Fedora Edits" class="md-nav__link">
+    Fedora Edits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solr" title="Solr" class="md-nav__link">
+    Solr
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solr-edits" title="Solr Edits" class="md-nav__link">
+    Solr Edits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-directory" title="Proxy directory" class="md-nav__link">
+    Proxy directory
+  </a>
   
 </li>
       
@@ -570,8 +624,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_docker_compose_edit_checklist/" title="Docker Composer Edit Checklist" class="md-nav__link">
-      Docker Composer Edit Checklist
+    <a href="../migration_docker_compose_edit_checklist/" title="Migration Docker Compose Edit Checklist" class="md-nav__link">
+      Migration Docker Compose Edit Checklist
     </a>
   </li>
 
@@ -582,8 +636,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_reindex_process/" title="Reindex Process" class="md-nav__link">
-      Reindex Process
+    <a href="../migration_reindex_process/" title="Migration Reindex Process" class="md-nav__link">
+      Migration Reindex Process
     </a>
   </li>
 
@@ -900,16 +954,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migration-merge-checklist" title="Migration Merge Checklist" class="md-nav__link">
-    Migration Merge Checklist
+  <a href="#apache" title="Apache" class="md-nav__link">
+    Apache
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#apache" title="Apache" class="md-nav__link">
-    Apache
+  <a href="#apache-edits" title="Apache Edits" class="md-nav__link">
+    Apache Edits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache-sites-enabled" title="Apache - sites-enabled" class="md-nav__link">
+    Apache - sites-enabled
   </a>
   
 </li>
@@ -922,21 +983,68 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fedora" title="Fedora" class="md-nav__link">
-    Fedora
+  <a href="#apache-ssl-certs" title="Apache - ssl-certs" class="md-nav__link">
+    Apache - ssl-certs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solr" title="Solr" class="md-nav__link">
-    Solr
+  <a href="#apache-ssl-certs-multi" title="Apache - ssl-certs (multi)" class="md-nav__link">
+    Apache - ssl-certs (multi)
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fedora" title="Fedora" class="md-nav__link">
+    Fedora
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fedora-edits" title="Fedora Edits" class="md-nav__link">
+    Fedora Edits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solr" title="Solr" class="md-nav__link">
+    Solr
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solr-edits" title="Solr Edits" class="md-nav__link">
+    Solr Edits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-directory" title="Proxy directory" class="md-nav__link">
+    Proxy directory
+  </a>
   
 </li>
       
@@ -957,28 +1065,28 @@
               
                 
                 
-                  <h1>Merge Checklist</h1>
+                  <h1>Migration Merge Checklist</h1>
                 
-                <h3 id="migration-merge-checklist">Migration Merge Checklist</h3>
-<p>This section is to serve as a new checklist for the editing or merging of the copied Islandora Production server(s) data and config files to the appropriate config directory on the new ISLE Host Server.</p>
-<p>The suggested workflow is for endusers to review the Production file(s) first, make note of any settings and then make appropriate edits within the <code>yourdomain-config</code> directory to change values, add passwords or usernames etc unless otherwise directed e.g. Apache <code>html</code> and Fedora <code>data</code>. (NOTE: as per the migration guide instructions the name of this directory shouldn't literally be "yourdomain-confg" but replace "yourdomain" with the name of your intended Islandora site's domain).</p>
+                <p>This section is to serve as a new checklist for the editing or merging of the copied Islandora Production server(s) data and config files to the appropriate config directory on the enduser's local laptop and ultimately copied / deployed back to the new ISLE Host Server.</p>
+<p>The suggested workflow is for endusers to review the Production file(s) first, make note of any settings and then make appropriate edits within the <code>yourdomain-config</code> directory to change values, add passwords or usernames etc on your local laptop with the ultimate goal of checking all results into a git repository for deploy later on the ISLE Host server.</p>
+<p>The only change is that unless otherwise directed e.g. Apache <code>html</code> and Fedora <code>data</code>. all changes should be made on the local laptop in the <code>yourdomain-config</code> directory.</p>
+<p>Please note as per the migration guide instructions the name of this directory shouldn't literally be "yourdomain-config" or "yourdomain-data" so replace "yourdomain" with the name of your intended Islandora site's domain.</p>
 <p>While this checklist will attempt to point out most of the merge challenges or pitfalls, you may encounter unique situations depending on the edits and customizations made to your Islandora environment in the past. This is a good place to reach out to the Islandora community for assistance.</p>
 <p><strong>Please note:</strong></p>
 <ul>
 <li>
-<p>In most cases, many of the configuration files copied from your running production Islandora will have comments (#) in them to help guide endusers to make the appropriate edits e.g. (# enduser edit here)</p>
+<p>In some cases, some of the configuration files copied from your running production Islandora may have comments (#) in them to help guide endusers to make the appropriate edits e.g. (# enduser edit here)</p>
 </li>
 <li>
 <p>In most cases, many of the configuration files copied from ISLE repository to <code>yourdomain-config</code> will have fake or empty settings in them. Please remove, edit or enter new values as advised.</p>
 </li>
 </ul>
 <hr />
-<h4 id="apache">Apache</h4>
+<h2 id="apache">Apache</h2>
 <p>Compare, edit, merge or copy the following from the source directory <code>current-production-config/apache/</code> to:</p>
 <ul>
-<li><code>yourdomain-config/apache/</code></li>
+<li><code>yourdomain-config/apache/</code> on your local laptop.</li>
 </ul>
-<p>This data will be used in conjunction with an Apache container.</p>
 <table>
 <thead>
 <tr>
@@ -986,7 +1094,7 @@
 <th>Description</th>
 <th>Production Data Copy</th>
 <th>Merge, Copy or Edit Location / Destination</th>
-<th>Notes</th>
+<th>Copy location</th>
 </tr>
 </thead>
 <tbody>
@@ -994,28 +1102,29 @@
 <td>html</td>
 <td>Islandora/Drupal Website</td>
 <td>current-production-config/apache/</td>
-<td>yourdomain-config/apache/</td>
-<td><em>see below</em></td>
+<td>yourdomain-data/apache/</td>
+<td>Remote ISLE Host server</td>
 </tr>
 <tr>
 <td>settings.php</td>
 <td>Drupal settings.php file</td>
 <td>current-production-config/apache/</td>
 <td>yourdomain-config/apache/</td>
-<td><em>see below</em></td>
+<td>Local ISLE config laptop</td>
 </tr>
 <tr>
 <td>site.conf</td>
 <td>Apache webserver vhost file</td>
 <td>current-production-config/apache/</td>
-<td>yourdomain-config/apache/</td>
-<td><em>see below</em></td>
+<td>reference file but do not copy</td>
+<td>Local ISLE config laptop</td>
 </tr>
 </tbody>
 </table>
+<h3 id="apache-edits">Apache Edits</h3>
 <ul>
 <li>
-<p><code>html</code> - endusers will <strong>COPY</strong> this entire directory <strong>instead</strong> to <code>yourdomain-config/apache/html</code></p>
+<p><code>html</code> - endusers will have <strong>copied</strong> this entire directory <strong>instead</strong> to a new directory called <code>yourdomain-data/apache/html/</code> on your remote ISLE host server in the appropriate storage area.</p>
 </li>
 <li>
 <p><code>settings.php</code> - endusers will want to edit database and user names for Drupal sites to connect properly.</p>
@@ -1027,26 +1136,61 @@
 <p>Line 288: <em>Recommend adding a Drupal hash value here of 25+ alpha-numeric characters</em></p>
 </li>
 <li>
-<p>Line 312: <code>$base_url</code> should be the URL of the ISLE production Drupal website e.g. <code>https://site.institution.extension</code></p>
+<p>Line 312: <code>$base_url</code> should be commented out as it isn't used due to the proxy.</p>
 </li>
 </ul>
 </li>
-<li>
-<p><code>site.conf</code> - endusers will edit this file as required to setup the Apache webserver on the Apache container.</p>
+</ul>
+<h3 id="apache-sites-enabled">Apache - sites-enabled</h3>
+<p>Please note that endusers will take values from the <code>site.conf</code> file and flow the information as needed into the to be renamed <code>newsite-sample-ssl.conf</code> &amp; <code>newsite-sample.conf</code> files accordingly with the domain name of your choice. This file will not be copied to yourdomain-config/apache/ for any usage.</p>
 <ul>
 <li>
-<p>The filename can stay the same or can be changed. Please note that Line 85 of the associated <code>docker-compose.yml</code> will need to be updated if the file is renamed</p>
+<p>Within the <code>sites-enabled</code> directory, rename the files <code>newsite-sample-ssl.conf</code> and <code>newsite-sample.conf</code> to your domain names - example:</p>
+<ul>
+<li>
+<p><code>digital-collections.example.edu_ssl.conf</code></p>
 </li>
 <li>
-<p>Lines 2, 3, 6, 7, 34 - 37, 39, 40, 44 &amp; 45:  endusers will edit this file as directed in the (# enduser please edit this and then remove this comment) instructions.</p>
-</li>
-<li>
-<p>Do remove (# enduser please edit this and then remove this comment) after editing or adding the appropriate values.</p>
+<p><code>digital-collections.example.edu.conf</code></p>
 </li>
 </ul>
 </li>
+<li>
+<p>Edit the previously named <code>newsite-sample.conf</code> file and change lines 3 and 4 to point to the location of your apache logs on the container - example:</p>
+<ul>
+<li>
+<p><code>ErrorLog /var/log/apache2/digital-collections.example.edu.ssl.error.log</code></p>
+</li>
+<li>
+<p><code>CustomLog /var/log/apache2/digital-collections.example.edu.ssl.access.log combined</code></p>
+</li>
 </ul>
-<h4 id="apache-optional-edits">Apache Optional Edits</h4>
+</li>
+<li>
+<p>Edit the previously named <code>newsite-sample-ssl.conf</code> file and change lines 4 and 5 to point to the location of your apache logs on the container - example:</p>
+<ul>
+<li>
+<p><code>ErrorLog /var/log/apache2/digital-collections.example.edu.ssl.error.log</code></p>
+</li>
+<li>
+<p><code>CustomLog /var/log/apache2/digital-collections.example.edu.ssl.access.log combined</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Edit the previously named <code>newsite-sample-ssl.conf</code> file and change lines 12, 13 and 14 to point to the location of your certs on the <code>apache</code> container - example:</p>
+<p>```</p>
+<pre><code>SSLCertificateFile  /certs/newsite-sample.pem
+SSLCertificateChainFile /certs/newsite-sample-interm.pem
+SSLCertificateKeyFile /certs/newsite-sample-key.pem
+</code></pre>
+<p>```</p>
+</li>
+<li>
+<p>If there are any additional customizations required, you'll need to copy them into these two vhost files accordingly.</p>
+</li>
+</ul>
+<h3 id="apache-optional-edits">Apache Optional Edits</h3>
 <table>
 <thead>
 <tr>
@@ -1054,7 +1198,7 @@
 <th>Description</th>
 <th>Production Data Copy</th>
 <th>Merge, Copy or Edit Location / Destination</th>
-<th>Notes</th>
+<th>Copy location</th>
 </tr>
 </thead>
 <tbody>
@@ -1063,7 +1207,7 @@
 <td>PHP configuration file</td>
 <td>current-production-config/apache/</td>
 <td>yourdomain-config/apache/</td>
-<td><em>see below</em></td>
+<td>Local ISLE config laptop</td>
 </tr>
 </tbody>
 </table>
@@ -1082,7 +1226,7 @@
 <th>Description</th>
 <th>Production Data Copy</th>
 <th>Merge, Copy or Edit Location / Destination</th>
-<th>Notes</th>
+<th>Copy location</th>
 </tr>
 </thead>
 <tbody>
@@ -1091,7 +1235,7 @@
 <td>Cronjob for tmpreaper</td>
 <td>current-production-config/apache/</td>
 <td>yourdomain-config/apache/</td>
-<td><em>see below</em></td>
+<td>Local ISLE config laptop</td>
 </tr>
 </tbody>
 </table>
@@ -1103,10 +1247,55 @@
 <p><strong>Please note:</strong> an additional line will have to be added to the associated <code>docker-compose.yml</code> in the Apache <code>volumes:</code> section for this edit to work e.g. <code>- ./apache/tmpreaper/cron:/etc/cron.d/tmpreaper-cron</code></p>
 </li>
 </ul>
-<h4 id="fedora">Fedora</h4>
+<h3 id="apache-ssl-certs">Apache - ssl-certs</h3>
+<p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<ul>
+<li>
+<p>Copy your original production SSL certificates for Apache into the <code>apache/ssl-certs</code> subdirectory. They will and should have different names than the examples provided below dependent on the ISLE environment you are setting up e.g. (<em>production, staging or development</em>).</p>
+<ul>
+<li>
+<p>There can be up to 2 - 3 files involved in this process.</p>
+<ul>
+<li>
+<p>1 x SSL Certificate Key File e.g. <code>newsite-sample-key.pem</code></p>
+<ul>
+<li>This file is required.</li>
+<li>Please also note that the file extensions can also be: <code>.key</code> or <code>.pem</code></li>
+</ul>
+</li>
+<li>
+<p>1 x SSL Certificate File e.g. <code>newsite-sample.pem</code></p>
+<ul>
+<li>This file is required.</li>
+<li>Please also note that the file extensions can also be: <code>.cer</code>, <code>.crt</code> or <code>.pem</code></li>
+</ul>
+</li>
+<li>
+<p>1 x SSL Certificate Chain File e.g. <code>newsite-sample-interm.pem</code></p>
+<ul>
+<li>This file may be <strong>optional</strong> in some setups but is generally recommended for use by the <code>apache</code> container when available.</li>
+<li>It will not be used by the <code>proxy</code> container.</li>
+<li>Please also note that the file extensions can also be: <code>.cer</code>, <code>.crt</code> or <code>.pem</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="apache-ssl-certs-multi">Apache - ssl-certs (multi)</h3>
+<ul>
+<li>When creating multiple environments for ISLE, please change all of the file and key names accordingly to reflect the environment e.g. adding (<code>-prod, -stage, -dev</code> to file names). Later on, this process will assist in organizing proper filing of files for the <code>proxy</code> container and stop any situation where a file gets overwritten or improperly referenced by the wrong environment.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>* 1 x SSL Certificate Key File e.g. `newsite-dev-key.pem`
+* 1 x SSL Certificate File e.g. `newsite-dev.pem`
+* 1 x SSL Certificate Chain File e.g. `newsite-dev-interm.pem`
+</code></pre>
+<h2 id="fedora">Fedora</h2>
 <p>Compare, edit, merge or copy the following from the suggested directory <code>current-production-config/fedora/</code> to:</p>
 <ul>
-<li><code>yourdomain-config/fedora/</code></li>
+<li><code>yourdomain-config/fedora/</code> on your local laptop.</li>
 </ul>
 <table>
 <thead>
@@ -1114,52 +1303,73 @@
 <th>Data</th>
 <th>Description</th>
 <th>Possible Location</th>
-<th>Suggested Destination</th>
-<th>Notes</th>
+<th>Merge, Copy or Edit Location / Destination</th>
+<th>Copy location</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>data</td>
+<td>datastreamStore</td>
 <td>Entire Fedora data directory</td>
-<td>/usr/local/fedora/</td>
-<td>yourdomain-config/fedora/</td>
-<td><em>see below</em></td>
+<td>/usr/local/fedora/data/</td>
+<td>yourdomain-data/fedora/data/datastreamStore</td>
+<td>Remote ISLE Host server</td>
+</tr>
+<tr>
+<td>fedora-xacml-policies</td>
+<td>Entire Fedora data directory</td>
+<td>/usr/local/fedora/data/</td>
+<td>yourdomain-data/fedora/data/fedora-xacml-policies</td>
+<td>Remote ISLE Host server</td>
+</tr>
+<tr>
+<td>objectStore</td>
+<td>Entire Fedora data directory</td>
+<td>/usr/local/fedora/data/</td>
+<td>yourdomain-data/fedora/data/objectStore</td>
+<td>Remote ISLE Host server</td>
 </tr>
 <tr>
 <td>fedora.fcfg</td>
 <td>Fedora repository config file</td>
 <td>/usr/local/fedora/server/config/</td>
-<td>/yourdomain-config/fedora/</td>
-<td><em>see below</em></td>
+<td>yourdomain-config/fedora/</td>
+<td>Local ISLE config laptop</td>
 </tr>
 <tr>
 <td>fedora-users.xml</td>
 <td>Fedora users config file</td>
 <td>/usr/local/fedora/server/config/</td>
-<td>/yourdomain-config/fedora/</td>
-<td><em>see below</em></td>
+<td>yourdomain-config/fedora/</td>
+<td>Local ISLE config laptop</td>
 </tr>
 <tr>
 <td>filter-drupal.xml</td>
 <td>Fedora Drupal filter file</td>
 <td>/usr/local/fedora/server/config/</td>
-<td>/yourdomain-config/fedora/</td>
-<td><em>see below</em></td>
+<td>yourdomain-config/fedora/</td>
+<td>Local ISLE config laptop</td>
 </tr>
 <tr>
 <td>repository-policies</td>
 <td>Fedora Drupal filter file</td>
 <td>/usr/local/fedora/server/config/</td>
-<td>/yourdomain-config/fedora/</td>
-<td><em>see below</em></td>
+<td>yourdomain-config/fedora/</td>
+<td>Local ISLE config laptop</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Fedora Notes</strong>:</p>
+<h3 id="fedora-edits">Fedora Edits</h3>
 <ul>
 <li>
-<p><code>data</code> - endusers will <strong>COPY</strong> this entire directory <strong>instead</strong> to <code>yourdomain-config/fedora/data</code></p>
+<p>The outlined contents (above) of the production Islandora Fedora <code>data</code> directory should be copied to a new directory called <code>yourdomain-data/fedora/data/</code> on your remote ISLE host server in the appropriate storage area.</p>
+<ul>
+<li>Do not copy the following directories from the production Islandora fedora <code>/usr/local/fedora/data</code> directory.<ul>
+<li>/usr/local/fedora/<code>data/activemq-data</code></li>
+<li>/usr/local/fedora/<code>data/resourceIndex</code></li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p><code>fedora.fcfg</code> - endusers will want to edit the following:</p>
@@ -1212,30 +1422,65 @@
 <ul>
 <li><code>fedora/repository-policies</code> - endusers can edit the files contained within for more granular or customized Fedora user permissions or repository access.</li>
 </ul>
-<h4 id="solr">Solr</h4>
-<pre><code>   Copy the following below from the `current-production-config/solr/`
-   This data will be used in conjunction with a Solr container.
-   | Data           | Description               | Possible Location        | Suggested ISLE Path Destination          | Notes         |
-   | -------------  | -------------             | -------------            | -------------                            | ------------- |
-   | schema.xml     | Solr index config file    | ../solr/collection1/conf | /yourdomain-config/solr/ | _see below_   |
-   | solrconfig.xml | Solr config file          | ../solr/collection1/conf | /yourdomain-config/solr/ | _see below_   |
-   | solr.xml       | Solr config file file     | /opt/solr/               | /yourdomain-config/solr/ | _see below_   |
-   | stopwords.txt  | solr webserver vhost file | ../solr/collection1/conf | /yourdomain-config/solr/ | _see below_   |
-</code></pre>
-<p><strong>Solr Notes</strong>:</p>
+<h2 id="solr">Solr</h2>
+<p>Compare, edit, merge or copy the following from the source directory <code>current-production-config/solr/</code> to:</p>
+<ul>
+<li><code>yourdomain-config/solr/</code> on your local laptop.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Description</th>
+<th>Possible Location</th>
+<th>Merge, Copy or Edit Location / Destination</th>
+<th>Copy location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>schema.xml</td>
+<td>Solr index config file</td>
+<td>../solr/collection1/conf</td>
+<td>yourdomain-config/solr/</td>
+<td>Local ISLE config laptop</td>
+</tr>
+<tr>
+<td>solrconfig.xml</td>
+<td>Solr config file</td>
+<td>../solr/collection1/conf</td>
+<td>yourdomain-config/solr/</td>
+<td>Local ISLE config laptop</td>
+</tr>
+<tr>
+<td>stopwords.txt</td>
+<td>solr webserver vhost file</td>
+<td>../solr/collection1/conf</td>
+<td>yourdomain-config/solr/</td>
+<td>Local ISLE config laptop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solr-edits">Solr Edits</h3>
 <ul>
 <li><code>schema.xml</code></li>
 <li><em>Usually the first file one configures when setting up a new Solr installation</em></li>
-<li>The schema declares<ul>
+<li>
+<p>The schema declares</p>
+<ul>
 <li>what kinds of fields there are</li>
 <li>which field should be used as the unique/primary key</li>
 <li>which fields are required</li>
 <li>how to index and search each field</li>
 </ul>
 </li>
-<li><code>solrconfig.xml</code></li>
+<li>
+<p><code>solrconfig.xml</code></p>
+</li>
 <li><em>The solrconfig.xml file is the configuration file with the most parameters affecting Solr itself.</em></li>
-<li>In solrconfig.xml, one can configure the following:<ul>
+<li>
+<p>In solrconfig.xml, one can configure the following:</p>
+<ul>
 <li>request handlers, which process requests to Solr, e.g. requests to add documents to the index or requests to return results for a query</li>
 <li>processes that "listen" for particular query-related events; listeners can be used to trigger the execution of special code</li>
 <li>the Request Dispatcher for managing HTTP communications</li>
@@ -1243,9 +1488,9 @@
 <li>parameters related to replication and duplication</li>
 </ul>
 </li>
-<li><code>solr.xml</code></li>
-<li><em>The solr.xml file defines global configuration options that apply to all or many cores.</em></li>
-<li><code>stopwords.txt</code></li>
+<li>
+<p><code>stopwords.txt</code></p>
+</li>
 <li>_Using the stopwords.txt file, one can avoid the common words of a language, which do not add a significant value to any search.</li>
 <li>
 <p><em>For example, a, an, the, you, I, am, and so on. One can specify words to be removed from the Solr search in this file line-by-line.</em></p>
@@ -1257,6 +1502,23 @@
 <li>/usr/local/solr</li>
 <li>/var/lib/tomcat7/webapps/solr</li>
 <li>/usr/share/tomcat/webapps/solr</li>
+</ul>
+<hr />
+<h2 id="proxy-directory">Proxy directory</h2>
+<p>If need be, please refer to the <strong>Systems</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<p>This directory and service will not exist on any current islandora production systems. Please pick one of the following guides to complete this configuration.</p>
+<ul>
+<li>
+<p>If the migrated production site is to be the first or only site running on the ISLE host server, please follow the <a href="../../03_installation_new_site/new_site_installation_guide_single/">New Site Installation Guide - w/ Single ISLE Environment</a>, <code>### Proxy directory</code> section, lines 317 - 395.</p>
+</li>
+<li>
+<p>If the migrated production site is not the first or only site running on the ISLE host server, please follow the <a href="../../03_installation_new_site/new_site_installation_guide_multi/">New Site Installation Guide - w/ multiple ISLE Environments</a></p>
+<ul>
+<li>Read the <code>Assumptions / Prerequisites</code> section, lines 16 -32</li>
+<li>Read the <code>Multiple ISLE / Islandora Environments</code> section, lines 36 -88</li>
+<li>All of the sections starting with <code>Proxy directory</code> paying particular attention to anything labelled with <code>(multi)</code>, lines 384 - 623</li>
+</ul>
+</li>
 </ul>
                 
                   
@@ -1276,7 +1538,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../migration_export_checklist/" title="Export Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../migration_export_checklist/" title="Migration Export Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1285,19 +1547,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Export Checklist
+                Migration Export Checklist
               </span>
             </div>
           </a>
         
         
-          <a href="../migration_docker_compose_edit_checklist/" title="Docker Composer Edit Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../migration_docker_compose_edit_checklist/" title="Migration Docker Compose Edit Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docker Composer Edit Checklist
+                Migration Docker Compose Edit Checklist
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

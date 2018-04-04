@@ -38,7 +38,7 @@
     
     
       
-        <title>Docker Composer Edit Checklist - Islandora Enterprise (ISLE)</title>
+        <title>Migration Docker Compose Edit Checklist - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -98,7 +98,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Docker Composer Edit Checklist
+                Migration Docker Compose Edit Checklist
               </span>
             
           
@@ -332,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_example_user_story/" title="Example User Story" class="md-nav__link">
-      Example User Story
+    <a href="../../02_installation_test/ild_example_user_story/" title="Test Site Example User Story" class="md-nav__link">
+      Test Site Example User Story
     </a>
   </li>
 
@@ -392,8 +392,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_example_user_story/" title="Example User Story" class="md-nav__link">
-      Example User Story
+    <a href="../../03_installation_new_site/new_site_example_user_story/" title="New Site Example User Story" class="md-nav__link">
+      New Site Example User Story
     </a>
   </li>
 
@@ -454,8 +454,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_example_user_story/" title="Example User Story" class="md-nav__link">
-      Example User Story
+    <a href="../migration_example_user_story/" title="Migration Example User Story" class="md-nav__link">
+      Migration Example User Story
     </a>
   </li>
 
@@ -466,8 +466,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_installation_guide/" title="Installation Guide" class="md-nav__link">
-      Installation Guide
+    <a href="../migration_installation_guide/" title="Migration Guide" class="md-nav__link">
+      Migration Guide
     </a>
   </li>
 
@@ -478,8 +478,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_export_checklist/" title="Export Checklist" class="md-nav__link">
-      Export Checklist
+    <a href="../migration_export_checklist/" title="Migration Export Checklist" class="md-nav__link">
+      Migration Export Checklist
     </a>
   </li>
 
@@ -490,8 +490,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_merge_checklist/" title="Merge Checklist" class="md-nav__link">
-      Merge Checklist
+    <a href="../migration_merge_checklist/" title="Migration Merge Checklist" class="md-nav__link">
+      Migration Merge Checklist
     </a>
   </li>
 
@@ -509,11 +509,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Docker Composer Edit Checklist
+        Migration Docker Compose Edit Checklist
       </label>
     
-    <a href="./" title="Docker Composer Edit Checklist" class="md-nav__link md-nav__link--active">
-      Docker Composer Edit Checklist
+    <a href="./" title="Migration Docker Compose Edit Checklist" class="md-nav__link md-nav__link--active">
+      Migration Docker Compose Edit Checklist
     </a>
     
       
@@ -548,8 +548,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_reindex_process/" title="Reindex Process" class="md-nav__link">
-      Reindex Process
+    <a href="../migration_reindex_process/" title="Migration Reindex Process" class="md-nav__link">
+      Migration Reindex Process
     </a>
   </li>
 
@@ -889,7 +889,7 @@
               
                 
                 
-                  <h1>Docker Composer Edit Checklist</h1>
+                  <h1>Migration Docker Compose Edit Checklist</h1>
                 
                 <h2 id="migration-docker-compose-edit-guidelines">Migration Docker Compose Edit Guidelines</h2>
 <p><strong>Mysql Service section</strong></p>
@@ -941,6 +941,9 @@ TO DO : apache service edits
 **TO DO:**  git clone from the institutional git repo e.g. `ISLE-config` to the /opt/ISLE/config/ (on ISLE host server using terminal)
 
 </code></pre>
+
+<p>apache service section</p>
+<p>uncomment       #- ./apache/site_vsets.sh:/var/www/html/site_vsets.sh # you'll need to uncomment to run this script once if migrating a production islandora site only   </p>
                 
                   
                 
@@ -959,7 +962,7 @@ TO DO : apache service edits
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../migration_merge_checklist/" title="Merge Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../migration_merge_checklist/" title="Migration Merge Checklist" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -968,19 +971,19 @@ TO DO : apache service edits
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Merge Checklist
+                Migration Merge Checklist
               </span>
             </div>
           </a>
         
         
-          <a href="../migration_reindex_process/" title="Reindex Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../migration_reindex_process/" title="Migration Reindex Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Reindex Process
+                Migration Reindex Process
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
