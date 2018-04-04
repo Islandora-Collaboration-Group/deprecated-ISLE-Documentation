@@ -144,12 +144,6 @@
     </url>
         
     <url>
-     <loc>/04_installation_migration/migration_docker_compose_edit_checklist/</loc>
-     <lastmod>2018-04-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/04_installation_migration/migration_reindex_process/</loc>
      <lastmod>2018-04-04</lastmod>
      <changefreq>daily</changefreq>

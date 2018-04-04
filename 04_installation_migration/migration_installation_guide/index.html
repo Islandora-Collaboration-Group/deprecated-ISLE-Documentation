@@ -546,8 +546,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-edit-checklist" title="Docker Edit Checklist" class="md-nav__link">
-    Docker Edit Checklist
+  <a href="#docker-compose-file" title="Docker compose file:" class="md-nav__link">
+    Docker compose file:
   </a>
   
 </li>
@@ -657,18 +657,6 @@
   <li class="md-nav__item">
     <a href="../migration_merge_checklist/" title="Migration Merge Checklist" class="md-nav__link">
       Migration Merge Checklist
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../migration_docker_compose_edit_checklist/" title="Migration Docker Compose Edit Checklist" class="md-nav__link">
-      Migration Docker Compose Edit Checklist
     </a>
   </li>
 
@@ -1054,8 +1042,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#docker-edit-checklist" title="Docker Edit Checklist" class="md-nav__link">
-    Docker Edit Checklist
+  <a href="#docker-compose-file" title="Docker compose file:" class="md-nav__link">
+    Docker compose file:
   </a>
   
 </li>
@@ -1160,7 +1148,6 @@
 <li><a href="../migration_example_user_story/">Migration Example User Story</a></li>
 <li><a href="../migration_export_checklist/">Migration Export Checklist</a></li>
 <li><a href="../migration_merge_checklist/">Migration Merge Checklist</a></li>
-<li><a href="../migration_docker_compose_edit_checklist/">Migration Docker Compose Edit Checklist</a></li>
 <li><a href="../migration_reindex_process/">Migration Reindex Process</a></li>
 </ul>
 <hr />
@@ -1241,9 +1228,6 @@
 </li>
 <li>
 <p>Edit the docker-compose.yml file to point to all these fine new config files.</p>
-<ul>
-<li>(following the <a href="../migration_docker_compose_edit_checklist/">Migration Docker Compose Edit Checklist</a>)</li>
-</ul>
 </li>
 <li>Download ISLE images from Dockerhub and spin up the ISLE Containers (takes a while depending on network speeds)</li>
 <li>Go into the fedora container and do a re-indexing (takes a little while)<ul>
@@ -1369,11 +1353,23 @@
 <li>Compare and merge the Solr files: <code>stopwords</code></li>
 <li>Compare and merge the Fedora GSearch Islandora Transform (XSLTs) folder of files: <code>islandora_transforms</code></li>
 </ul>
-<h3 id="docker-edit-checklist">Docker Edit Checklist</h3>
+<h3 id="docker-compose-file">Docker compose file:</h3>
 <ul>
-<li>Edit the <code>docker-compose.yml</code> file to:</li>
-<li>Point to the new directories and config settings in <code>yourdomain-config</code></li>
+<li>
+<p>Edit the file: <strong>docker-compose.yml</strong> accordingly:</p>
+<ul>
+<li>Change container names (you could do this based on the environment (e.g. prod)</li>
 </ul>
+</li>
+<li>
+<p>For example if you are building a prod server instance:</p>
+<p><code>container_name: isle-solr-newsite</code></p>
+<p>changes to:</p>
+<p><code>container_name: isle-solr-prod</code></p>
+<p>and so on...</p>
+</li>
+</ul>
+<p><strong>Please note:</strong> Much of the file is already with comments guiding the enduser to key areas or files to edit or modify accordingly.</p>
 <hr />
 <h2 id="final-steps">Final steps</h2>
 <ul>
