@@ -226,18 +226,6 @@
     </url>
         
     <url>
-     <loc>/05_developer_docs/dev_push_images_dockerhub/</loc>
-     <lastmod>2018-04-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/05_developer_docs/dev_announcements_releases/</loc>
-     <lastmod>2018-04-04</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
      <loc>/05_developer_docs/dev_ansible_guide/</loc>
      <lastmod>2018-04-04</lastmod>
      <changefreq>daily</changefreq>

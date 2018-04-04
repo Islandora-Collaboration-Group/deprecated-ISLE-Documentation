@@ -72,6 +72,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#assumptions-prerequisites" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -660,9 +664,113 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Build Guide
+      </label>
+    
     <a href="./" title="Build Guide" class="md-nav__link md-nav__link--active">
       Build Guide
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
+    Assumptions / Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-ensure-there-are-no-local-isle-docker-images-present" title="Step 1: Ensure there are no local ISLE Docker images present" class="md-nav__link">
+    Step 1: Ensure there are no local ISLE Docker images present
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-rename-the-docker-composeyml-file" title="Step 2: Rename the docker-compose.yml file" class="md-nav__link">
+    Step 2: Rename the docker-compose.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-rename-the-docker-compose-buildyml-file" title="Step 3: Rename the docker-compose-build.yml file" class="md-nav__link">
+    Step 3: Rename the docker-compose-build.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3a-alternative-for-non-isle-maintainers-only-eg-developers" title="Step 3a: Alternative for non-ISLE maintainers only e.g. Developers" class="md-nav__link">
+    Step 3a: Alternative for non-ISLE maintainers only e.g. Developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-build-the-images-in-this-suggested-order" title="Step 4: Build the images in this suggested order" class="md-nav__link">
+    Step 4: Build the images in this suggested order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-tag-the-resulting-images" title="Step 5: Tag the resulting images" class="md-nav__link">
+    Step 5: Tag the resulting images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-push-the-images-to-the-image-repository" title="Step 6: Push the images to the image repository" class="md-nav__link">
+    Step 6: Push the images to the image repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-rename-the-docker-compose-buildyml-file" title="Step 7: Rename the docker-compose-build.yml file" class="md-nav__link">
+    Step 7: Rename the docker-compose-build.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-rename-the-docker-composeyml-file" title="Step 8: Rename the docker-compose.yml file" class="md-nav__link">
+    Step 8: Rename the docker-compose.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-delete-all-recently-built-and-pushed-isle-images-on-local-laptop" title="Step 9: Delete all recently built and pushed ISLE images on local laptop" class="md-nav__link">
+    Step 9: Delete all recently built and pushed ISLE images on local laptop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-test-the-images-pushed" title="Step 10: Test the images pushed." class="md-nav__link">
+    Step 10: Test the images pushed.
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -675,30 +783,6 @@
   <li class="md-nav__item">
     <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_push_images_dockerhub/" title="Pushing images to Dockerhub Guide" class="md-nav__link">
-      Pushing images to Dockerhub Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_announcements_releases/" title="Announcements of new releases" class="md-nav__link">
-      Announcements of new releases
     </a>
   </li>
 
@@ -811,6 +895,112 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
+    Assumptions / Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-ensure-there-are-no-local-isle-docker-images-present" title="Step 1: Ensure there are no local ISLE Docker images present" class="md-nav__link">
+    Step 1: Ensure there are no local ISLE Docker images present
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-rename-the-docker-composeyml-file" title="Step 2: Rename the docker-compose.yml file" class="md-nav__link">
+    Step 2: Rename the docker-compose.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-rename-the-docker-compose-buildyml-file" title="Step 3: Rename the docker-compose-build.yml file" class="md-nav__link">
+    Step 3: Rename the docker-compose-build.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3a-alternative-for-non-isle-maintainers-only-eg-developers" title="Step 3a: Alternative for non-ISLE maintainers only e.g. Developers" class="md-nav__link">
+    Step 3a: Alternative for non-ISLE maintainers only e.g. Developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-build-the-images-in-this-suggested-order" title="Step 4: Build the images in this suggested order" class="md-nav__link">
+    Step 4: Build the images in this suggested order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-tag-the-resulting-images" title="Step 5: Tag the resulting images" class="md-nav__link">
+    Step 5: Tag the resulting images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-push-the-images-to-the-image-repository" title="Step 6: Push the images to the image repository" class="md-nav__link">
+    Step 6: Push the images to the image repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-rename-the-docker-compose-buildyml-file" title="Step 7: Rename the docker-compose-build.yml file" class="md-nav__link">
+    Step 7: Rename the docker-compose-build.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-rename-the-docker-composeyml-file" title="Step 8: Rename the docker-compose.yml file" class="md-nav__link">
+    Step 8: Rename the docker-compose.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-delete-all-recently-built-and-pushed-isle-images-on-local-laptop" title="Step 9: Delete all recently built and pushed ISLE images on local laptop" class="md-nav__link">
+    Step 9: Delete all recently built and pushed ISLE images on local laptop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-test-the-images-pushed" title="Step 10: Test the images pushed." class="md-nav__link">
+    Step 10: Test the images pushed.
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -819,7 +1009,197 @@
                 
                   <h1>Build Guide</h1>
                 
-                
+                <p><strong>Caution</strong>: This guide is recommended for ISLE maintainers or Developers only and not for end-users.</p>
+<p>ISLE maintainers are to follow this guide to build the five Docker ISLE images using the <code>docker-compose-build.yml</code> file.</p>
+<p>Developers can follow this guide if they have edited their Dockerfiles with custom software and they then can push to their own Docker image repository.</p>
+<p>These images will contain the necessary base code, scripts and files to run the default sample <code>isle.localdomain</code>.</p>
+<p>This test ISLE / Islandora environment (<code>isle.localdomain</code>) includes an un-themed Drupal website and empty Fedora repository for endusers to develop code, test ingests, test metadata, update fields in SOLR indexing and otherwise "kick the tires" on ISLE prior for further usages e.g. creating a new ISLE production site or migrating a current Islandora production site to ISLE.</p>
+<p>While this checklist will attempt to point out most of the usage challenges or pitfalls, ISLE assumes no responsibility or liability in this matter should an enduser have customizations beyond what this guide outlines.</p>
+<p><strong>Please note:</strong> There is a <a href="../../../glossary">Glossary</a> with relevant terms to help guide installation.</p>
+<h3 id="assumptions-prerequisites">Assumptions / Prerequisites</h3>
+<ul>
+<li>
+<p>Laptop / workstation that conforms to the specifications outlined in the <a href="../../../01_installation_host_server/host_server_system_specifications/">Host Server Specifications</a></p>
+</li>
+<li>
+<p>This image build site guide is designed for a local laptop / workstation that has already followed the appropriate setup and configuration instructions in the <code>Test ISLE</code> section of the <a href="../../install_start_here/">Install Start Here</a> guide.</p>
+</li>
+<li>
+<p>Instructions below assume a MacOS or Linux laptop or workstation. Windows users may have to adjust / swap out various tools as needed.</p>
+</li>
+<li>
+<p>The ISLE project has been cloned from the ISLE project repository using the <code>master</code> branch. Do not build ISLE images with untested and developmental code. Only stable releases please.</p>
+</li>
+<li>
+<p>Having a cleaned up system prior to any build is key. Ensure that all local development containers, volumes and images associated with the build are deleted. Otherwise previously unaltered data or configurations could break or alter negatively the new images.</p>
+</li>
+<li>
+<p>ISLE maintainers, Developers have pre-existing knowledge or familiarity with <a href="https://docs.docker.com/engine/reference/builder/">Dockerfiles</a>, the <a href="https://docs.docker.com/engine/reference/commandline/build/">Docker Build</a> process and <a href="https://docs.docker.com/engine/reference/commandline/push/">pushing Docker images</a> to repositories.</p>
+</li>
+<li>
+<p><a href="https://docs.docker.com/engine/reference/builder/">Dockerfiles</a>, their editing process and compositions are familiar or known concepts.</p>
+</li>
+<li>
+<p>ISLE maintainers should already have access to the <a href="https://hub.docker.com/r/islandoracollabgroup">ISLE Dockerhub</a> image repository.</p>
+</li>
+<li>
+<p>Developers should have already setup their own separate Docker image repository. e.g. <a href="https://hub.docker.com">Dockerhub</a> following that site's instructions.</p>
+</li>
+<li>
+<p>Developers are free to mix official ISLE images with your own custom image build. Best practice would be to create new Dockerfiles that use the official ISLE images as the base image to build from.</p>
+</li>
+</ul>
+<hr />
+<h3 id="step-1-ensure-there-are-no-local-isle-docker-images-present">Step 1: Ensure there are no local ISLE Docker images present</h3>
+<p>If performing a brand new image build, the ISLE maintainer will need to ensure there are no previous image builds or cached build data.</p>
+<ul>
+<li>
+<p><code>docker image ls</code></p>
+</li>
+<li>
+<p>Remove any ISLE images by selecting their <code>IMAGE ID</code></p>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>docker image ls
+
+REPOSITORY                         TAG                 IMAGE ID            CREATED             SIZE
+islandoracollabgroup/isle-proxy    1.13                7cbd80c8b043        13 days ago         109MB
+islandoracollabgroup/isle-proxy    latest              7cbd80c8b043        13 days ago         109MB
+islandoracollabgroup/isle-apache   2.4                 ba6505e7a428        13 days ago         2.25GB
+islandoracollabgroup/isle-apache   latest              ba6505e7a428        13 days ago         2.25GB
+islandoracollabgroup/isle-apache   &lt;none&gt;              9bc727f301b8        2 weeks ago         2.25GB
+islandoracollabgroup/isle-proxy    &lt;none&gt;              23cb1c73c232        2 weeks ago         109MB
+</code></pre>
+
+<ul>
+<li><code>docker image rm -f 7cbd80c8b043</code></li>
+<li><code>docker image rm -f ba6505e7a428</code></li>
+<li><code>docker image rm -f 7cbd80c8b043</code></li>
+<li><code>docker image rm -f 9bc727f301b8</code></li>
+<li><code>docker image rm -f 23cb1c73c232</code></li>
+</ul>
+<h3 id="step-2-rename-the-docker-composeyml-file">Step 2: Rename the docker-compose.yml file</h3>
+<ul>
+<li>Rename the <code>docker-compose.yml</code> file to <code>docker-compose.bak</code></li>
+</ul>
+<h3 id="step-3-rename-the-docker-compose-buildyml-file">Step 3: Rename the docker-compose-build.yml file</h3>
+<ul>
+<li>Rename the <code>docker-compose-build.yml</code> file to <code>docker-compose.yml</code></li>
+</ul>
+<h3 id="step-3a-alternative-for-non-isle-maintainers-only-eg-developers">Step 3a: Alternative for non-ISLE maintainers only e.g. Developers</h3>
+<p>For <strong>non-ISLE maintainers only e.g. Developers (only)</strong>  you'll need to change the following lines in the newly renamed <code>docker-compose.yml</code> file.</p>
+<pre><code>    image: islandoracollabgroup/isle-mysql:latest
+    image: islandoracollabgroup/isle-fedora:latest
+    image: islandoracollabgroup/isle-apache:latest
+    image: islandoracollabgroup/isle-solr:latest
+    image: islandoracollabgroup/isle-proxy:latest
+
+    to
+
+    image: yourdockerimagerepo_orgname/isle-mysql:latest
+    image: yourdockerimagerepo_orgname/isle-fedora:latest
+    image: yourdockerimagerepo_orgname/isle-apache:latest
+    image: yourdockerimagerepo_orgname/isle-solr:latest
+    image: yourdockerimagerepo_orgname/isle-proxy:latest
+
+</code></pre>
+
+<p>Change only the images you need to rebuild or customize.</p>
+<h3 id="step-4-build-the-images-in-this-suggested-order">Step 4: Build the images in this suggested order</h3>
+<p>Please perform these steps one at time. If any errors occur during the build process, troubleshoot and edit the associated Dockerfile.</p>
+<ul>
+<li>
+<p><code>docker-compose build mysql</code></p>
+</li>
+<li>
+<p><code>docker-compose build fedora</code></p>
+</li>
+<li>
+<p><code>docker-compose build apache</code></p>
+</li>
+<li>
+<p><code>docker-compose build proxy</code></p>
+</li>
+<li>
+<p><code>docker-compose build solr</code></p>
+</li>
+</ul>
+<h3 id="step-5-tag-the-resulting-images">Step 5: Tag the resulting images</h3>
+<p>This renamed <code>docker-compose-build.yml</code> file will tag all builds by default with the <code>latest</code> tag.</p>
+<p>Review the current tags found on the <a href="../../06_specifications/specs_docker_containers_images/">Docker Containers &amp; Images</a> Specifications Page. Should the software version change, update this document with the new tags. You will need to tag each image further as needed. There are always two tags for every image, e.g. <code>latest</code> and the specific version of the primary software package used on the image or container. It is possible there will be more tags for different image versions in the future.</p>
+<p>For example if the installed proxy nginx software changes from <code>1.13</code> to <code>1.14</code>, change or add the new tag of <code>1.14</code></p>
+<p>To learn more about tagging, read the official Docker <a href="https://docs.docker.com/engine/reference/commandline/tag/">tag</a> documentation.</p>
+<p>To tag images:</p>
+<ul>
+<li><code>docker image ls</code> (<em>to see the new IMAGE IDs</em>)</li>
+<li><code>docker tag IMAGE ID image/TAG</code></li>
+</ul>
+<p>IMAGE ID is the 12-character identification string for the image (listed from the Docker images command), and TAG is our newly created versioning tag. So our command to tag a new <code>proxy</code> image would be:</p>
+<ul>
+<li><code>docker tag 7cbd80c8b043 islandoracollabgroup/isle-proxy:1.13</code></li>
+</ul>
+<p>Please note: your IMAGE ID will be different than the examples above.</p>
+<p>Developers, please note you are welcome to use tags that are useful for your institution e.g. <code>docker tag 7cbd80c8b043 yourdockerimagerepo_orgname/isle-proxy:1.13</code></p>
+<h3 id="step-6-push-the-images-to-the-image-repository">Step 6: Push the images to the image repository</h3>
+<p><strong>Please note:</strong> These steps assume use of Dockerhub. If you use a different Docker image repository, you'll need to change the following steps per their specific instructions.</p>
+<p><code>docker login</code></p>
+<p>Example output:</p>
+<pre><code>    Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+    Username (username_here):
+</code></pre>
+
+<ul>
+<li>Enter your Dockerhub username</li>
+<li>Enter your Dockerhub user password.</li>
+</ul>
+<p>Push the images one at a time. <strong>Please note:</strong> <em>Depending on your Internet connection's upload speed this process may take several hours.</em></p>
+<ul>
+<li><code>docker push islandoracollabgroup/isle-apache:latest</code></li>
+<li><code>docker push islandoracollabgroup/isle-fedora:latest</code></li>
+<li><code>docker push islandoracollabgroup/isle-mysql:latest</code></li>
+<li><code>docker push islandoracollabgroup/isle-proxy:latest</code></li>
+<li><code>docker push islandoracollabgroup/isle-solr:latest</code></li>
+</ul>
+<p>Repeat the process with any additional tags. <strong>Please note:</strong> <em>Depending on your Internet connection's upload speed this process may take several minutes.</em></p>
+<ul>
+<li><code>docker push islandoracollabgroup/isle-apache:2.4</code></li>
+<li><code>docker push islandoracollabgroup/isle-fedora:3.8.1</code></li>
+<li><code>docker push islandoracollabgroup/isle-mysql:5.6</code></li>
+<li><code>docker push islandoracollabgroup/isle-proxy:1.13</code></li>
+<li><code>docker push islandoracollabgroup/isle-solr:4.10.4</code></li>
+</ul>
+<h3 id="step-7-rename-the-docker-compose-buildyml-file">Step 7: Rename the docker-compose-build.yml file</h3>
+<ul>
+<li>Rename the <code>docker-compose.yml</code> file to <code>docker-compose-build.yml</code></li>
+</ul>
+<h3 id="step-8-rename-the-docker-composeyml-file">Step 8: Rename the docker-compose.yml file</h3>
+<ul>
+<li>Rename the <code>docker-compose.bak</code> file to <code>docker-compose.yml</code></li>
+</ul>
+<hr />
+<p>Steps below are mandatory for any ISLE maintainer but optional (though recommended) for any Developer.</p>
+<h3 id="step-9-delete-all-recently-built-and-pushed-isle-images-on-local-laptop">Step 9: Delete all recently built and pushed ISLE images on local laptop</h3>
+<ul>
+<li><code>docker image ls</code></li>
+</ul>
+<p>Example commands to repeat for each type of image.</p>
+<ul>
+<li><code>docker rm -f IMAGE ID islandoracollabgroup/TAG</code></li>
+<li><code>docker rm -f 7cbd80c8b043 islandoracollabgroup/isle-proxy:1.13</code></li>
+</ul>
+<h3 id="step-10-test-the-images-pushed">Step 10: Test the images pushed.</h3>
+<p>Pull down the newly pushed images.</p>
+<ul>
+<li><code>docker pull islandoracollabgroup/isle-apache:latest</code></li>
+<li><code>docker pull islandoracollabgroup/isle-fedora:latest</code></li>
+<li><code>docker pull islandoracollabgroup/isle-mysql:latest</code></li>
+<li><code>docker pull islandoracollabgroup/isle-proxy:latest</code></li>
+<li><code>docker pull islandoracollabgroup/isle-solr:latest</code></li>
+</ul>
+<p>Follow the instructions within the <code>docker-compose.yml</code> file or within the <a href="../../02_installation_test/ild_installation_guide/">Test Site Installation Guide</a> to start up containers and install the ISLE Test Site (<code>isle.localdomain</code>).</p>
+<p>Ensure that all components, connections etc are working, otherwise troubleshoot as required, making the appropriate fixes to the associated Dockerfiles, pushing changes to the ISLE project git repository and then REPEATING this entire build and push process.</p>
+<p>Always test prior and post to ensure there are no issues pushed to endusers.</p>
                 
                   
                 
