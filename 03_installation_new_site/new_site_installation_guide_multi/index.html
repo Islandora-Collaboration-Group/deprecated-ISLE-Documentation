@@ -1409,14 +1409,14 @@
 <li><a href="../new_site_example_user_story/">New Site Example User Story</a></li>
 </ul>
 <hr />
-<p><strong>Please note:</strong> There is a <a href="../../../glossary">Glossary</a> with relevant terms to help guide installation.</p>
+<p><strong>Please note:</strong> There is a <a href="../../glossary/">Glossary</a> with relevant terms to help guide installation.</p>
 <h2 id="assumptions-prerequisites">Assumptions / Prerequisites</h2>
 <ul>
 <li>
-<p>Comfortability with ISLE. Recommend first setting up the ISLE Test Site (<code>isle.localdomain</code>) via the <a href="../../../install_start_here">Install Start Here</a> guide. If you have already done this, please proceed.</p>
+<p>Comfortability with ISLE. Recommend first setting up the ISLE Test Site (<code>isle.localdomain</code>) via the <a href="../../install_start_here/">Install Start Here</a> guide. If you have already done this, please proceed.</p>
 </li>
 <li>
-<p>Host Server that conforms to the specifications outlined in the <a href="../../../01_installation_host_server/host_server_system_specifications/">Host Server Specifications</a></p>
+<p>Host Server that conforms to the specifications outlined in the <a href="../../01_installation_host_server/host_server_system_specifications/">Host Server Specifications</a></p>
 </li>
 <li>
 <p>This new site guide is designed for a Host server that has already followed the appropriate setup and configuration instructions in the <code>Create a new ISLE site</code> section of the <a href="../../install_start_here/">Install Start Here</a> guide.</p>
@@ -1431,7 +1431,7 @@
 <p>Have an existing domain name that works - is set up with DNS etc...</p>
 </li>
 <li>
-<p>Have <a href="../../../glossary#systems">SSL Certificates</a> previously created for the web domain. (<em>Please work with the appropriate internal IT resource to provision these files for your domain</em>)</p>
+<p>Have <a href="../../glossary/#systems">SSL Certificates</a> previously created for the web domain. (<em>Please work with the appropriate internal IT resource to provision these files for your domain</em>)</p>
 </li>
 <li>
 <p>ISLE project has been cloned to BOTH your local laptop/workstation AND the ISLE host server</p>
@@ -1671,7 +1671,7 @@
 
 <hr />
 <h4 id="apache-ssl-certs">Apache - ssl-certs</h4>
-<p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <ul>
 <li>
 <p>Copy your SSL certificates for Apache into the <code>apache/ssl-certs</code> subdirectory. They will and should have different names than the examples provided below dependent on the ISLE environment you are setting up e.g. (<em>production, staging or development</em>).</p>
@@ -1871,7 +1871,7 @@
 </ul>
 <hr />
 <h3 id="proxy-directory">Proxy directory</h3>
-<p>If need be, please refer to the <strong>Systems</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<p>If need be, please refer to the <strong>Systems</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <p>The <code>proxy</code> subdirectory contains all specific configurations and overrides necessary for the ISLE proxy image and resulting container to function properly with your changes. This is the Nginx reverse proxy server that properly routes all internal and external communication between the other four containers and the ISLE Host network.</p>
 <h4 id="proxy-sites-enabled">Proxy - sites-enabled</h4>
 <ul>
@@ -1961,7 +1961,7 @@
 <h4 id="proxy-ssl-certs">Proxy - ssl-certs</h4>
 <p>Copy your SSL certs into the ssl-certs subdirectory.</p>
 <p><em>DO NOT OVERWRITE OR DELETE the create_dhparam_pem file within this directory.</em></p>
-<p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <p>There are also additional links for the enduser to learn how to combine the SSL Certificate File with any available SSL Certificate Chain File for the <code>proxy</code> process to work properly.</p>
 <ul>
 <li>
@@ -2150,7 +2150,7 @@ d4994fca8ea7        isle_isle-external                          bridge          
 <hr />
 <h3 id="solr-directory">Solr directory</h3>
 <p>The <code>solr</code> subdirectory contains all specific configurations and overrides necessary for the ISLE solr image and resulting container to function properly with your changes. This is the SOLR search server that properly indexes all objects and metadata to provide speedy in-depth search functionality for the Islandora / Drupal site of the objects and collections contained within the Fedora repository.</p>
-<p>If need be, please refer to the <strong>Solr</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<p>If need be, please refer to the <strong>Solr</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <h4 id="solr-solr">Solr - solr</h4>
 <ul>
 <li>
@@ -2198,7 +2198,7 @@ d4994fca8ea7        isle_isle-external                          bridge          
 
 <hr />
 <h2 id="final-steps">Final steps</h2>
-<p>If need be, please refer to the <strong>Git</strong> section of the <a href="../../../glossary">Glossary</a> for relevant terms to help guide installation.</p>
+<p>If need be, please refer to the <strong>Git</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <ul>
 <li>
 <p>Now that all the changes are made (be sure to save), ISLE should be ready to test. First you'll need to push these changes to your private code repository.</p>
