@@ -444,6 +444,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#6-image-services" title="6. Image Services" class="md-nav__link">
+    6. Image Services
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1054,6 +1061,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#6-image-services" title="6. Image Services" class="md-nav__link">
+    6. Image Services
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1168,7 +1182,7 @@
 <td align="center">fedora</td>
 <td align="center">isle-fedora-ld</td>
 <td>see below</td>
-<td>8080, 80 (on container) mapped to 8777 (on host)</td>
+<td>8080 mapped to 8081 (on host)</td>
 </tr>
 </tbody>
 </table>
@@ -1202,7 +1216,7 @@
 </tr>
 <tr>
 <td>(DG) Islandora Transforms (XSLTs)</td>
-<td>as of 3/2018</td>
+<td>as of 8/2018</td>
 </tr>
 <tr>
 <td>Tomcat</td>
@@ -1211,10 +1225,6 @@
 <tr>
 <td>Oracle JDK</td>
 <td>8.x</td>
-</tr>
-<tr>
-<td>Djatoka</td>
-<td>1.1</td>
 </tr>
 </tbody>
 </table>
@@ -1232,13 +1242,13 @@
 <td>fedoraAdmin</td>
 <td>ild_fed_admin_2018</td>
 <td>Fedora</td>
-<td>http://hostip:8080/fedora/describe</td>
+<td>http://hostip:8081/fedora/describe</td>
 </tr>
 <tr>
 <td>fedoraIntCallUser</td>
 <td>ild_fed_IntCallUser_2018</td>
 <td>Fedora</td>
-<td>http://hostip:8080/fedora/objects</td>
+<td>http://hostip:8081/fedora/objects</td>
 </tr>
 <tr>
 <td>anonymous</td>
@@ -1250,25 +1260,19 @@
 <td>fgsAdmin</td>
 <td>ild_fgs_admin_2018</td>
 <td>Gsearch</td>
-<td>http://hostip:8080/fedoragsearch/rest?operation=updateIndex</td>
+<td>http://hostip:8081/fedoragsearch/rest?operation=updateIndex</td>
 </tr>
 <tr>
 <td>admin</td>
-<td>ild_tc_adm_2018</td>
+<td>isle_admin</td>
 <td>Tomcat</td>
-<td>http://hostip:8080/manager/html</td>
+<td>http://hostip:8081/manager/html</td>
 </tr>
 <tr>
 <td>manager</td>
-<td>ild_tc_man_2018</td>
+<td>isle_manager</td>
 <td>Tomcat</td>
-<td>http://hostip:8080/manager/html</td>
-</tr>
-<tr>
-<td>--</td>
-<td>--</td>
-<td>Djatoka</td>
-<td>http://hostip:8080/adore-djatoka/</td>
+<td>http://hostip:8081/manager/html</td>
 </tr>
 </tbody>
 </table>
@@ -1288,7 +1292,7 @@
 <td align="center">solr</td>
 <td align="center">isle-solr-ld</td>
 <td>see below</td>
-<td>8080 (on container) mapped to 8091 (on host)</td>
+<td>8080 (on container) mapped to 8082 (on host)</td>
 </tr>
 </tbody>
 </table>
@@ -1330,21 +1334,21 @@
 <tbody>
 <tr>
 <td>admin</td>
-<td>ild_tc_adm_2018</td>
+<td>isle_admin</td>
 <td>Tomcat</td>
-<td>http://hostip:8091/manager/html</td>
+<td>http://hostip:8082/manager/html</td>
 </tr>
 <tr>
 <td>manager</td>
-<td>ild_tc_man_2018</td>
+<td>isle_manager</td>
 <td>Tomcat</td>
-<td>http://hostip:8091/manager/html</td>
+<td>http://hostip:8082/manager/html</td>
 </tr>
 <tr>
 <td>--</td>
 <td>--</td>
 <td>Solr</td>
-<td>http://hostip:8091/solr/</td>
+<td>http://hostip:8082/solr/</td>
 </tr>
 </tbody>
 </table>
@@ -1413,8 +1417,8 @@
 </thead>
 <tbody>
 <tr>
-<td>isle_localdomain_admin</td>
-<td>isle_localdomain_adminpw2018</td>
+<td>isle</td>
+<td>isle</td>
 <td>Drupal site admin</td>
 <td><a href="https://isle.localdomain">https://isle.localdomain</a></td>
 </tr>
@@ -1435,8 +1439,73 @@
 <tr>
 <td align="center">proxy</td>
 <td align="center">isle-proxy</td>
-<td>Nginx 1.13</td>
+<td>Traefik</td>
 <td>80, 443</td>
+</tr>
+</tbody>
+</table>
+<p>| Account                | Password                      | Service               | URL      <br />
+|
+| None Required          | None Required                 | Proxy UI     | <a href="https://admin.isle.localdomain">https://admin.isle.localdomain</a> OR http://hostip:8080  |</p>
+<hr />
+<h4 id="6-image-services">6. Image Services</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Compose Service Name</th>
+<th align="center">Container Name</th>
+<th>Software</th>
+<th>Ports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">image-services</td>
+<td align="center">isle-images-ld</td>
+<td>see below</td>
+<td>8080 (on container) mapped to 8083 (on host)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Djatoka</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>Cantaloupe IIIF</td>
+<td>3.4.3</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Password</th>
+<th>Service</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--</td>
+<td>--</td>
+<td>Djatoka</td>
+<td>http://hostip:8083/adore-djatoka/</td>
+</tr>
+<tr>
+<td>admin</td>
+<td>isle_admin</td>
+<td>Cantaloupe</td>
+<td>http://hostip:8083/cantaloupe/admin</td>
 </tr>
 </tbody>
 </table>
