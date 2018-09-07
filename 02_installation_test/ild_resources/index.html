@@ -246,8 +246,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac Hig Sierra" class="md-nav__link">
-      Docker for Mac Hig Sierra
+    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac High Sierra" class="md-nav__link">
+      Docker for Mac High Sierra
     </a>
   </li>
 
@@ -663,54 +663,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_overview/" title="Documentation Overview" class="md-nav__link">
-      Documentation Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_editing_online/" title="Documentation Editing - Online" class="md-nav__link">
-      Documentation Editing - Online
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_editing_local/" title="Documentation Editing - Local" class="md-nav__link">
-      Documentation Editing - Local
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_mkdocs/" title="Installing Mkdocs" class="md-nav__link">
-      Installing Mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../05_developer_docs/dev_release_process/" title="Release process" class="md-nav__link">
       Release process
     </a>
@@ -735,32 +687,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_build_guide/" title="Build Guide" class="md-nav__link">
-      Build Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../05_developer_docs/dev_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_ansible_guide/" title="Ansible Guide" class="md-nav__link">
-      Ansible Guide
     </a>
   </li>
 
@@ -1444,9 +1372,24 @@
 </tr>
 </tbody>
 </table>
-<p>| Account                | Password                      | Service               | URL      <br />
-|
-| None Required          | None Required                 | Proxy UI     | <a href="https://admin.isle.localdomain">https://admin.isle.localdomain</a> OR http://hostip:8080  |</p>
+<table>
+<thead>
+<tr>
+<th align="center">Account</th>
+<th align="center">Password</th>
+<th align="center">Service</th>
+<th align="center">URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">None Required</td>
+<td align="center">None Required</td>
+<td align="center">Proxy UI</td>
+<td align="center"><a href="https://admin.isle.localdomain">https://admin.isle.localdomain</a> OR http://hostip:8080</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h4 id="6-image-services">6. Image Services</h4>
 <table>
@@ -1496,8 +1439,20 @@
 </thead>
 <tbody>
 <tr>
-<td>--</td>
-<td>--</td>
+<td>admin</td>
+<td>isle_admin</td>
+<td>Tomcat</td>
+<td>http://hostip:8082/manager/html</td>
+</tr>
+<tr>
+<td>manager</td>
+<td>isle_manager</td>
+<td>Tomcat</td>
+<td>http://hostip:8082/manager/html</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
 <td>Djatoka</td>
 <td>http://hostip:8083/adore-djatoka/</td>
 </tr>

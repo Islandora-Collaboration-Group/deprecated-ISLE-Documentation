@@ -38,7 +38,7 @@
     
     
       
-        <title>Ansible Guide - Islandora Enterprise (ISLE)</title>
+        <title>Dev ansible guide - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Ansible Guide
+                Dev ansible guide
               </span>
             
           
@@ -244,8 +244,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac Hig Sierra" class="md-nav__link">
-      Docker for Mac Hig Sierra
+    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac High Sierra" class="md-nav__link">
+      Docker for Mac High Sierra
     </a>
   </li>
 
@@ -540,12 +540,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Developer Docs
@@ -556,54 +554,6 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_overview/" title="Documentation Overview" class="md-nav__link">
-      Documentation Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_editing_online/" title="Documentation Editing - Online" class="md-nav__link">
-      Documentation Editing - Online
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_editing_local/" title="Documentation Editing - Local" class="md-nav__link">
-      Documentation Editing - Local
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_mkdocs/" title="Installing Mkdocs" class="md-nav__link">
-      Installing Mkdocs
-    </a>
-  </li>
-
         
           
           
@@ -635,211 +585,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_build_guide/" title="Build Guide" class="md-nav__link">
-      Build Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Ansible Guide
-      </label>
-    
-    <a href="./" title="Ansible Guide" class="md-nav__link md-nav__link--active">
-      Ansible Guide
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites-assumptions" title="Prerequisites / Assumptions" class="md-nav__link">
-    Prerequisites / Assumptions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ansible-deploy-script-explanation" title="Ansible Deploy Script Explanation" class="md-nav__link">
-    Ansible Deploy Script Explanation
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installs-software-dependencies-tools-including" title="Installs software dependencies &amp; tools including:" class="md-nav__link">
-    Installs software dependencies &amp; tools including:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#makes-isle-host-service-changes" title="Makes ISLE Host service changes" class="md-nav__link">
-    Makes ISLE Host service changes
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adds-users-groups-and-updates-permissions" title="Adds users, groups and updates permissions" class="md-nav__link">
-    Adds users, groups and updates permissions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installs-additional-software" title="Installs additional software" class="md-nav__link">
-    Installs additional software
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ansible-script-directory-structure" title="Ansible script directory structure" class="md-nav__link">
-    Ansible script directory structure
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-ansible-script-to-deploy-to-isle-host" title="Configure Ansible Script to deploy to ISLE Host" class="md-nav__link">
-    Configure Ansible Script to deploy to ISLE Host
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ansibledocker_installyml" title="ansible/docker_install.yml" class="md-nav__link">
-    ansible/docker_install.yml
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ansibleinventoryyml" title="ansible/inventory.yml" class="md-nav__link">
-    ansible/inventory.yml
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ansibleisle-prod-projectinstitutionyml" title="ansible/isle-prod-project.institution.yml" class="md-nav__link">
-    ansible/isle-prod-project.institution.yml
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ansible-commands-to-test-connection" title="Ansible commands to test connection" class="md-nav__link">
-    Ansible commands to test connection
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ansible-commands-for-deploy" title="Ansible commands for deploy" class="md-nav__link">
-    Ansible commands for deploy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qc-review-checklist" title="QC Review checklist" class="md-nav__link">
-    QC Review checklist
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker" title="Docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-compose" title="Docker Compose" class="md-nav__link">
-    Docker Compose
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#islandora-user" title="Islandora user" class="md-nav__link">
-    Islandora user
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#isle-project-directory" title="ISLE Project directory" class="md-nav__link">
-    ISLE Project directory
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#walkthrough-using-ansible-on-a-macos-control-machine" title="Walkthrough: Using Ansible on a MacOS control machine" class="md-nav__link">
-    Walkthrough: Using Ansible on a MacOS control machine
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1250,7 +998,7 @@
               
                 
                 
-                  <h1>Ansible Guide</h1>
+                  <h1>Dev ansible guide</h1>
                 
                 <p>You have the choice of using Ansible to deploy the Docker Host server dependencies instead of performing manual commands on either a CentOS or Ubuntu OS. The Ansible script and configuration files can be found in the root folder of the ISLE git repo in a directory named <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/ansible">ansible</a>. Additionally, the Ansible script is designed to detect the chosen operating system and then install the appropriate dependencies with minimal user interaction or prior configuration.</p>
 <p>Ansible is an free open source automation platform / tool which runs on Linux, Mac or BSD, doesn’t use local or remote agents and is relatively easy to setup. Ansible can help with server configuration management, application deployment, task automation and IT orchestration (<em>running tasks in sequence on several different servers or devices</em>).</p>
@@ -1834,41 +1582,6 @@ host_local_macos_isle_localdomain | SUCCESS =&gt; {
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../dev_testing_guide/" title="Testing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Testing Guide
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../../01_installation_host_server/host_server_system_specifications/" title="Host Server Specifications" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Host Server Specifications
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

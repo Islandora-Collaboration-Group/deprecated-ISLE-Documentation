@@ -38,7 +38,7 @@
     
     
       
-        <title>Build Guide - Islandora Enterprise (ISLE)</title>
+        <title>Dev build guide - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Build Guide
+                Dev build guide
               </span>
             
           
@@ -244,8 +244,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac Hig Sierra" class="md-nav__link">
-      Docker for Mac Hig Sierra
+    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac High Sierra" class="md-nav__link">
+      Docker for Mac High Sierra
     </a>
   </li>
 
@@ -540,12 +540,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Developer Docs
@@ -556,54 +554,6 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_overview/" title="Documentation Overview" class="md-nav__link">
-      Documentation Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_editing_online/" title="Documentation Editing - Online" class="md-nav__link">
-      Documentation Editing - Online
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_editing_local/" title="Documentation Editing - Local" class="md-nav__link">
-      Documentation Editing - Local
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_documentation_mkdocs/" title="Installing Mkdocs" class="md-nav__link">
-      Installing Mkdocs
-    </a>
-  </li>
-
         
           
           
@@ -633,145 +583,10 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Build Guide
-      </label>
-    
-    <a href="./" title="Build Guide" class="md-nav__link md-nav__link--active">
-      Build Guide
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
-    Assumptions / Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-ensure-there-are-no-local-isle-docker-images-present" title="Step 1: Ensure there are no local ISLE Docker images present" class="md-nav__link">
-    Step 1: Ensure there are no local ISLE Docker images present
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-rename-the-docker-composeyml-file" title="Step 2: Rename the docker-compose.yml file" class="md-nav__link">
-    Step 2: Rename the docker-compose.yml file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-rename-the-docker-compose-buildyml-file" title="Step 3: Rename the docker-compose-build.yml file" class="md-nav__link">
-    Step 3: Rename the docker-compose-build.yml file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3a-alternative-for-non-isle-maintainers-only-eg-developers" title="Step 3a: Alternative for non-ISLE maintainers only e.g. Developers" class="md-nav__link">
-    Step 3a: Alternative for non-ISLE maintainers only e.g. Developers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-build-the-images-in-this-suggested-order" title="Step 4: Build the images in this suggested order" class="md-nav__link">
-    Step 4: Build the images in this suggested order
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-tag-the-resulting-images" title="Step 5: Tag the resulting images" class="md-nav__link">
-    Step 5: Tag the resulting images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-push-the-images-to-the-image-repository" title="Step 6: Push the images to the image repository" class="md-nav__link">
-    Step 6: Push the images to the image repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-rename-the-docker-compose-buildyml-file" title="Step 7: Rename the docker-compose-build.yml file" class="md-nav__link">
-    Step 7: Rename the docker-compose-build.yml file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-8-rename-the-docker-composeyml-file" title="Step 8: Rename the docker-compose.yml file" class="md-nav__link">
-    Step 8: Rename the docker-compose.yml file
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-delete-all-recently-built-and-pushed-isle-images-on-local-laptop" title="Step 9: Delete all recently built and pushed ISLE images on local laptop" class="md-nav__link">
-    Step 9: Delete all recently built and pushed ISLE images on local laptop
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-10-test-the-images-pushed" title="Step 10: Test the images pushed." class="md-nav__link">
-    Step 10: Test the images pushed.
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
     <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_ansible_guide/" title="Ansible Guide" class="md-nav__link">
-      Ansible Guide
     </a>
   </li>
 
@@ -1116,7 +931,7 @@
               
                 
                 
-                  <h1>Build Guide</h1>
+                  <h1>Dev build guide</h1>
                 
                 <p><strong>Caution</strong>: This guide is recommended for ISLE maintainers or Developers only and not for end-users.</p>
 <p>ISLE maintainers are to follow this guide to build the five Docker ISLE images using the <code>docker-compose-build.yml</code> file.</p>
@@ -1321,41 +1136,6 @@ islandoracollabgroup/isle-proxy    &lt;none&gt;              23cb1c73c232       
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../dev_example_user_story/" title="Example User Story" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Example User Story
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../dev_testing_guide/" title="Testing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Testing Guide
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -240,8 +240,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac Hig Sierra" class="md-nav__link">
-      Docker for Mac Hig Sierra
+    <a href="../../01_installation_host_server/install_docker_for_mac/" title="Docker for Mac High Sierra" class="md-nav__link">
+      Docker for Mac High Sierra
     </a>
   </li>
 
@@ -557,54 +557,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_overview/" title="Documentation Overview" class="md-nav__link">
-      Documentation Overview
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_editing_online/" title="Documentation Editing - Online" class="md-nav__link">
-      Documentation Editing - Online
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_editing_local/" title="Documentation Editing - Local" class="md-nav__link">
-      Documentation Editing - Local
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_documentation_mkdocs/" title="Installing Mkdocs" class="md-nav__link">
-      Installing Mkdocs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../05_developer_docs/dev_release_process/" title="Release process" class="md-nav__link">
       Release process
     </a>
@@ -629,32 +581,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_build_guide/" title="Build Guide" class="md-nav__link">
-      Build Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../05_developer_docs/dev_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_ansible_guide/" title="Ansible Guide" class="md-nav__link">
-      Ansible Guide
     </a>
   </li>
 
@@ -904,7 +832,31 @@
                 
                   <h1>Updating ISLE</h1>
                 
-                <p>Add Instructions here</p>
+                <p>If you are already running an older version of ISLE, update to the latest version by doing the following:</p>
+<p><strong>WARNING</strong> It is recommended you do not do this on a production server until after the ISLE 
+1.1 Release Candidate has been fully tested by the community and released as a stable version.</p>
+<p>These instructions assume you have already installed a version of ISLE using git.</p>
+<ul>
+<li>In the command line, navigate to the ISLE directory.  This directory should contain the <code>docker-compose.yml</code> file.</li>
+<li>Shut down the existing ISLE stack, if running<ul>
+<li><code>docker-compose down -v</code></li>
+</ul>
+</li>
+<li>Update the docker files via git<ul>
+<li><code>git fetch</code></li>
+</ul>
+</li>
+<li>Update the docker containers<ul>
+<li><code>docker-compose pull</code></li>
+<li>This may take a few minutes depending on your network connection</li>
+</ul>
+</li>
+<li>Run the new docker containers<ul>
+<li><code>docker-compose up -d</code></li>
+</ul>
+</li>
+</ul>
+<p>If all goes well, the new containers should start up and your Islandora site should be available again, with no loss of existing content.  If you run into trouble, please see the <a href="https://github.com/Islandora-Collaboration-Group/ISLE#quick-stop-and-cleanup">Cleanup section of the quick start guide</a>.</p>
                 
                   
                 
