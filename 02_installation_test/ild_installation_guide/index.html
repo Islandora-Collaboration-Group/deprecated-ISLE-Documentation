@@ -1195,47 +1195,24 @@
 </ul>
 <p><em>For Windows Users only</em></p>
 <ul>
-<li>You may be prompted by Windows to:<ul>
-<li>Share the C drive with Docker.  Click okay or allow<ul>
+<li>
+<p>You may be prompted by Windows to:</p>
+<ul>
+<li>
+<p>Share the C drive with Docker.  Click okay or allow</p>
+<ul>
 <li>Enter your username and password</li>
 <li>Allow vpnkit.exe to communicate with the network.  Click Okay or Allow to accept the default selection.</li>
 <li>If the process seems to halt, check the taskbar for background windows.</li>
 </ul>
 </li>
+<li>
+<p><strong>This script will take some time (see estimate above.)</strong> You should see a lot of green [ok] messages.</p>
+</li>
+<li>If the script appears to pause and prompt for y/n, do not enter any values; the script will answer for you.  </li>
+<li>Wait until "Drush script finished! ...exiting" before proceeding.**</li>
 </ul>
 </li>
-</ul>
-<hr />
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-    * <strong>This script will take some time (see estimate above.)</strong> You should see a lot of green [ok] messages.
-    * If the script appears to pause and prompt for y/n, do not enter any values; the script will answer for you.<br />
-    * Wait until "Drush script finished! ...exiting" before proceeding.*<em>
-=======
-</em> This will put you into a root prompt at the command line where you will enter the following commands:
-    * <code>cd /utility-scripts/isle_drupal_build_tools/</code></p>
-<pre><code>* `./isle_islandora_installer.sh`
-
-    * **This script will take some time (see estimate above.)** You should see a lot of green [ok] messages.
-    * If the script appears to pause and prompt for y/n, do not enter any values; the script will answer for you.  
-    * Wait until "Drush script finished! ...exiting" before proceeding.**
-</code></pre>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>upstream/master</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<ul>
-<li>Once finished press the <code>Ctrl</code> and <code>d</code> keys or type <code>exit</code> to get out of the apache container</li>
 </ul>
 <h3 id="step-4-testing-the-site">Step 4: Testing the site</h3>
 <ul>
@@ -1271,10 +1248,10 @@
 <h3 id="note">Note</h3>
 <ul>
 <li>
-<p>The Proxy Control Panel is available at admin.isle.localdomain(https://admin.isle.localdomain).  No username/password are required.  This is unsafe for production environments.</p>
+<p>The Proxy Control Panel is available at <a href="https://admin.isle.localdomain">admin.isle.localdomain</a>.  No username/password are required.  This is unsafe for production environments.</p>
 </li>
 <li>
-<p>Portainer (a Docker control panel) is available at portainer.isle.localdomain(http://portainer.isle.localdomain). No username/password are required.  This is unsafe for production environments.</p>
+<p>Portainer (a Docker control panel) is available at <a href="http://portainer.isle.localdomain">portainer.isle.localdomain</a>. No username/password are required.  This is unsafe for production environments.</p>
 </li>
 </ul>
 <h3 id="warning">WARNING</h3>
@@ -1315,18 +1292,18 @@
 <ul>
 <li>
 <p>MySQL image pull &amp; container launch</p>
-<p><code>docker pull islandoracollabgroup/isle-mysql:latest</code></p>
+<p><code>docker pull islandoracollabgroup/isle-mysql:1.1</code></p>
 <p><code>docker-compose up -d mysql</code></p>
 </li>
 <li>
 <p>Fedora image pull &amp; container launch</p>
-<p><code>docker pull islandoracollabgroup/isle-fedora:latest</code></p>
+<p><code>docker pull islandoracollabgroup/isle-fedora:1.1</code></p>
 <p><code>docker-compose up -d fedora</code></p>
 <p>(Optional but recommended troubleshooting step)</p>
 <ul>
 <li>Please note the Tomcat service requires about  one to three minutes to startup and as such if the enduser rushes to the URL supplied below, the service page maytime out or be reported as unreachable. Give it a little time.</li>
 <li>After spinning up fedora container, check if the Fedora service is running prior to advancing.</li>
-<li>Navigate to http://fedora:8080/manager/html a popup login prompt should appear.</li>
+<li>Navigate to http://hostip:8081/manager/html a popup login prompt should appear.</li>
 <li>Enter the user name of <code>admin</code> and the password of <code>isle_admin</code></li>
 <li>Upon login a large display of running Tomcat applications should display, scroll down to fedora</li>
 <li>The application state / status should be true</li>
@@ -1338,12 +1315,12 @@
 </li>
 <li>
 <p>Solr image pull &amp; container launch</p>
-<p><code>docker pull islandoracollabgroup/isle-solr:latest</code></p>
+<p><code>docker pull islandoracollabgroup/isle-solr:1.1</code></p>
 <p><code>docker-compose up -d solr</code></p>
 </li>
 <li>
 <p>Apache image pull &amp; container launch</p>
-<p><code>docker pull islandoracollabgroup/isle-apache:latest</code></p>
+<p><code>docker pull islandoracollabgroup/isle-apache:1.1</code></p>
 <p><code>docker-compose up -d apache</code></p>
 </li>
 </ul>
