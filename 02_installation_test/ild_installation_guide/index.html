@@ -1137,7 +1137,7 @@
 <li>Run install script on Apache container</li>
 <li>Test the site</li>
 <li>Sample object ingestion</li>
-<li>Toubleshooting</li>
+<li>Troubleshooting</li>
 </ul>
 <h3 id="step-0-edit-etchosts-on-local-laptop-or-desktop">Step 0: edit /etc/hosts on local laptop or desktop</h3>
 <p>It is important to add <code>isle.localdomain admin.isle.localdomian portainer.isle.localdomain</code> to your <code>/etc/hosts</code> file, as connecting directly to an IP address can prevent some components from working properly.</p>
@@ -1166,7 +1166,7 @@
 </ul>
 </li>
 <li>
-<p><strong>Docker for Mac:</strong> Continue to use the open terminal and navigate <code>cd /opt/ISLE</code> to the ISLE project directory.</p>
+<p><strong>Docker for Mac:</strong> Continue to use the open terminal and navigate <code>cd ~/Documents/ISLE</code> to the ISLE project directory.</p>
 </li>
 <li>
 <p><strong>Docker for Windows:</strong> Continue to use the open PowerShell window and navigate to the ISLE project directory if not already there: <code>cd ~\Documents\ISLE</code>.</p>
@@ -1184,16 +1184,16 @@
 </ul>
 </li>
 <li>
-<p>This is going to download and start all five ISLE Docker images (<em>roughly 6 GB of data so it may take a little while depending on your Internet connection</em>)</p>
+<p>This is going to download and start all ISLE Docker images (<em>roughly 6 GB of data so it may take a little while depending on your Internet connection</em>)</p>
 </li>
 <li>
 <p>To check if the containers are running: <code>docker ps</code> (shows only running containers)</p>
 <ul>
-<li>If you don't see all five containers try: <code>docker ps -a</code> (shows all containers running or not)</li>
+<li>If you don't see all containers try: <code>docker ps -a</code> (shows all containers running or not)</li>
 </ul>
 </li>
 </ul>
-<p><strong>If all five containers are NOT running, then proceed to the Troubleshooting section first before advancing to the "Install script on Apache container" section below</strong></p>
+<p><strong>If all containers are NOT running, then proceed to the Troubleshooting section first before advancing to the "Install script on Apache container" section below</strong></p>
 <hr />
 <h4 id="step-2-run-install-script-on-apache-container">Step 2: Run install script on Apache container</h4>
 <p><strong>Total build process</strong> may take up to 15 - 45 minutes (<em>depending on system and internet speeds</em>)</p>
@@ -1300,7 +1300,7 @@
 </ul>
 <p>Once your web server(s) have been disabled, resume the ISLE install process by repeating your last installation command, presumably <code>docker-compose up -d</code>.</p>
 <h4 id="non-running-containers">Non-running Containers</h4>
-<p>If you don't see five running containers, then stop the running containers with <code>docker-compose down -d</code> and start the containers one at a time following the instructions below:</p>
+<p>If you don't see all containers running, then stop the running containers with <code>docker-compose down -d</code> and start the containers one at a time following the instructions below:</p>
 <ul>
 <li>
 <p>MySQL image pull &amp; container launch</p>
