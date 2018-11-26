@@ -852,8 +852,8 @@
 
 
   <li class="md-nav__item">
-    <a href="https://docs.google.com/document/d/1r-I9n8mUhlJ5Z-X9AO-RrikhzH6I8bTPIL25LmtRbxE" title="Installing on Google Cloud Platform" class="md-nav__link">
-      Installing on Google Cloud Platform
+    <a href="https://docs.google.com/document/d/1r-I9n8mUhlJ5Z-X9AO-RrikhzH6I8bTPIL25LmtRbxE" title="Installing on Google Cloud Platform (Google Doc)" class="md-nav__link">
+      Installing on Google Cloud Platform (Google Doc)
     </a>
   </li>
 
@@ -900,8 +900,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08_about/contributing_to_project/" title="Contributing to Project" class="md-nav__link">
-      Contributing to Project
+    <a href="../../08_about/contributing_to_ISLE/" title="Contributing to ISLE" class="md-nav__link">
+      Contributing to ISLE
     </a>
   </li>
 
@@ -914,18 +914,6 @@
   <li class="md-nav__item">
     <a href="../../08_about/about_maintainers/" title="About Maintainers" class="md-nav__link">
       About Maintainers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../08_about/policies.md" title="Policies" class="md-nav__link">
-      Policies
     </a>
   </li>
 
@@ -1527,6 +1515,9 @@
 <p>Please note while you may be able to see objects being displayed, metadata and search results will be empty until you run the last step in the Reindex process.</p>
 </li>
 </ul>
+<p><strong>Troubleshooting Note</strong> Sites migrating <em>from</em> a version of Drupal prior to 7.50 may need to update their mysql tables to utf8mb4.  On the new site, go to <code>https://isle-prod-project.institution/admin/reports/status</code> (you will need to be logged in as a Drupal Admin) and look for the following error:</p>
+<p><img alt="Database 4 byte UTF-8 support Enabled, but database tables need conversion" src="../../assets/utf8mb4-error.png" /></p>
+<p>Instructions for converting the Drupal mysql database are available on the <a href="https://www.drupal.org/project/utf8mb4_convert">Drupal website</a></p>
 <hr />
 <h3 id="spin-up-solr-container-and-complete-the-reindex-processes">Spin up solr container and complete the reindex processes</h3>
 <ul>

@@ -735,8 +735,8 @@
 
 
   <li class="md-nav__item">
-    <a href="https://docs.google.com/document/d/1r-I9n8mUhlJ5Z-X9AO-RrikhzH6I8bTPIL25LmtRbxE" title="Installing on Google Cloud Platform" class="md-nav__link">
-      Installing on Google Cloud Platform
+    <a href="https://docs.google.com/document/d/1r-I9n8mUhlJ5Z-X9AO-RrikhzH6I8bTPIL25LmtRbxE" title="Installing on Google Cloud Platform (Google Doc)" class="md-nav__link">
+      Installing on Google Cloud Platform (Google Doc)
     </a>
   </li>
 
@@ -783,8 +783,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08_about/contributing_to_project/" title="Contributing to Project" class="md-nav__link">
-      Contributing to Project
+    <a href="../../08_about/contributing_to_ISLE/" title="Contributing to ISLE" class="md-nav__link">
+      Contributing to ISLE
     </a>
   </li>
 
@@ -797,18 +797,6 @@
   <li class="md-nav__item">
     <a href="../../08_about/about_maintainers/" title="About Maintainers" class="md-nav__link">
       About Maintainers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../08_about/policies.md" title="Policies" class="md-nav__link">
-      Policies
     </a>
   </li>
 
@@ -909,46 +897,68 @@
 <li>The FQDN set in your .env file's <code>BASE_DOMAIN</code> is the FQDN we're requesting SSL certificates.</li>
 </ul>
 <h2 id="steps">Steps</h2>
-<p>On the server (host) hosting your ISLE instance
-<em>Note:</em> These commands are run on a shell (terminal).
-<em>Note:</em> You do <strong>not</strong> need to stop your stack to complete these steps.
-  1. Change to the directory with your docker-compose.yml
-  2. Change to the <code>config/proxy</code> directory
-     <code>cd config/proxy</code>
-  3. Create a blank file called <code>acme.json</code>
-     <code>touch acme.json</code>
-  4. Modify the permissions of <code>acme.json</code> to be user read-write ONLY.
-     <code>chmod 600 acme.json</code>
-  5. Using your favorite text editor open <code>traefik.toml</code> (<em>note:</em> this file is in your <code>config/proxy</code> folder)
-  6. Locate lines and comment out (add a <code>#</code> to the start of the line) to these lines:
-      <code>toml
-      [[entryPoints.https.tls.certificates]]
-      certFile = "/certs/isle.localdomain.cert"
-      keyFile = "/certs/isle.localdomain.key"</code>
-      result:
-      <code>toml
-      # [[entryPoints.https.tls.certificates]]
-      # certFile = "/certs/isle.localdomain.cert"
-      # keyFile = "/certs/isle.localdomain.key"</code>
-  7. On a new line add the following, substituting in your email address:
-      <code>toml
-      [acme]
-      email = "your-email@my-institution.org/edu"
-      storage = "acme.json"
-      entryPoint = "https"
-      onHostRule = true
-      onDemand = false
-        [acme.httpChallenge]
-        entryPoint = "http"</code>
-  8. Save and close the file.
-  9. Change back to the directory with your docker-compose.yml in terminal.
- 10. Using your favorite text editor open docker-compose.yml.
- 11. Locate the section for <code>traefik</code> and under the <code>volumes</code> area for <code>traefik</code> add:
-     <code>yaml
-           - ./config/proxy/acme.json:/acme.json  ## Automated cert storage.</code>
- 12. Save and close the file.
- 13. Reload your ISLE instance by running <code>docker-compose up -d</code>.
- 14. Visit your website and inspect your certificates.</p>
+<p>On the server (host) hosting your ISLE instance</p>
+<p><em>Note:</em> These commands are run on a shell (terminal).</p>
+<p><em>Note:</em> You do <strong>not</strong> need to stop your stack to complete these steps.</p>
+<ol>
+<li>Change to the directory with your docker-compose.yml</li>
+<li>Change to the <code>config/proxy</code> directory
+   <code>cd config/proxy</code></li>
+<li>Create a blank file called <code>acme.json</code>
+   <code>touch acme.json</code></li>
+<li>Modify the permissions of <code>acme.json</code> to be user read-write ONLY.
+   <code>chmod 600 acme.json</code></li>
+<li>Using your favorite text editor open <code>traefik.toml</code> (<em>note:</em> this file is in your <code>config/proxy</code> folder)</li>
+<li>
+<p>Locate the following lines </p>
+<pre><code>[[entryPoints.https.tls.certificates]]  
+certFile = "/certs/isle.localdomain.cert"  
+keyFile = "/certs/isle.localdomain.key"
+</code></pre>
+</li>
+<li>
+<p>Comment the three lines out by adding a # to the beginning of the line:</p>
+<pre><code># [[entryPoints.https.tls.certificates]]  
+# certFile = "/certs/isle.localdomain.cert"  
+# keyFile = "/certs/isle.localdomain.key"
+</code></pre>
+</li>
+<li>
+<p>On a new line add the following, substituting in your email address:</p>
+<pre><code>[acme]  
+email = "your-email@my-institution.org/edu"  
+storage = "acme.json"  
+entryPoint = "https"  
+onHostRule = true  
+onDemand = false  
+  [acme.httpChallenge]  
+  entryPoint = "http"
+</code></pre>
+</li>
+<li>
+<p>Save and close the file.</p>
+</li>
+<li>
+<p>Change back to the directory with your docker-compose.yml in terminal.</p>
+</li>
+<li>
+<p>Using your favorite text editor open docker-compose.yml.</p>
+</li>
+<li>
+<p>Locate the section for <code>traefik</code> and under the <code>volumes</code> area for <code>traefik</code> add:</p>
+<pre><code>- ./config/proxy/acme.json:/acme.json  ## Automated cert storage.
+</code></pre>
+</li>
+<li>
+<p>Save and close the file.</p>
+</li>
+<li>
+<p>Reload your ISLE instance by running <code>docker-compose up -d</code>.</p>
+</li>
+<li>
+<p>Visit your website and inspect your certificates.</p>
+</li>
+</ol>
 <h2 id="resources">Resources</h2>
 <p>https://docs.traefik.io/user-guide/docker-and-lets-encrypt/</p>
                 
