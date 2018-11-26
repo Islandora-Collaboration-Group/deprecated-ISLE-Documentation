@@ -38,7 +38,7 @@
     
     
       
-        <title>Vagrant & VirtualBox on MacOS (Deprecated) - Islandora Enterprise (ISLE)</title>
+        <title>Install macos vagrant - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Vagrant & VirtualBox on MacOS (Deprecated)
+                Install macos vagrant
               </span>
             
           
@@ -180,12 +180,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Installation and Migration Instructions
@@ -201,19 +199,17 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
-      1. Set up the Host Server
+      1. Configure the Host Server
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
-        1. Set up the Host Server
+        1. Configure the Host Server
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -224,8 +220,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../install_on_centos/" title="CentOS 7.x" class="md-nav__link">
-      CentOS 7.x
+    <a href="../server-requirements/" title="Hardware Requirements" class="md-nav__link">
+      Hardware Requirements
     </a>
   </li>
 
@@ -236,155 +232,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../install_on_ubuntu_1804/" title="Ubuntu 18.04" class="md-nav__link">
-      Ubuntu 18.04
+    <a href="../software-dependencies/" title="Software Dependencies" class="md-nav__link">
+      Software Dependencies
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../install_docker_for_mac/" title="Docker for Mac High Sierra" class="md-nav__link">
-      Docker for Mac High Sierra
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../install_docker_for_windows/" title="Docker for Windows 10" class="md-nav__link">
-      Docker for Windows 10
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Vagrant & VirtualBox on MacOS (Deprecated)
-      </label>
-    
-    <a href="./" title="Vagrant & VirtualBox on MacOS (Deprecated)" class="md-nav__link md-nav__link--active">
-      Vagrant & VirtualBox on MacOS (Deprecated)
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-isle-on-a-mac-with-vagrant" title="Install ISLE on a Mac with Vagrant" class="md-nav__link">
-    Install ISLE on a Mac with Vagrant
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#assumptions-pre-requisites" title="Assumptions / Pre-Requisites" class="md-nav__link">
-    Assumptions / Pre-Requisites
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#install-process-overview" title="Install process overview" class="md-nav__link">
-    Install process overview
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-1-git-installation" title="Step 1: Git Installation" class="md-nav__link">
-    Step 1: Git Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-virtualbox-installation" title="Step 2: VirtualBox Installation" class="md-nav__link">
-    Step 2: VirtualBox Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-virtualbox-extensions-for-virtualbox-installation" title="Step 3: VirtualBox Extensions for VirtualBox Installation" class="md-nav__link">
-    Step 3: VirtualBox Extensions for VirtualBox Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4-vagrant-installation" title="Step 4: Vagrant Installation" class="md-nav__link">
-    Step 4: Vagrant Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-5-vagrant-plugin-installation" title="Step 5: Vagrant Plugin Installation" class="md-nav__link">
-    Step 5: Vagrant Plugin Installation
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-6-clone-the-isle-repository" title="Step 6: Clone the ISLE repository" class="md-nav__link">
-    Step 6: Clone the ISLE repository
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-7-start-the-isle-host-vagrant-vm-and-ssh-in" title="Step 7: Start the ISLE Host Vagrant VM and ssh in" class="md-nav__link">
-    Step 7: Start the ISLE Host Vagrant VM and ssh in
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#next-steps" title="Next steps" class="md-nav__link">
-    Next steps
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -415,11 +265,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
-      2. Install ISLE
+      2. Deploy ISLE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-2">
-        2. Install ISLE
+        2. Deploy ISLE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -434,11 +284,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-1" type="checkbox" id="nav-2-2-1">
     
     <label class="md-nav__link" for="nav-2-2-1">
-      Install a Test Site
+      Deploy a Test Site
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-1">
-        Install a Test Site
+        Deploy a Test Site
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -461,8 +311,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_installation_guide/" title="Test Site Installation Guide" class="md-nav__link">
-      Test Site Installation Guide
+    <a href="../../02_installation_test/ild_installation_guide/" title="Test Site Deploy Guide" class="md-nav__link">
+      Test Site Deploy Guide
     </a>
   </li>
 
@@ -494,11 +344,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
     
     <label class="md-nav__link" for="nav-2-2-2">
-      Install a New ISLE Site
+      Deploy a New ISLE Site
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-2">
-        Install a New ISLE Site
+        Deploy a New ISLE Site
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -521,8 +371,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_installation_guide_single/" title="New Site Installation Guide - w/ Single ISLE Environment" class="md-nav__link">
-      New Site Installation Guide - w/ Single ISLE Environment
+    <a href="../../03_installation_new_site/new_site_installation_guide_single/" title="New Site Deploy Guide - w/ Single ISLE Environment" class="md-nav__link">
+      New Site Deploy Guide - w/ Single ISLE Environment
     </a>
   </li>
 
@@ -533,8 +383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_installation_guide_multi/" title="New Site Installation Guide - w/ multiple ISLE Environments" class="md-nav__link">
-      New Site Installation Guide - w/ multiple ISLE Environments
+    <a href="../../03_installation_new_site/new_site_installation_guide_multi/" title="New Site Deploy Guide - w/ multiple ISLE Environments" class="md-nav__link">
+      New Site Deploy Guide - w/ multiple ISLE Environments
     </a>
   </li>
 
@@ -554,11 +404,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
     
     <label class="md-nav__link" for="nav-2-2-3">
-      Migrate an Existing Islandora site to ISLE
+      Migrate and Deploy an Existing Islandora site to ISLE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-3">
-        Migrate an Existing Islandora site to ISLE
+        Migrate and Deploy an Existing Islandora site to ISLE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -735,18 +585,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../host_server_system_specifications/" title="Host Server Specifications" class="md-nav__link">
-      Host Server Specifications
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../07_appendices/update_isle/" title="Updating ISLE" class="md-nav__link">
       Updating ISLE
     </a>
@@ -809,6 +647,18 @@
   <li class="md-nav__item">
     <a href="../../07_appendices/open-terminal-in-running-container/" title="Opening a Terminal in a Running Container" class="md-nav__link">
       Opening a Terminal in a Running Container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07_appendices/configuring-lets-encrypt/" title="Using Let's Encrypt with ISLE" class="md-nav__link">
+      Using Let's Encrypt with ISLE
     </a>
   </li>
 
@@ -1056,7 +906,7 @@
               
                 
                 
-                  <h1>Vagrant & VirtualBox on MacOS (Deprecated)</h1>
+                  <h1>Install macos vagrant</h1>
                 
                 <h2 id="install-isle-on-a-mac-with-vagrant">Install ISLE on a Mac with Vagrant</h2>
 <p><strong>PLEASE NOTE</strong> Installing ISLE on a <a href="../install_docker_for_mac/">Mac using Docker</a> is simpler and can be done on a less powerful laptop or workstation.  Support for installing ISLE on a Mac with Vagrant is deprecated.</p>
@@ -1234,41 +1084,6 @@ Installed the plugin 'vagrant-hostsupdater (1.0.2)'!
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../install_docker_for_windows/" title="Docker for Windows 10" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Docker for Windows 10
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../install_troubleshooting/" title="Troubleshooting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Troubleshooting
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

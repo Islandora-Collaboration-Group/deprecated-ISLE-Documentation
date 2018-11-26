@@ -38,7 +38,7 @@
     
     
       
-        <title>CentOS 7.x - Islandora Enterprise (ISLE)</title>
+        <title>Install on centos - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                CentOS 7.x
+                Install on centos
               </span>
             
           
@@ -180,12 +180,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Installation and Migration Instructions
@@ -201,19 +199,17 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
     
     <label class="md-nav__link" for="nav-2-1">
-      1. Set up the Host Server
+      1. Configure the Host Server
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-1">
-        1. Set up the Host Server
+        1. Configure the Host Server
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -222,178 +218,10 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        CentOS 7.x
-      </label>
-    
-    <a href="./" title="CentOS 7.x" class="md-nav__link md-nav__link--active">
-      CentOS 7.x
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-process-overview" title="Install process overview" class="md-nav__link">
-    Install process overview
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-install-server-prerequisites" title="Step 1: Install server prerequisites" class="md-nav__link">
-    Step 1: Install server prerequisites
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-install-docker" title="Step 2: Install Docker" class="md-nav__link">
-    Step 2: Install Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-create-islandora-user-and-group" title="Step 3: Create islandora user and group" class="md-nav__link">
-    Step 3: Create islandora user and group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4a-setup-ssh-access-for-islandora-user-on-vm-server-part-1" title="Step 4a: Setup SSH access for islandora user on VM / server (Part 1)" class="md-nav__link">
-    Step 4a: Setup SSH access for islandora user on VM / server (Part 1)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-create-ssh-keys-on-endusers-laptop-workstation" title="(optional) Create ssh keys on enduser's laptop / workstation" class="md-nav__link">
-    (optional) Create ssh keys on enduser's laptop / workstation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-4b-setup-ssh-access-for-islandora-user-on-vm-server-part-2" title="Step 4b: Setup SSH access for islandora user on VM / server (Part 2)" class="md-nav__link">
-    Step 4b: Setup SSH access for islandora user on VM / server (Part 2)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-note-for-vagrant-and-local-vm-users-only" title="(optional) Note for Vagrant and local VM users only" class="md-nav__link">
-    (optional) Note for Vagrant and local VM users only
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-5-create-docker-group" title="Step 5: Create Docker group" class="md-nav__link">
-    Step 5: Create Docker group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-6-add-islandora-user-to-wheel-group" title="Step 6: Add islandora user to wheel group" class="md-nav__link">
-    Step 6: Add islandora user to wheel group
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-7-install-docker-compose" title="Step 7: Install Docker-Compose" class="md-nav__link">
-    Step 7: Install Docker-Compose
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-alternative-install-method-for-docker-compose" title="(optional) Alternative install method for Docker-compose" class="md-nav__link">
-    (optional) Alternative install method for Docker-compose
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-8-start-up-and-enable-docker" title="Step 8: Start up and enable Docker" class="md-nav__link">
-    Step 8: Start up and enable Docker
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-9-clone-isle-repository" title="Step 9: Clone ISLE repository" class="md-nav__link">
-    Step 9: Clone ISLE repository
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" title="Next steps" class="md-nav__link">
-    Next steps
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../install_on_ubuntu_1804/" title="Ubuntu 18.04" class="md-nav__link">
-      Ubuntu 18.04
+    <a href="../server-requirements/" title="Hardware Requirements" class="md-nav__link">
+      Hardware Requirements
     </a>
   </li>
 
@@ -404,32 +232,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../install_docker_for_mac/" title="Docker for Mac High Sierra" class="md-nav__link">
-      Docker for Mac High Sierra
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../install_docker_for_windows/" title="Docker for Windows 10" class="md-nav__link">
-      Docker for Windows 10
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../install_macos_vagrant/" title="Vagrant & VirtualBox on MacOS (Deprecated)" class="md-nav__link">
-      Vagrant & VirtualBox on MacOS (Deprecated)
+    <a href="../software-dependencies/" title="Software Dependencies" class="md-nav__link">
+      Software Dependencies
     </a>
   </li>
 
@@ -461,11 +265,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
-      2. Install ISLE
+      2. Deploy ISLE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-2">
-        2. Install ISLE
+        2. Deploy ISLE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -480,11 +284,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-1" type="checkbox" id="nav-2-2-1">
     
     <label class="md-nav__link" for="nav-2-2-1">
-      Install a Test Site
+      Deploy a Test Site
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-1">
-        Install a Test Site
+        Deploy a Test Site
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -507,8 +311,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_installation_guide/" title="Test Site Installation Guide" class="md-nav__link">
-      Test Site Installation Guide
+    <a href="../../02_installation_test/ild_installation_guide/" title="Test Site Deploy Guide" class="md-nav__link">
+      Test Site Deploy Guide
     </a>
   </li>
 
@@ -540,11 +344,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
     
     <label class="md-nav__link" for="nav-2-2-2">
-      Install a New ISLE Site
+      Deploy a New ISLE Site
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-2">
-        Install a New ISLE Site
+        Deploy a New ISLE Site
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -567,8 +371,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_installation_guide_single/" title="New Site Installation Guide - w/ Single ISLE Environment" class="md-nav__link">
-      New Site Installation Guide - w/ Single ISLE Environment
+    <a href="../../03_installation_new_site/new_site_installation_guide_single/" title="New Site Deploy Guide - w/ Single ISLE Environment" class="md-nav__link">
+      New Site Deploy Guide - w/ Single ISLE Environment
     </a>
   </li>
 
@@ -579,8 +383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_installation_guide_multi/" title="New Site Installation Guide - w/ multiple ISLE Environments" class="md-nav__link">
-      New Site Installation Guide - w/ multiple ISLE Environments
+    <a href="../../03_installation_new_site/new_site_installation_guide_multi/" title="New Site Deploy Guide - w/ multiple ISLE Environments" class="md-nav__link">
+      New Site Deploy Guide - w/ multiple ISLE Environments
     </a>
   </li>
 
@@ -600,11 +404,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
     
     <label class="md-nav__link" for="nav-2-2-3">
-      Migrate an Existing Islandora site to ISLE
+      Migrate and Deploy an Existing Islandora site to ISLE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-3">
-        Migrate an Existing Islandora site to ISLE
+        Migrate and Deploy an Existing Islandora site to ISLE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -781,18 +585,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../host_server_system_specifications/" title="Host Server Specifications" class="md-nav__link">
-      Host Server Specifications
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../07_appendices/update_isle/" title="Updating ISLE" class="md-nav__link">
       Updating ISLE
     </a>
@@ -855,6 +647,18 @@
   <li class="md-nav__item">
     <a href="../../07_appendices/open-terminal-in-running-container/" title="Opening a Terminal in a Running Container" class="md-nav__link">
       Opening a Terminal in a Running Container
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07_appendices/configuring-lets-encrypt/" title="Using Let's Encrypt with ISLE" class="md-nav__link">
+      Using Let's Encrypt with ISLE
     </a>
   </li>
 
@@ -1148,7 +952,7 @@
               
                 
                 
-                  <h1>CentOS 7.x</h1>
+                  <h1>Install on centos</h1>
                 
                 <p><strong>CentOS</strong> server version to use: <code>7.x+</code></p>
 <p>This is a detailed operating system-specific guide including commands to copy/paste for all the software you may need to run ISLE on a <code>CentOS</code> ISLE Host Server.</p>
@@ -1559,41 +1363,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Home
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../install_on_ubuntu_1804/" title="Ubuntu 18.04" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Ubuntu 18.04
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
