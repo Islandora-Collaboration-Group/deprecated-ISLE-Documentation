@@ -1082,7 +1082,7 @@
 <p>Have an existing domain name that works - is set up with DNS etc...</p>
 </li>
 <li>
-<p>Have <a href="../../glossary/#systems">SSL Certificates</a> previously created for the web domain. (<em>Please work with the appropriate internal IT resource to provision these files for your domain</em>)</p>
+<p>Have <a href="../../glossary/#systems">SSL Certificates</a> previously created for the web domain. (<em>Please work with the appropriate internal IT resource to provision these files for your domain</em>)  OR use the <a href="../../07_appendices/configuring-lets-encrypt/">Let's Encrypt guide</a> to generate SSL Certificates.</p>
 </li>
 </ul>
 <h2 id="overview">Overview</h2>
@@ -1306,6 +1306,7 @@
 <p>The <code>proxy</code> subdirectory contains all specific configurations necessary for the Traefik proxy to function properly with your changes.</p>
 <p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <p>There are also additional links for the enduser to learn how to combine the SSL Certificate File with any available SSL Certificate Chain File for the <code>proxy</code> process to work properly.</p>
+<p><strong>If you followed the <a href="../../07_appendices/configuring-lets-encrypt/">Let's Encrypt</a> configuration guide, you can skip to the next section: Spin up ISLE containers</strong></p>
 <ul>
 <li>
 <p>Copy your SSL certificates for the ISLE Proxy into <code>config/proxy/ssl-certs</code>. They will and should have different names than the examples provided below.</p>
