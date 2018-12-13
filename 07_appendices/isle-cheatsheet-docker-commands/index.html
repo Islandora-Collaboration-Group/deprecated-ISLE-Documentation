@@ -1092,32 +1092,26 @@
 <h1 id="careful-below-there-be-dragons"><em>CAREFUL! BELOW THERE BE DRAGONS</em></h1>
 <h2 id="how-to-remove-all-docker-containers-and-then-pull-down-fresh-images">How to Remove ALL Docker Containers and then Pull Down Fresh Images</h2>
 <ol>
-<li>Stop all Current Containers</li>
-<li>
-<p><code>docker-compose stop</code></p>
+<li>Stop all Current Containers<ul>
+<li><code>docker-compose stop</code> </li>
+</ul>
 </li>
-<li>
-<p>WARNING! This will remove: all stopped containers; etc.</p>
+<li>WARNING! This will remove: all stopped containers; etc.<ul>
+<li><code>docker system prune --all</code></li>
+</ul>
 </li>
-<li>
-<p><code>docker system prune --all</code></p>
+<li>Delete "data" folder in ISLE-Developer folder so logs are fresh and clean<ul>
+<li><code>sudo rm -rf data</code></li>
+</ul>
 </li>
-<li>
-<p>Delete "data" folder in ISLE-Developer folder so logs are fresh and clean</p>
+<li>Pull down the images from Docker Hub<ul>
+<li><code>docker-compose pull</code></li>
+</ul>
 </li>
-<li>
-<p><code>sudo rm -rf data</code></p>
-</li>
-<li>
-<p>Pull down the images from Docker Hub</p>
-</li>
-<li>
-<p><code>docker-compose pull</code></p>
-</li>
-<li>
-<p>Launch all containers (creates volumes and starts containers)</p>
-</li>
+<li>Launch all containers (creates volumes and starts containers)<ul>
 <li><code>docker-compose up -d</code></li>
+</ul>
+</li>
 </ol>
 <h2 id="how-testers-can-maintain-a-nice-clean-environment">How Testers Can Maintain a Nice Clean Environment</h2>
 <p>Show Currently Running and All Past Containers
