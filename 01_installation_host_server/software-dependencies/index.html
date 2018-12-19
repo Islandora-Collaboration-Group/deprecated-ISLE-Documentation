@@ -1486,6 +1486,15 @@ git version 2.15.1
 <pre><code class="bash">cd ISLE
 </code></pre>
 
+<p><em>To improve performance on Mac OSX:</em></p>
+<ul>
+<li>Open <code>docker-compose.yml</code> in a text editor and go to the the <code>apache</code> section</li>
+<li>Under <code>volumes</code> find the following line:<ul>
+<li><code>- ./mnt/html:/var/www/html</code></li>
+<li>Change to: <code>- ./mnt/html:/var/www/html:cached</code></li>
+</ul>
+</li>
+</ul>
 <p>Your host server is now configured and ready to run ISLE. Return to the <a href="../..">homepage</a> and continue with step 3 for your type of deployment (or pick from the list):</p>
 <ul>
 <li><a href="../../02_installation_test/ild_installation_guide/">Test/Demo ISLE Deployment Guide</a></li>
