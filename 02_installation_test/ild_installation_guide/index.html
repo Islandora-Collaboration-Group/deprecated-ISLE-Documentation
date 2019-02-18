@@ -1132,7 +1132,7 @@
 <ul>
 <li>Run the following install site script on the apache container by copying and pasting this command:</li>
 </ul>
-<pre><code class="bash">docker exec -it isle-apache-ld bash /utility-scripts/isle_drupal_build_tools/isle_islandora_installer.sh`
+<pre><code class="bash">docker exec -it isle-apache-ld bash /utility-scripts/isle_drupal_build_tools/isle_islandora_installer.sh
 </code></pre>
 
 <p><em>For Windows Users only</em></p>
@@ -1152,7 +1152,7 @@
 <p><strong>This script will take some time (see estimate above.)</strong> You should see a lot of green [ok] messages.</p>
 </li>
 <li>If the script appears to pause and prompt for y/n, do not enter any values; the script will answer for you.  </li>
-<li>Wait until "Drush script finished! ...exiting" before proceeding.**</li>
+<li>Wait until "Clearing Drupal Caches. 'all' cache was cleared." before proceeding.**</li>
 </ul>
 </li>
 </ul>
@@ -1230,7 +1230,7 @@
 </ul>
 <p>Once your web server(s) have been disabled, resume the ISLE install process by repeating your last installation command, presumably <code>docker-compose up -d</code>.</p>
 <h4 id="non-running-containers">Non-running Containers</h4>
-<p>If you don't see all containers running, then stop the running containers with <code>docker-compose down -d</code> and start the containers one at a time following the instructions below:</p>
+<p>If you don't see all containers running, then stop the running containers with <code>docker-compose down</code> and start the containers one at a time following the instructions below:</p>
 <ul>
 <li>
 <p>MySQL image pull &amp; container launch</p>
