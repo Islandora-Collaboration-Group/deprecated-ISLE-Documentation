@@ -38,7 +38,7 @@
     
     
       
-        <title>Example User Story - Islandora Enterprise (ISLE)</title>
+        <title>Testing Guide - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -95,7 +95,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Example User Story
+                Testing Guide
               </span>
             
           
@@ -508,11 +508,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -523,8 +523,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintainer_example_user_story/" title="Example User Story" class="md-nav__link">
+      Example User Story
     </a>
   </li>
 
@@ -541,22 +553,10 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
-    <a href="./" title="Example User Story" class="md-nav__link md-nav__link--active">
-      Example User Story
-    </a>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="./" title="Testing Guide" class="md-nav__link md-nav__link--active">
       Testing Guide
     </a>
+    
   </li>
 
         
@@ -602,8 +602,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -674,8 +674,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -698,8 +698,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -806,9 +806,24 @@
               
                 
                 
-                  <h1>Example User Story</h1>
+                  <h1>Testing Guide</h1>
                 
-                <p>This page left intentionally blank, pending full community documentation for this process.</p>
+                <p>The ISLE project is currently testing the ISLE 1.1 Release Candidate.  We are actively soliciting volunteers to test the following scenarios:</p>
+<ul>
+<li>Installing a New ISLE site on Ubuntu 18.04</li>
+<li>Installing a New ISLE site on Centos 7.x</li>
+<li>Updating an exisiting ISLE site to the latest 1.1 Release Candidate</li>
+<li>Installing a Test/Demo version of ISLE on Windows 10 using Docker</li>
+<li>Installing a Test/Demo version of ISLE on Mac OSX High Sierra using Docker</li>
+</ul>
+<p>After testing the above scenarios, the project will announce a second round of testing for migrations:</p>
+<ul>
+<li>Migrating an existing Islandora site to ISLE on Ubuntu 18.04</li>
+<li>Migrating an existing Islandora site to ISLE on Centos 7.x</li>
+</ul>
+<p>If you want to be involved as a tester, please see the following documents:</p>
+<p><a href="https://docs.google.com/document/d/1DBmpbWbtWJq_N5YXRkT50ETehnLCcsN4JUQRMsECKXE/">ISLE 1.1 RC Testing Instructions and Details</a>
+<a href="https://docs.google.com/spreadsheets/d/1L-wrivXq2pUz7vcGsMCx3X7yKf27uokoaR8SovU_BsU/">ISLE 1.1 RC Testing Matrix</a></p>
                 
                   
                 
@@ -829,7 +844,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../dev_release_process/" title="Release process" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../maintainer_example_user_story/" title="Example User Story" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -838,19 +853,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Release process
+                Example User Story
               </span>
             </div>
           </a>
         
         
-          <a href="../dev_testing_guide/" title="Testing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../07_appendices/update_isle/" title="Updating ISLE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Testing Guide
+                Updating ISLE
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

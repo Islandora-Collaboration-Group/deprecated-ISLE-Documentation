@@ -38,7 +38,7 @@
     
     
       
-        <title>Dev ansible guide - Islandora Enterprise (ISLE)</title>
+        <title>Maintainer ansible guide - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Dev ansible guide
+                Maintainer ansible guide
               </span>
             
           
@@ -510,11 +510,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -525,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
     </a>
   </li>
 
@@ -537,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_example_user_story/" title="Example User Story" class="md-nav__link">
+    <a href="../maintainer_example_user_story/" title="Example User Story" class="md-nav__link">
       Example User Story
     </a>
   </li>
@@ -549,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="../maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
   </li>
@@ -597,8 +597,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -669,8 +669,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -693,8 +693,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -822,36 +822,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installs-software-dependencies-tools-including" title="Installs software dependencies &amp; tools including:" class="md-nav__link">
-    Installs software dependencies &amp; tools including:
+  <a href="#installs-software-dependencies-and-tools-including" title="Installs Software Dependencies and Tools Including" class="md-nav__link">
+    Installs Software Dependencies and Tools Including
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#makes-isle-host-service-changes" title="Makes ISLE Host service changes" class="md-nav__link">
-    Makes ISLE Host service changes
+  <a href="#makes-isle-host-service-changes" title="Makes ISLE Host Service Changes" class="md-nav__link">
+    Makes ISLE Host Service Changes
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#adds-users-groups-and-updates-permissions" title="Adds users, groups and updates permissions" class="md-nav__link">
-    Adds users, groups and updates permissions
+  <a href="#adds-users-groups-and-updates-permissions" title="Adds Users, Groups and Updates Permissions" class="md-nav__link">
+    Adds Users, Groups and Updates Permissions
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#installs-additional-software" title="Installs additional software" class="md-nav__link">
-    Installs additional software
+  <a href="#installs-additional-software" title="Installs Additional Software" class="md-nav__link">
+    Installs Additional Software
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ansible-script-directory-structure" title="Ansible script directory structure" class="md-nav__link">
-    Ansible script directory structure
+  <a href="#ansible-script-directory-structure" title="Ansible Script Directory Structure" class="md-nav__link">
+    Ansible Script Directory Structure
   </a>
   
 </li>
@@ -862,8 +862,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-ansible-script-to-deploy-to-isle-host" title="Configure Ansible Script to deploy to ISLE Host" class="md-nav__link">
-    Configure Ansible Script to deploy to ISLE Host
+  <a href="#configure-ansible-script-to-deploy-to-isle-host" title="Configure Ansible Script to Deploy to ISLE Host" class="md-nav__link">
+    Configure Ansible Script to Deploy to ISLE Host
   </a>
   
     <nav class="md-nav">
@@ -891,8 +891,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ansible-commands-to-test-connection" title="Ansible commands to test connection" class="md-nav__link">
-    Ansible commands to test connection
+  <a href="#ansible-commands-to-test-connection" title="Ansible Commands to Test Connection" class="md-nav__link">
+    Ansible Commands to Test Connection
   </a>
   
 </li>
@@ -903,15 +903,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ansible-commands-for-deploy" title="Ansible commands for deploy" class="md-nav__link">
-    Ansible commands for deploy
+  <a href="#ansible-commands-for-deploy" title="Ansible Commands for Deploy" class="md-nav__link">
+    Ansible Commands for Deploy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#qc-review-checklist" title="QC Review checklist" class="md-nav__link">
-    QC Review checklist
+  <a href="#qc-review-checklist" title="QC Review Checklist" class="md-nav__link">
+    QC Review Checklist
   </a>
   
     <nav class="md-nav">
@@ -932,15 +932,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#islandora-user" title="Islandora user" class="md-nav__link">
-    Islandora user
+  <a href="#islandora-user" title="islandora User" class="md-nav__link">
+    islandora User
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#isle-project-directory" title="ISLE Project directory" class="md-nav__link">
-    ISLE Project directory
+  <a href="#isle-project-directory" title="ISLE Project Directory" class="md-nav__link">
+    ISLE Project Directory
   </a>
   
 </li>
@@ -951,8 +951,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#walkthrough-using-ansible-on-a-macos-control-machine" title="Walkthrough: Using Ansible on a MacOS control machine" class="md-nav__link">
-    Walkthrough: Using Ansible on a MacOS control machine
+  <a href="#walkthrough-using-ansible-on-a-macos-control-machine" title="Walkthrough: Using Ansible on a MacOS Control Machine" class="md-nav__link">
+    Walkthrough: Using Ansible on a MacOS Control Machine
   </a>
   
 </li>
@@ -974,9 +974,9 @@
               
                 
                 
-                  <h1>Dev ansible guide</h1>
+                  <h1>Maintainer ansible guide</h1>
                 
-                <p>You have the choice of using Ansible to deploy the Docker Host server dependencies instead of performing manual commands on either a CentOS or Ubuntu OS. The Ansible script and configuration files can be found in the root folder of the ISLE git repo in a directory named <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/ansible">ansible</a>. Additionally, the Ansible script is designed to detect the chosen operating system and then install the appropriate dependencies with minimal user interaction or prior configuration.</p>
+                <p>You have the choice of using Ansible to deploy the Docker Host server dependencies instead of performing manual commands on either a CentOS or Ubuntu OS. The Ansible script and configuration files can be found in the root folder of the ISLE git repository in a directory named <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/ansible">ansible</a>. Additionally, the Ansible script is designed to detect the chosen operating system and then install the appropriate dependencies with minimal user interaction or prior configuration.</p>
 <p>Ansible is an free open source automation platform / tool which runs on Linux, Mac or BSD, doesn’t use local or remote agents and is relatively easy to setup. Ansible can help with server configuration management, application deployment, task automation and IT orchestration (<em>running tasks in sequence on several different servers or devices</em>).</p>
 <p>If you are not familiar with the Ansible, it is recommended to start with their documentation.</p>
 <ul>
@@ -997,7 +997,7 @@
 <p>Do not use this script if running <code>Docker for Mac</code> or <code>Docker for Windows</code> as the dependencies are not required.</p>
 </li>
 <li>
-<p>This script can be used with the supplied Vagrant profiles (Ubuntu or CentOS) found within the <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/vagrant">vagrant</a> directory of the ISLE repo.</p>
+<p>This script can be used with the supplied Vagrant profiles (Ubuntu or CentOS) found within the <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/vagrant">vagrant</a> directory of the ISLE repository.</p>
 </li>
 </ul>
 <h3 id="prerequisites-assumptions">Prerequisites / Assumptions</h3>
@@ -1069,7 +1069,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="installs-software-dependencies-tools-including">Installs software dependencies &amp; tools including:</h4>
+<h4 id="installs-software-dependencies-and-tools-including">Installs Software Dependencies and Tools Including</h4>
 <p>The Ansible script will deploy the following to the ISLE Host server:</p>
 <table>
 <thead>
@@ -1149,7 +1149,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="makes-isle-host-service-changes">Makes ISLE Host service changes</h4>
+<h4 id="makes-isle-host-service-changes">Makes ISLE Host Service Changes</h4>
 <p><strong>Please Note:</strong> <em>Any of these services can be re-enabled post installation see appropriate documentation for opening ports on firewalls etc.</em></p>
 <table>
 <thead>
@@ -1173,7 +1173,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="adds-users-groups-and-updates-permissions">Adds users, groups and updates permissions</h4>
+<h4 id="adds-users-groups-and-updates-permissions">Adds Users, Groups and Updates Permissions</h4>
 <ul>
 <li>Creates the <code>islandora</code> user</li>
 <li>Along with an appropriate password</li>
@@ -1188,7 +1188,7 @@
 <li>Disables use of passwords with ssh.</li>
 <li><em>key based access only to the ISLE Host server</em></li>
 </ul>
-<h4 id="installs-additional-software">Installs additional software</h4>
+<h4 id="installs-additional-software">Installs Additional Software</h4>
 <ul>
 <li>
 <p>Docker</p>
@@ -1197,13 +1197,13 @@
 <p>Docker Compose</p>
 </li>
 <li>
-<p>Git clones the ISLE repo to <code>/opt/ISLE</code></p>
+<p>Git clones the ISLE repository to <code>/opt/ISLE</code></p>
 </li>
 <li>
 <p>Pulls down the most recent ISLE images</p>
 </li>
 </ul>
-<h4 id="ansible-script-directory-structure">Ansible script directory structure</h4>
+<h4 id="ansible-script-directory-structure">Ansible Script Directory Structure</h4>
 <pre><code>ansible
 ├── docker_install.yml
 ├── host_vars
@@ -1243,7 +1243,7 @@
             └── users.yml
 </code></pre>
 
-<h3 id="configure-ansible-script-to-deploy-to-isle-host">Configure Ansible Script to deploy to ISLE Host</h3>
+<h3 id="configure-ansible-script-to-deploy-to-isle-host">Configure Ansible Script to Deploy to ISLE Host</h3>
 <p>To configure the Ansible script to deploy to one's institutional ISLE Host Server, please review and edit the following files within the <code>ansible</code> directory.</p>
 <ul>
 <li><code>ansible/docker_install.yml</code></li>
@@ -1252,12 +1252,12 @@
 </ul>
 <p>Basically wherever <code>isle-prod-project.institution</code> appears as a value in these three files, please replace with the appropriate ISLE Host server fully qualified domain name (<strong>fqdn</strong>) e.g. <code>yourislesite.institution.com</code></p>
 <p>One can open up and edit all files in a text editor e.g. Atom, Textedit, Textwrangler etc.</p>
-<h4 id="ansibledocker_installyml">ansible/docker_install.yml</h4>
+<h4 id="ansibledocker_installyml"><code>ansible/docker_install.yml</code></h4>
 <p><em>This is the Ansible playbook necessary to deploy software to the ISLE host server.</em></p>
 <ul>
 <li>At the top of the file remove <code>isle-prod-project.institution</code> and replace with the appropriate <strong>fqdn</strong>.  </li>
 </ul>
-<h4 id="ansibleinventoryyml">ansible/inventory.yml</h4>
+<h4 id="ansibleinventoryyml"><code>ansible/inventory.yml</code></h4>
 <p><em>This is the possible list of server(s) to deploy to using Ansible and its associated playbook(s).</em></p>
 <p><strong>Please Note:</strong> These instructions below are repeated within the file itself.</p>
 <ul>
@@ -1286,7 +1286,7 @@
 yourislesite.institution.com ansible_connection=ssh ansible_ssh_user=janesmith ansible_ssh_private_key_file=/home/janesmith/.ssh/id_rsa.pub
 </code></pre>
 
-<h4 id="ansibleisle-prod-projectinstitutionyml">ansible/isle-prod-project.institution.yml</h4>
+<h4 id="ansibleisle-prod-projectinstitutionyml"><code>ansible/isle-prod-project.institution.yml</code></h4>
 <ul>
 <li>
 <p>Copy this file and rename the copy to with the appropriate <strong>fqdn</strong></p>
@@ -1334,7 +1334,7 @@ yourislesite.institution.com ansible_connection=ssh ansible_ssh_user=janesmith a
 </li>
 </ul>
 <hr />
-<h4 id="ansible-commands-to-test-connection">Ansible commands to test connection</h4>
+<h4 id="ansible-commands-to-test-connection">Ansible Commands to Test Connection</h4>
 <ul>
 <li>Test if the Ansible control laptop / workstation can connect to the ISLE Host server by running these commands. On the local Ansible control laptop / workstation, open a terminal window and enter the following:</li>
 </ul>
@@ -1355,7 +1355,7 @@ isle-host-server | SUCCESS =&gt; {
 </code></pre>
 
 <p><strong>Please Note:</strong> <em>If SUCCESS doesn't appear as a value or if the wording of the prompt is in RED with "host doesn't exist ...", review all steps above and check the settings. Do not advance until the <strong>Example</strong> output above matches.</em>  </p>
-<h3 id="ansible-commands-for-deploy">Ansible commands for deploy</h3>
+<h3 id="ansible-commands-for-deploy">Ansible Commands for Deploy</h3>
 <ul>
 <li>
 <p>To deploy to the ISLE Host Server, run this command.</p>
@@ -1363,7 +1363,7 @@ isle-host-server | SUCCESS =&gt; {
 </li>
 </ul>
 <p>Ansible will start displaying output within the terminal. If any turn red and the script terminates, please review the above settings and connectivity to the server. Attempt to rerun the script.</p>
-<h3 id="qc-review-checklist">QC Review checklist</h3>
+<h3 id="qc-review-checklist">QC Review Checklist</h3>
 <p>To ensure a successful deploy to the ISLE Server, please review the following to ensure that the deploy to the Islandora Host server was successful.</p>
 <p>Open a terminal window on the Ansible control laptop /workstation and <code>ssh</code> into the Islandora Host server using the appropriate enduser account setup prior to the deploy.</p>
 <p><strong>Example</strong>:</p>
@@ -1429,7 +1429,7 @@ islandoracollabgroup/isle-proxy    latest              5gdc45f1a074        2 wee
 <p><code>docker-compose version 1.20.1, build 1719ceb</code></p>
 </li>
 </ul>
-<h4 id="islandora-user">Islandora user</h4>
+<h4 id="islandora-user"><code>islandora</code> User</h4>
 <ul>
 <li>
 <p>To check if the <code>islandora</code> user has been created, enter:</p>
@@ -1438,10 +1438,10 @@ islandoracollabgroup/isle-proxy    latest              5gdc45f1a074        2 wee
 <p><code>islandora:x:1002:1002::/home/islandora:/bin/bash</code></p>
 </li>
 </ul>
-<h4 id="isle-project-directory">ISLE Project directory</h4>
+<h4 id="isle-project-directory">ISLE Project Directory</h4>
 <ul>
 <li>
-<p>To check if the ISLE project git repo has been cloned to <code>/opt/ISLE</code>, enter:</p>
+<p>To check if the ISLE project git repository has been cloned to <code>/opt/ISLE</code>, enter:</p>
 <p><code>ls -lh /opt/ISLE</code></p>
 <p><strong>Example</strong> output:</p>
 </li>
@@ -1470,7 +1470,7 @@ drwxr-xr-x. 4 islandora islandora   50 Jan 17 09:17 solr
 </ul>
 <p>Proceed to bottom of this page for next steps.</p>
 <hr />
-<h3 id="walkthrough-using-ansible-on-a-macos-control-machine">Walkthrough: Using Ansible on a MacOS control machine</h3>
+<h3 id="walkthrough-using-ansible-on-a-macos-control-machine">Walkthrough: Using Ansible on a MacOS Control Machine</h3>
 <ul>
 <li>
 <p>To install <code>Ansible</code> on the enduser's MacOS laptop / workstation.</p>

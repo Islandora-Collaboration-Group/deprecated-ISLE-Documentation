@@ -38,7 +38,7 @@
     
     
       
-        <title>Dev documentation editing online - Islandora Enterprise (ISLE)</title>
+        <title>Maintainer documentation editing local - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Dev documentation editing online
+                Maintainer documentation editing local
               </span>
             
           
@@ -510,11 +510,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -525,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
     </a>
   </li>
 
@@ -537,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_example_user_story/" title="Example User Story" class="md-nav__link">
+    <a href="../maintainer_example_user_story/" title="Example User Story" class="md-nav__link">
       Example User Story
     </a>
   </li>
@@ -549,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="../maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
   </li>
@@ -597,8 +597,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -669,8 +669,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -693,8 +693,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -815,30 +815,56 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#navigate-to-online-isle-documentation-repo" title="Navigate to online ISLE-Documentation repo" class="md-nav__link">
-    Navigate to online ISLE-Documentation repo
+  <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
+    Assumptions / Prerequisites
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#edit-existing-pages" title="Edit existing pages" class="md-nav__link">
-    Edit existing pages
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-git-branch" title="Create a New Git Branch" class="md-nav__link">
+    Create a New Git Branch
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#adding-new-pages" title="Adding new pages" class="md-nav__link">
-    Adding new pages
+      
+        <li class="md-nav__item">
+  <a href="#adding-new-pages" title="Adding New Pages" class="md-nav__link">
+    Adding New Pages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-changes-to-git" title="Commit Changes to Git" class="md-nav__link">
+    Commit Changes to Git
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#updating-mkdocs" title="Updating mkdocs" class="md-nav__link">
-    Updating mkdocs
+  <a href="#git-status" title="Git Status" class="md-nav__link">
+    Git Status
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-add-files" title="Git Add Files" class="md-nav__link">
+    Git Add Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-commit-with-message" title="Git Commit with Message" class="md-nav__link">
+    Git Commit with Message
   </a>
   
 </li>
@@ -847,23 +873,18 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#commit-changes" title="Commit changes" class="md-nav__link">
-    Commit changes
+      
+        <li class="md-nav__item">
+  <a href="#git-push-to-isle-github-repository" title="Git Push to ISLE Github Repository" class="md-nav__link">
+    Git Push to ISLE Github Repository
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#create-pull-request-for-review" title="Create pull request for review" class="md-nav__link">
-    Create pull request for review
+      
+        <li class="md-nav__item">
+  <a href="#create-a-pull-request-on-isle-githubcom-repository" title="Create a Pull Request on ISLE Github.com Repository" class="md-nav__link">
+    Create a Pull Request on ISLE Github.com Repository
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -884,81 +905,48 @@
               
                 
                 
-                  <h1>Dev documentation editing online</h1>
+                  <h1>Maintainer documentation editing local</h1>
                 
-                <h2 id="overview">Overview</h2>
+                <h3 id="overview">Overview</h3>
 <ul>
-<li>Navigate to online ISLE-Documentation repo</li>
-<li>Edit existing pages</li>
-<li>Adding new pages<ul>
-<li>Updating mkdocs.yml</li>
+<li>Run the <code>mkdocs</code> software</li>
+<li>Edit documentation files locally</li>
+<li>Commit changes to git</li>
+<li>Push committed changes to the online ISLE Github.com git repository</li>
+<li>Create pull request for review on ISLE Github.com</li>
 </ul>
-</li>
-<li>Commit changes using a new branch</li>
-<li>Create pull request for review</li>
-</ul>
-<p><strong>Please note:</strong> You'll need to create separate pull requests for each type of change whether editing or adding new pages with a <code>mkdocs.yml</code> file update. Using the online editor means you can only do one thing at a time.</p>
-<p>If you need to edit more than one file or want to create more than one new page of content, it is recommended to instead follow the steps contained within the <a href="../dev_documentation_editing_local/">Documentation Editing - Local</a> Guide.</p>
-<hr />
-<h3 id="navigate-to-online-isle-documentation-repo">Navigate to online ISLE-Documentation repo</h3>
+<h4 id="assumptions-prerequisites">Assumptions / Prerequisites</h4>
 <ul>
-<li>In a web browser navigate to <a href="https://github.com/Islandora-Collaboration-Group/ISLE-Documentation">https://github.com/Islandora-Collaboration-Group/ISLE-Documentation</a></li>
+<li><code>mkdocs</code> and <code>mkdocs-material</code> theme are installed following the <a href="../maintainer_documentation_mkdocs/">Installing Mkdocs</a> documentation.</li>
+<li>The ISLE Documentation project directory has been cloned to the enduser's laptop / workstation in an appropriate Code or Project Directory.</li>
+<li><code>git clone https://github.com/Islandora-Collaboration-Group/ISLE-Documentation.git</code></li>
+<li>Familiarity or comfortability with git and cli commands.</li>
+<li>Enduser has a web browser opened to this URL: <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></li>
+<li>Enduser has a terminal open with <code>mkdocs serve</code> running.</li>
 </ul>
-<hr />
-<h3 id="edit-existing-pages">Edit existing pages</h3>
+<h3 id="create-a-new-git-branch">Create a New Git Branch</h3>
+<p>As there is a review process of any new changes to the ISLE code or documentation projects by the Maintainers, using git pull requests are ideal to avoid issues of missing materials, inappropriately edited files or incorrect overwrites of critical data.</p>
+<ul>
+<li>While <code>mkdocs serve</code> is running in the terminal, open up a new terminal or terminal tab and <code>cd to pathto/ISLE-Documentation project directory</code></li>
+</ul>
+<p>You will now create a new git branch which will allow you to make changes without fear of losing the original code / file versions kept in <code>master</code>. The new branch name can be anything you like but we suggest that you use a convention that identifies you clearly e.g. <code>githubusername-docs-fix2</code> or <code>janedoe-doc-fixes1</code></p>
 <ul>
 <li>
-<p>Click into the <code>docs</code> directory and navigate to the appropriate <code>.md</code> file you would like to edit.</p>
+<p><code>git checkout -b githubusername-docs-fix2</code></p>
 </li>
 <li>
-<p>Once the file has been selected, you should see on the right hand side of the page, a navigation bar that will display <code>Raw | Blame | History</code>, computer monitor icon, a pen / pencil icon and a trashcan icon. Click the pen / pencil icon to edit the file.</p>
-</li>
-<li>
-<p>The page should change indicating that it can now be edited.</p>
-</li>
-<li>
-<p>Make the appropriate edits as needed.</p>
-</li>
-<li>
-<p>When finished and ready to "save" the changes, follow the instructions immediately in the <code>Commit changes</code> section below.</p>
+<p>Proceed to edit or create new files as necessary using a text editor of your choice.</p>
 </li>
 </ul>
-<hr />
-<h3 id="adding-new-pages">Adding new pages</h3>
-<p><strong>Please note:</strong> If you are adding new pages to the Documentation, in addition to creating the new page, you'll need to edit the <code>mkdocs.yml</code> (YAML) file at the root (base) of the ISLE-Documentation project directory in order for the page to show up in the documentation after adding the new page.</p>
+<h3 id="adding-new-pages">Adding New Pages</h3>
+<p>If you are adding new pages to the Documentation, in addition to creating the new page, you'll need to edit the <code>mkdocs.yml</code> (YAML) file at the root (base) of the ISLE-Documentation project directory in order for the page to show up in the documentation.</p>
 <p>The example used below is how to create a new documentation page that will be about building giant ISLE robots with the title of "Building Giant ISLE Robots" and be located in the Development section.</p>
 <ul>
 <li>
-<p>Click into the <code>docs/05_developer_docs</code> directory</p>
+<p>Create a new empty file in the <code>docs/05_maintainer_docs</code> directory e.g. <code>maintainer_building_giant_robots.md</code></p>
 </li>
 <li>
-<p>On the right hand side of the page, a navigation bar that will display <code>Create new file | Upload files | Find File History</code>, click the <code>Create new file</code> button.</p>
-</li>
-<li>
-<p>In the empty <code>Name your file...</code> field at the top of the page, enter <code>dev_building_giant_robots.md</code></p>
-</li>
-<li>
-<p>Enter the appropriate content to the page.</p>
-</li>
-<li>
-<p>When finished and ready to "save" the changes, follow the instructions immediately in the <code>Commit changes</code> section below.</p>
-</li>
-</ul>
-<hr />
-<h4 id="updating-mkdocs">Updating mkdocs</h4>
-<p>If you have added a new page to the Documentation, you'll need to edit the <code>mkdocs.yml</code> (YAML) file at the root (base) of the ISLE-Documentation project directory in order for the page to show up in the documentation.</p>
-<ul>
-<li>
-<p>Click into the <code>mkdocs.yml</code> file.</p>
-</li>
-<li>
-<p>Once the file has been selected, you should see on the right hand side of the page, a navigation bar that will display <code>Raw | Blame | History</code>, computer monitor icon, a pen / pencil icon and a trashcan icon. Click the pen / pencil icon to edit the file.</p>
-</li>
-<li>
-<p>The page should change indicating that it can now be edited.</p>
-</li>
-<li>
-<p>Make the appropriate edits as needed.</p>
+<p>Open up the <code>mkdocs.yml</code> file in a text editor of your choice.</p>
 </li>
 </ul>
 <p>In order for <code>mkdocs</code> to understand that there is a new page and page title to display in the rendered documentation, one must use the YAML code convention (syntax) to enter.</p>
@@ -968,47 +956,94 @@
 <p>'Page Title': '/section/filename.md'</p>
 </li>
 <li>
-<p>Within the <code>Developer Docs</code> section of the open <code>mkdocs.yml</code> file, add this new line in the appropriate order.</p>
+<p>Within the <code>Maintainer Docs</code> section of the open <code>mkdocs.yml</code> file, add this new line in the appropriate order.</p>
 </li>
 </ul>
-<p><code>- 'Building Giant ISLE Robots': '05_developer_docs/dev_building_giant_robots.md'</code></p>
-<pre><code>- 'Developer Docs':
-  - 'Building Giant ISLE Robots': '05_developer_docs/dev_building_giant_robots.md'
-  - 'Contributing to Project': '05_developer_docs/dev_contributing_to_project.md'
-  - 'Documentation Overview': '05_developer_docs/dev_documentation_overview.md'
+<p><code>- 'Building Giant ISLE Robots': '05_maintainer_docs/maintainer_building_giant_robots.md'</code></p>
+<pre><code>- 'Maintainer Docs':
+  - 'Building Giant ISLE Robots': '05_maintainer_docs/maintainer_building_giant_robots.md'
+  - 'Contributing to Project': '05_maintainer_docs/maintainer_contributing_to_project.md'
+  - 'Documentation Overview': '05_maintainer_docs/maintainer_documentation_overview.md'
 </code></pre>
 
 <ul>
-<li>When finished and ready to "save" the changes, follow the instructions immediately in the <code>Commit changes</code> section below.</li>
-</ul>
-<hr />
-<h3 id="commit-changes">Commit changes</h3>
-<ul>
-<li>When finished editing, adding or updating, scroll down to the <code>Commit changes</code> section.</li>
 <li>
-<p>In the first empty field, enter a short description of the file edited e.g. <code>Update glossary.md</code></p>
+<p>The enduser can now review the contents of this new page at http://127.0.0.1:8000/05_maintainer_docs/maintainer_building_giant_robots/</p>
 </li>
 <li>
-<p>In the second larger empty field, enter a larger description of the edits
-  made to the file. Two to five sentences should suffice.</p>
+<p>Edit the contents of <code>maintainer_building_giant_robots.md</code> and save the file each time. The associated webpage will refresh with the new changes.</p>
+</li>
+</ul>
+<h3 id="commit-changes-to-git">Commit Changes to Git</h3>
+<p>Once finished with adding all new pages and editing files, it is time to add everything to git and then push to the remote ISLE github.com repository for review by ISLE Maintainers.</p>
+<h4 id="git-status">Git Status</h4>
+<ul>
+<li>Within the open terminal, enter <code>git status</code></li>
+</ul>
+<p>The example git status output below displays that several files have been modified (edited or changed) and that there is a new file called <code>maintainer_building_giant_robots.md</code> has been created.</p>
+<pre><code>git status
+
+On branch githubusername-docs-fix2
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    modified:   docs/06_specifications/specs_diagram_network.md
+    modified:   docs/glossary.md
+    modified:   mkdocs.yml
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+    docs/05_maintainer_docs/maintainer_building_giant_robots.md
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+
+<h4 id="git-add-files">Git Add Files</h4>
+<p>You now need to add these changed / new files to git.</p>
+<ul>
+<li><code>git add docs/06_specifications/specs_diagram_network.md</code></li>
+<li><code>git add docs/glossary.md</code></li>
+<li><code>git add mkdocs.yml</code></li>
+<li><code>git add docs/05_maintainer_docs/maintainer_building_giant_robots.md</code></li>
+</ul>
+<h4 id="git-commit-with-message">Git Commit with Message</h4>
+<p>Now it is time to package up all these additions with a git commit command. Please ensure that you commit with a descriptive message of changes etc.</p>
+<ul>
+<li><code>git commit -m "Tweaked some specs in specs_diagram_network.md. Updated the Glossary with more terms. Made new Building Giant Robots page. I love big robots. Added new files and titles to mkdocs.yml "</code></li>
+</ul>
+<h3 id="git-push-to-isle-github-repository">Git Push to ISLE Github Repository</h3>
+<ul>
+<li><code>git push origin githubusername-docs-fix2</code></li>
+</ul>
+<h3 id="create-a-pull-request-on-isle-githubcom-repository">Create a Pull Request on ISLE Github.com Repository</h3>
+<p>In order for the ISLE Maintainers to review suggested changes a "pull request" will need to be created. This process is a way for Maintainers to see a summary of the suggested changes to be made with any helpful comments and a catalog of potential differences between the original files and the new ones.</p>
+<p>If you run into trouble, this Github.com support page may be of use: <a href="https://help.github.com/articles/creating-a-pull-request/">https://help.github.com/articles/creating-a-pull-request/</a></p>
+<ul>
+<li>
+<p>On GitHub, navigate to the main page of the ISLE-Documentation repository.</p>
 </li>
 <li>
-<p>Once finished, select the second radio button at the bottom</p>
-<ul>
-<li>Its label displays: <code>Create a new branch for this commit and start a pull request</code></li>
-<li>Change the branch name as needed or leave as the default.</li>
-<li>Click the green <code>Propose File Change</code></li>
-</ul>
+<p>In the "Branch" menu, choose the branch that contains your commits e.g. <code>githubusername-docs-fix2</code></p>
+</li>
+<li>
+<p>To the right of the Branch menu, click <code>New pull request</code>.</p>
+</li>
+<li>
+<p>Use the base branch dropdown menu to select the branch you'd like to merge your changes into (<code>master</code>), then use the compare branch drop-down menu to choose the topic branch you made your changes in.(<code>githubusername-docs-fix2</code>)</p>
+</li>
+<li>
+<p><code>base:master</code> &lt;--- <code>compare:githubusername-docs-fix2</code></p>
+</li>
+<li>
+<p>Type a title and description for your pull request.</p>
+</li>
+<li>
+<p>Click the green <code>Create pull request</code> button at the bottom.</p>
 </li>
 </ul>
-<p><strong>DO NOT</strong> SELECT THE 1ST RADIO BUTTON - <code>Commit directly to the master branch</code> as this will cause issues though it is selected by default.</p>
-<h3 id="create-pull-request-for-review">Create pull request for review</h3>
-<p>The "Open a pull request" page should now appear along with text like <code>The change you just made was written to a new branch named githubusername-docs-fix2. Create a pull request below to propose these changes.</code></p>
-<ul>
-<li>The first and second text fields may contain part of the short description. Either keep the default text or change accordingly.</li>
-<li>Click the green <code>Create pull request</code> button.</li>
-</ul>
-<p>This pull request should now appear in the <a href="https://github.com/Islandora-Collaboration-Group/ISLE-Documentation/pulls">Pull Requests</a> section of the ISLE Repo, ready for review, commentary or inclusion by the ISLE Maintainers.</p>
+<p>This pull request should now appear in the <a href="https://github.com/Islandora-Collaboration-Group/ISLE-Documentation/pulls">Pull Requests</a> section of the ISLE repository, ready for review, commentary or inclusion by the ISLE Maintainers.</p>
                 
                   
                 

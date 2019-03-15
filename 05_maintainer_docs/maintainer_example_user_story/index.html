@@ -38,7 +38,7 @@
     
     
       
-        <title>Dev documentation mkdocs - Islandora Enterprise (ISLE)</title>
+        <title>Example User Story - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -73,10 +73,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#assumptions-prerequisites" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -99,7 +95,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Dev documentation mkdocs
+                Example User Story
               </span>
             
           
@@ -504,17 +500,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -525,8 +523,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
     </a>
   </li>
 
@@ -535,11 +533,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../dev_example_user_story/" title="Example User Story" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Example User Story" class="md-nav__link md-nav__link--active">
       Example User Story
     </a>
+    
   </li>
 
         
@@ -549,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="../maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
   </li>
@@ -597,8 +602,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -669,8 +674,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -693,8 +698,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -795,110 +800,15 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
-    Assumptions / Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-install-mkdocs" title="Step 1. Install mkdocs" class="md-nav__link">
-    Step 1. Install mkdocs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-install-the-mkdocs-material-theme" title="Step 2. Install the mkdocs-material theme" class="md-nav__link">
-    Step 2. Install the mkdocs-material theme
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-run-the-mkdocs-software" title="Step 3. Run the mkdocs software" class="md-nav__link">
-    Step 3. Run the mkdocs software
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Dev documentation mkdocs</h1>
+                  <h1>Example User Story</h1>
                 
-                <h3 id="assumptions-prerequisites">Assumptions / Prerequisites</h3>
-<ul>
-<li>Python 2.7+ or higher is installed on the enduser's laptop / workstation</li>
-<li>The ISLE Documentation project directory has been cloned to the enduser's laptop / workstation in an appropriate Code or Project Directory.</li>
-<li><code>git clone https://github.com/Islandora-Collaboration-Group/ISLE-Documentation.git</code></li>
-<li>Familiarity or comfortability with git and cli commands.</li>
-</ul>
-<h3 id="step-1-install-mkdocs">Step 1. Install mkdocs</h3>
-<ul>
-<li>Please follow the instructions found here: <a href="http://www.mkdocs.org/#installation">http://www.mkdocs.org/#installation</a></li>
-</ul>
-<p><strong>Example: (All OS)</strong></p>
-<ul>
-<li><code>sudo -H pip install mkdocs</code></li>
-</ul>
-<hr />
-<h3 id="step-2-install-the-mkdocs-material-theme">Step 2. Install the mkdocs-material theme</h3>
-<p>The ISLE Documentation Theme can be found here: <a href="https://github.com/squidfunk/mkdocs-material">https://github.com/squidfunk/mkdocs-material</a></p>
-<p><strong>Example: (All OS)</strong></p>
-<ul>
-<li>sudo -H pip install mkdocs-material</li>
-</ul>
-<hr />
-<h3 id="step-3-run-the-mkdocs-software">Step 3. Run the mkdocs software</h3>
-<ul>
-<li>Open a terminal and <code>cd to pathto/ISLE-Documentation project directory</code></li>
-<li><code>mkdocs serve</code></li>
-</ul>
-<pre><code>INFO    -  Building documentation...
-INFO    -  Cleaning site directory
-[I 180310 15:50:39 server:283] Serving on http://127.0.0.1:8000
-[I 180310 15:50:39 handlers:60] Start watching changes
-[I 180310 15:50:39 handlers:62] Start detecting changes
-[I 180310 15:50:42 handlers:133] Browser Connected: http://127.0.0.1:8000/
-</code></pre>
-
-<ul>
-<li>Open up a browser and navigate to <a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></li>
-<li>It is critical for this terminal to keep running<ul>
-<li>as mkdocs will report file changes and any potential issues.</li>
-<li>To review changes in real time via the browser</li>
-</ul>
-</li>
-<li>Use the terminal output for debugging issues or missing files, links etc.</li>
-<li>To stop <code>mkdocs</code>, click the <code>Cntrl</code> and <code>c</code> key at the same time. <code>(Cntrl-C)</code></li>
-</ul>
+                <p>This page left intentionally blank, pending full community documentation for this process.</p>
                 
                   
                 
@@ -915,6 +825,41 @@ INFO    -  Cleaning site directory
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../maintainer_release_process/" title="Release Process" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Release Process
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../maintainer_testing_guide/" title="Testing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Testing Guide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

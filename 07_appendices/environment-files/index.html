@@ -38,7 +38,7 @@
     
     
       
-        <title>The ISLE environment files and settings - Islandora Enterprise (ISLE)</title>
+        <title>The ISLE Environment Files and Settings - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -99,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                The ISLE environment files and settings
+                The ISLE Environment Files and Settings
               </span>
             
           
@@ -510,11 +510,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -525,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../../05_maintainer_docs/maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
     </a>
   </li>
 
@@ -537,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_example_user_story/" title="Example User Story" class="md-nav__link">
+    <a href="../../05_maintainer_docs/maintainer_example_user_story/" title="Example User Story" class="md-nav__link">
       Example User Story
     </a>
   </li>
@@ -549,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="../../05_maintainer_docs/maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
   </li>
@@ -597,8 +597,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -669,8 +669,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -693,8 +693,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -809,43 +809,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#master-section" title="Master Section:" class="md-nav__link">
-    Master Section:
+  <a href="#master-section" title="Master Section" class="md-nav__link">
+    Master Section
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-section" title="Database Section:" class="md-nav__link">
-    Database Section:
+  <a href="#database-section" title="Database Section" class="md-nav__link">
+    Database Section
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#islandora-drupal-section" title="Islandora (DRUPAL) Section:" class="md-nav__link">
-    Islandora (DRUPAL) Section:
+  <a href="#islandora-drupal-section" title="Islandora (Drupal) Section" class="md-nav__link">
+    Islandora (Drupal) Section
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fedora-repository-section" title="Fedora Repository Section:" class="md-nav__link">
-    Fedora Repository Section:
+  <a href="#fedora-repository-section" title="Fedora Repository Section" class="md-nav__link">
+    Fedora Repository Section
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#image-services-section" title="Image Services Section:" class="md-nav__link">
-    Image Services Section:
+  <a href="#image-services-section" title="Image Services Section" class="md-nav__link">
+    Image Services Section
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tomcatenv-applies-to-all-tomcat-instances" title="Tomcat.env applies to all Tomcat instances" class="md-nav__link">
-    Tomcat.env applies to all Tomcat instances
+  <a href="#tomcatenv-applies-to-all-tomcat-instances" title="Tomcat.env Applies to All Tomcat Instances" class="md-nav__link">
+    Tomcat.env Applies to All Tomcat Instances
   </a>
   
 </li>
@@ -867,10 +867,10 @@
               
                 
                 
-                <h1 id="the-isle-environment-files-and-settings">The ISLE environment files and settings</h1>
+                <h1 id="the-isle-environment-files-and-settings">The ISLE Environment Files and Settings</h1>
 <p>The .env and tomcat.env files located in the folder with the docker-comopse.yml are key to configuring the ISLE stack to suit your needs.</p>
 <p>Here are the variables and their job:</p>
-<h3 id="master-section">Master Section:</h3>
+<h3 id="master-section">Master Section</h3>
 <pre><code>* COMPOSE_PROJECT_NAME to something unique (e.g. `COMPOSE_PROJECT_NAME=isle-production-collections`)
   * This variable is appended to Docker objects like: volume names, network names.
 * BASE_DOMAIN to your domainname (e.g. `BASE_DOMAIN=digital-collections.example.edu`)
@@ -878,7 +878,7 @@
 * CONTAINER_SHORT_ID to something unique (e.g. `CONTAINER_SHORT_ID=prod`).
   * This variable is appended to the end of all running containers, keep it _short_!
 </code></pre>
-<h3 id="database-section">Database Section:</h3>
+<h3 id="database-section">Database Section</h3>
 <table>
 <thead>
 <tr>
@@ -921,7 +921,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="islandora-drupal-section">Islandora (DRUPAL) Section:</h3>
+<h3 id="islandora-drupal-section">Islandora (Drupal) Section</h3>
 <table>
 <thead>
 <tr>
@@ -964,7 +964,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="fedora-repository-section">Fedora Repository Section:</h3>
+<h3 id="fedora-repository-section">Fedora Repository Section</h3>
 <table>
 <thead>
 <tr>
@@ -1013,7 +1013,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="image-services-section">Image Services Section:</h3>
+<h3 id="image-services-section">Image Services Section</h3>
 <table>
 <thead>
 <tr>
@@ -1040,7 +1040,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="tomcatenv-applies-to-all-tomcat-instances">Tomcat.env applies to all Tomcat instances</h3>
+<h3 id="tomcatenv-applies-to-all-tomcat-instances">Tomcat.env Applies to All Tomcat Instances</h3>
 <table>
 <thead>
 <tr>

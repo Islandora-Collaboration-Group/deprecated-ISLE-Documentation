@@ -510,11 +510,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -525,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../../05_maintainer_docs/maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
     </a>
   </li>
 
@@ -537,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_example_user_story/" title="Example User Story" class="md-nav__link">
+    <a href="../../05_maintainer_docs/maintainer_example_user_story/" title="Example User Story" class="md-nav__link">
       Example User Story
     </a>
   </li>
@@ -549,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="../../05_maintainer_docs/maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
   </li>
@@ -597,8 +597,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -669,8 +669,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -693,8 +693,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -814,29 +814,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dockerfile-locations" title="Dockerfile locations" class="md-nav__link">
-    Dockerfile locations
+  <a href="#dockerfile-locations" title="Dockerfile Locations" class="md-nav__link">
+    Dockerfile Locations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dockerfile-conventions" title="Dockerfile conventions" class="md-nav__link">
-    Dockerfile conventions
+  <a href="#dockerfile-conventions" title="Dockerfile Conventions" class="md-nav__link">
+    Dockerfile Conventions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dockerfile-composition" title="Dockerfile composition" class="md-nav__link">
-    Dockerfile composition
+  <a href="#dockerfile-composition" title="Dockerfile Composition" class="md-nav__link">
+    Dockerfile Composition
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dockerfile-commenting" title="Dockerfile commenting" class="md-nav__link">
-    Dockerfile commenting
+  <a href="#dockerfile-commenting" title="Dockerfile Commenting" class="md-nav__link">
+    Dockerfile Commenting
   </a>
   
 </li>
@@ -870,7 +870,7 @@
 <p><a href="https://docs.docker.com/engine/reference/builder/">Dockerfiles</a>, their editing process and compositions are familiar or known concepts.</p>
 </li>
 </ul>
-<h2 id="dockerfile-locations">Dockerfile locations</h2>
+<h2 id="dockerfile-locations">Dockerfile Locations</h2>
 <p>These files can be found within the cloned ISLE project directory.</p>
 <p>Each subdirectory is grouped by the image / container software type and each contains a respective Dockerfile.</p>
 <ul>
@@ -904,7 +904,7 @@
 └── vagrant
 </code></pre>
 
-<h2 id="dockerfile-conventions">Dockerfile conventions</h2>
+<h2 id="dockerfile-conventions">Dockerfile Conventions</h2>
 <ul>
 <li>
 <p>Making changes within these files will alter the contents and functionality of the ISLE images.</p>
@@ -922,7 +922,7 @@
 <p>All ISLE images use official Docker build images. Review the <a href="../specs_docker_containers_images/">Docker Containers &amp; Images</a> Specifications Page for a listing of those builds.</p>
 </li>
 </ul>
-<h2 id="dockerfile-composition">Dockerfile composition</h2>
+<h2 id="dockerfile-composition">Dockerfile Composition</h2>
 <p>Following <a href="https://docs.docker.com/engine/reference/builder/">standard Docker convention</a>, all ISLE Dockerfiles have similar structures. Examples displayed are from the <a href="https://github.com/Islandora-Collaboration-Group/ISLE/blob/master/apache/Dockerfile">Apache Dockerfile</a></p>
 <ul>
 <li>
@@ -970,7 +970,7 @@
 <p>Within the <a href="https://github.com/Islandora-Collaboration-Group/ISLE/blob/master/apache/Dockerfile">apache Dockerfile</a>, the server is told to "run" using the <code>apache2ctl</code> utility by this last line: <code>ENTRYPOINT ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]</code></p>
 </li>
 </ul>
-<h2 id="dockerfile-commenting">Dockerfile commenting</h2>
+<h2 id="dockerfile-commenting">Dockerfile Commenting</h2>
 <p>For ISLE Maintainers when possible it is highly recommended that all sections be commented appropriately to explain functionality or actions to all Developers looking to customize or curious endusers.</p>
 <p>Example:</p>
 <pre><code>###

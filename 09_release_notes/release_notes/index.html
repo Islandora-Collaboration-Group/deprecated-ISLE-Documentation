@@ -510,11 +510,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Developer Docs
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Developer Docs
+        Maintainer Docs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -525,8 +525,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_release_process/" title="Release process" class="md-nav__link">
-      Release process
+    <a href="../../05_maintainer_docs/maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
     </a>
   </li>
 
@@ -537,7 +537,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_example_user_story/" title="Example User Story" class="md-nav__link">
+    <a href="../../05_maintainer_docs/maintainer_example_user_story/" title="Example User Story" class="md-nav__link">
       Example User Story
     </a>
   </li>
@@ -549,7 +549,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05_developer_docs/dev_testing_guide/" title="Testing Guide" class="md-nav__link">
+    <a href="../../05_maintainer_docs/maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
       Testing Guide
     </a>
   </li>
@@ -597,8 +597,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the /ect/hosts file" class="md-nav__link">
-      Editing the /ect/hosts file
+    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
+      Editing the "/etc/hosts" File
     </a>
   </li>
 
@@ -669,8 +669,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about installing on Redhat" class="md-nav__link">
-      Note/Warning about installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
+      Note/Warning about Installing on Redhat
     </a>
   </li>
 
@@ -693,8 +693,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker commands" class="md-nav__link">
-      ISLE Cheat Sheet: Docker commands
+    <a href="../../07_appendices/isle-cheatsheet-docker-commands/" title="ISLE Cheat Sheet: Docker Commands" class="md-nav__link">
+      ISLE Cheat Sheet: Docker Commands
     </a>
   </li>
 
@@ -830,10 +830,10 @@
 <li>Base Images to serve them all:<ul>
 <li>In Docker fashion two new base-images were created for the 1.1 ISLE stack. There are major benefits both for the maintainers and users of ISLE.</li>
 <li>Keeping our users safe has never been easier.  For users and maintainers alike when a security update or patch arrives we (the ISLE maintainers) need only update the base image.  By virtue of inheritance these updates are automatically inherited and built into each and every component of the ISLE stack.</li>
-<li>Quick downloads, faster launch: these shared base images decrease the time to pull and launch the ISLE stack.  Since the images have the same layers (like a cake) they are downloaded only once and reused as building blocks for the rest of the ISLE stack. </li>
+<li>Quick downloads, faster launch: these shared base images decrease the time to pull and launch the ISLE stack.  Since the images have the same layers (like a cake) they are downloaded only once and reused as building blocks for the rest of the ISLE stack.</li>
 <li>This also significantly decreases the overall size of all images because we are able to finely tune and trim our base images so they’re stable, without being bloated by unneeded components.<ul>
 <li><a href="https://github.com/Islandora-Collaboration-Group/isle-ubuntu-basebox">ISLE-Ubuntu-Base</a></li>
-<li><a href="https://github.com/Islandora-Collaboration-Group/isle-tomcat">ISLE-Tomcat-Base</a> </li>
+<li><a href="https://github.com/Islandora-Collaboration-Group/isle-tomcat">ISLE-Tomcat-Base</a></li>
 </ul>
 </li>
 </ul>
@@ -845,19 +845,19 @@
 </li>
 <li>ISLE-Apache<ul>
 <li>Automatically pull the newest build tools on launch, never be with an outdated stack.  By default the Apache container will connect to GitHub and pull the ISLE-build.  This is controlled by an environment variable and can be disabled.</li>
-<li>In future releases we intend to make it so that you can fork our build tools, or make your own, and set your own repo for the container to fetch on boot.<ul>
+<li>In future releases we intend to make it so that you can fork our build tools, or make your own, and set your own repository for the container to fetch on boot.<ul>
 <li>Note that while currently running the build tools is only done once we’re thinking ahead. In future planned iterations of ISLE-Apache the build tools will separate core Drupal code (<code>core</code>) from the Islandora modules (<code>contrib</code>).  TL;DR: We hope to bring automated Drupal core updates, as well as offer an option to update Islandora modules -- though we acknowledge this might not be for everyone!</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>ImageMagick 7.x (ISLE images involved: ImageServices and Apache) <ul>
-<li>ImageMagick, the tool which converts and handles derivative generation (in most part) has been updated to the latest 7.x branch and is compiled with JP2 read and write support from <a href="http://www.openjpeg.org/">OpenJPEG</a>. </li>
+<li>ImageMagick 7.x (ISLE images involved: ImageServices and Apache)<ul>
+<li>ImageMagick, the tool which converts and handles derivative generation (in most part) has been updated to the latest 7.x branch and is compiled with JP2 read and write support from <a href="http://www.openjpeg.org/">OpenJPEG</a>.</li>
 <li>This update also includes the PHP Imagick extension which is now built from source to support the new version of ImageMagick with JP2 support.</li>
 </ul>
 </li>
-<li>ISLE-Proxy is now magiek <ul>
-<li>We have replaced NGiNX with <a href="https://traefik.io/">Traefik</a> </li>
+<li>ISLE-Proxy is now magiek<ul>
+<li>We have replaced NGiNX with <a href="https://traefik.io/">Traefik</a></li>
 <li>Traefik is a modern reverse proxy with several key benefits<ul>
 <li>Institutions and users alike can use ACME for the automatic and free creation and maintenance of SSL certificates from Let's Encrypt (https://letsencrypt.org/)</li>
 </ul>
