@@ -38,7 +38,7 @@
     
     
       
-        <title>Example User Story - Islandora Enterprise (ISLE)</title>
+        <title>Hardware Requirements - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -73,6 +73,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="../../#hardware-requirements" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -95,7 +99,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Example User Story
+                Hardware Requirements
               </span>
             
           
@@ -176,17 +180,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Installation and Migration Instructions
+      Installation and Migration
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Installation and Migration Instructions
+        Installation and Migration
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -195,10 +201,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       1. Configure the Host Server
@@ -214,11 +222,77 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../01_installation_host_server/server-requirements/" title="Hardware Requirements" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hardware Requirements
+      </label>
+    
+    <a href="./" title="Hardware Requirements" class="md-nav__link md-nav__link--active">
       Hardware Requirements
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#known-working-operating-systems-distributions" title="Known Working Operating Systems / Distributions" class="md-nav__link">
+    Known Working Operating Systems / Distributions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-server" title="Production Server" class="md-nav__link">
+    Production Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staging-server" title="Staging Server" class="md-nav__link">
+    Staging Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-server" title="Development Server" class="md-nav__link">
+    Development Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-isle-site" title="Demo ISLE Site" class="md-nav__link">
+    Demo ISLE Site
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -228,20 +302,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_installation_host_server/software-dependencies/" title="Software Dependencies" class="md-nav__link">
+    <a href="../software-dependencies/" title="Software Dependencies" class="md-nav__link">
       Software Dependencies
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../01_installation_host_server/install_troubleshooting/" title="Troubleshooting" class="md-nav__link">
-      Troubleshooting
     </a>
   </li>
 
@@ -261,11 +323,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
     
     <label class="md-nav__link" for="nav-2-2">
-      2. Deploy ISLE
+      2. Install ISLE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-2">
-        2. Deploy ISLE
+        2. Install ISLE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -280,11 +342,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-1" type="checkbox" id="nav-2-2-1">
     
     <label class="md-nav__link" for="nav-2-2-1">
-      Deploy a Test Site
+      Install a Demo ISLE Site
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-1">
-        Deploy a Test Site
+        Install a Demo ISLE Site
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -295,8 +357,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_example_user_story/" title="Test Site Example User Story" class="md-nav__link">
-      Test Site Example User Story
+    <a href="../../02_installation_demo_site/demo_installation/" title="Demo ISLE Site Installation" class="md-nav__link">
+      Demo ISLE Site Installation
     </a>
   </li>
 
@@ -307,20 +369,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_installation_guide/" title="Test Site Deploy Guide" class="md-nav__link">
-      Test Site Deploy Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../02_installation_test/ild_resources/" title="Test Site Resources" class="md-nav__link">
-      Test Site Resources
+    <a href="../../02_installation_demo_site/demo_resources/" title="Demo ISLE Site Resources" class="md-nav__link">
+      Demo ISLE Site Resources
     </a>
   </li>
 
@@ -340,11 +390,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-2" type="checkbox" id="nav-2-2-2">
     
     <label class="md-nav__link" for="nav-2-2-2">
-      Deploy a New ISLE Site
+      Install a New ISLE Site Site
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-2">
-        Deploy a New ISLE Site
+        Install a New ISLE Site Site
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -355,8 +405,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_example_user_story/" title="New Site Example User Story" class="md-nav__link">
-      New Site Example User Story
+    <a href="../../03_installation_new_site/new_site_installation_single/" title="New Site Installation: Single ISLE Environment" class="md-nav__link">
+      New Site Installation: Single ISLE Environment
     </a>
   </li>
 
@@ -367,20 +417,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_installation_guide_single/" title="New Site Deploy Guide - w/ Single ISLE Environment" class="md-nav__link">
-      New Site Deploy Guide - w/ Single ISLE Environment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../03_installation_new_site/new_site_installation_guide_multi/" title="New Site Deploy Guide - w/ multiple ISLE Environments" class="md-nav__link">
-      New Site Deploy Guide - w/ multiple ISLE Environments
+    <a href="../../03_installation_new_site/new_site_installation_multiple/" title="New Site Installation: Multiple ISLE Environments" class="md-nav__link">
+      New Site Installation: Multiple ISLE Environments
     </a>
   </li>
 
@@ -400,26 +438,14 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2-3" type="checkbox" id="nav-2-2-3">
     
     <label class="md-nav__link" for="nav-2-2-3">
-      Migrate and Deploy an Existing Islandora site to ISLE
+      Migrate an Existing Islandora Site to ISLE
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-2-2-3">
-        Migrate and Deploy an Existing Islandora site to ISLE
+        Migrate an Existing Islandora Site to ISLE
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_example_user_story/" title="Migration Example User Story" class="md-nav__link">
-      Migration Example User Story
-    </a>
-  </li>
-
         
           
           
@@ -500,19 +526,17 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Maintainer Docs
+      User Stories
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        Maintainer Docs
+        User Stories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -523,28 +547,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../maintainer_release_process/" title="Release Process" class="md-nav__link">
-      Release Process
+    <a href="../../10_user_stories/demo_site_example_user_story/" title="Demo ISLE Site Example User Story" class="md-nav__link">
+      Demo ISLE Site Example User Story
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Example User Story" class="md-nav__link md-nav__link--active">
-      Example User Story
-    </a>
-    
   </li>
 
         
@@ -554,8 +559,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
-      Testing Guide
+    <a href="../../10_user_stories/new_site_example_user_story/" title="New Site Example User Story" class="md-nav__link">
+      New Site Example User Story
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../10_user_stories/migration_example_user_story/" title="Migration Example User Story" class="md-nav__link">
+      Migration Example User Story
     </a>
   </li>
 
@@ -575,10 +592,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      Appendices
+      Maintainer Docs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Maintainer Docs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05_maintainer_docs/maintainer_release_process/" title="Release Process" class="md-nav__link">
+      Release Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05_maintainer_docs/maintainer_testing_guide/" title="Testing Guide" class="md-nav__link">
+      Testing Guide
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Appendices
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         Appendices
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -674,8 +739,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Note/Warning about Installing on Redhat" class="md-nav__link">
-      Note/Warning about Installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Warning about Installing on Redhat" class="md-nav__link">
+      Warning about Installing on Redhat
     </a>
   </li>
 
@@ -704,6 +769,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07_appendices/install_troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -716,13 +793,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       About
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         About
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -787,8 +864,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../glossary/" title="Glossary of Terms and Variables" class="md-nav__link">
-      Glossary of Terms and Variables
+    <a href="../../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
     </a>
   </li>
 
@@ -800,15 +877,144 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#known-working-operating-systems-distributions" title="Known Working Operating Systems / Distributions" class="md-nav__link">
+    Known Working Operating Systems / Distributions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-server" title="Production Server" class="md-nav__link">
+    Production Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#staging-server" title="Staging Server" class="md-nav__link">
+    Staging Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-server" title="Development Server" class="md-nav__link">
+    Development Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demo-isle-site" title="Demo ISLE Site" class="md-nav__link">
+    Demo ISLE Site
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Example User Story</h1>
-                
-                <p>This page left intentionally blank, pending full community documentation for this process.</p>
+                <h1 id="hardware-requirements">Hardware Requirements</h1>
+<p>The ISLE <strong>host server</strong> can be a laptop or workstation, physical server, virtual machine (VM) or cloud service. An SSH connection with a user that has root or admin privileges is necessary. If an IT department is providing the server environment, please see the <a href="../../07_appendices/sample-it-department-request/">Sample IT Department Request Letter</a> for sample language to use in requesting the server.</p>
+<h2 id="known-working-operating-systems-distributions">Known Working Operating Systems / Distributions</h2>
+<ul>
+<li>Ubuntu 18.04 LTS</li>
+<li>Ubuntu 16.04 LTS</li>
+<li>CentOS 7.x</li>
+<li>MacOS</li>
+<li>Windows 10 (for Demo ISLE Site only)</li>
+<li>Red Hat Enterprise Linux (RHEL) -
+<em>Please read this <a href="../../07_appendices/redhat/">Warning about Installing on Redhat</a>. Currently RHEL does not support Docker Community Edition (CE), although Docker Enterprise Edition (Docker EE) can be used.</em></li>
+</ul>
+<h2 id="production-server">Production Server</h2>
+<p>Below are the recommended minimum specifications for a production server. The server can be a local physical server, a VM, or on a hosted platform such as Amazon's AWS or Google's GCP.  </p>
+<ul>
+<li>Ubuntu 18.04 LTS or CentOS 7.x running on a server or VM</li>
+<li>Minimum 2 CPU's (w/ 1 - 4 cores each)</li>
+<li>16 - 32 GB of RAM is recommended</li>
+<li>Sufficient HD or attached storage to hold your collection</li>
+<li>30 - 50GB for the Server OS &amp; overhead</li>
+</ul>
+<p>If you are <strong>migrating</strong> please ensure you have enough storage space for your entire collection or that you can access those data via a network or other file-sharing protocol.</p>
+<ul>
+<li>Open your docker-compose and modify the environment variables called JAVA_MAX_MEM and JAVA_MIN_MEM for fedora, solr, and image-services. Here are some recommendations for production instances:</li>
+</ul>
+<pre><code class="yaml">fedora:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=256M
+...
+
+solr:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=256M
+...
+
+image-services:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=128M
+</code></pre>
+
+<h2 id="staging-server">Staging Server</h2>
+<p>Below are the recommended minimum specifications for a staging server. The server can be a local physical server, a VM, or on a hosted platform such as Amazon's AWS or Google's GCP.  </p>
+<ul>
+<li>Ubuntu 18.04 LTS or CentOS 7.x running on a server or VM</li>
+<li>Minimum 2 CPU's (w/ 1 - 4 cores each)</li>
+<li>8 - 16 GB of RAM is recommended</li>
+<li>Sufficient HD or attached storage to hold your collection</li>
+<li>30 - 50GB for the Server OS &amp; overhead</li>
+</ul>
+<h2 id="development-server">Development Server</h2>
+<p>Below are the recommended minimum specifications for a development server. The server can be a local physical server, a VM, or on a hosted platform such as Amazon's AWS or Google's GCP.  </p>
+<ul>
+<li>Ubuntu 18.04 LTS or CentOS 7.x running on a server or VM</li>
+<li>Minimum 2 CPU's (w/ 1 - 4 cores each)</li>
+<li>8 - 16 GB of RAM is recommended</li>
+<li>Sufficient HD or attached storage to hold your collection</li>
+<li>30 - 50GB for the Server OS &amp; overhead</li>
+</ul>
+<h2 id="demo-isle-site">Demo ISLE Site</h2>
+<p>Below are the recommended specifications for a laptop or desktop running a TEST version of ISLE:</p>
+<ul>
+<li>Bring your own OS.</li>
+<li>Minimum of 2 CPU cores</li>
+<li>8 - 16 GB of RAM is recommended</li>
+<li>128 - 500GB for the Desktop OS</li>
+<li>Sufficient HD or attached storage to hold a small test collection (depending on your testing ~5-10GB for objects and their derivatives)</li>
+</ul>
                 
                   
                 
@@ -829,7 +1035,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../maintainer_release_process/" title="Release Process" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -838,19 +1044,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Release Process
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../maintainer_testing_guide/" title="Testing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../software-dependencies/" title="Software Dependencies" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Testing Guide
+                Software Dependencies
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
