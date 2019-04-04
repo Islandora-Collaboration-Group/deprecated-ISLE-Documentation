@@ -73,7 +73,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#hardware-requirements" tabindex="1" class="md-skip">
+      <a href="../../#production-server" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -229,8 +229,6 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Hardware Requirements
@@ -244,18 +242,9 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#known-working-operating-systems-distributions" title="Known Working Operating Systems / Distributions" class="md-nav__link">
-    Known Working Operating Systems / Distributions
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#production-server" title="Production Server" class="md-nav__link">
@@ -371,6 +360,18 @@
   <li class="md-nav__item">
     <a href="../../02_installation_demo_site/demo_resources/" title="Demo ISLE Site Resources" class="md-nav__link">
       Demo ISLE Site Resources
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02_installation_demo_site/demo_troubleshooting/" title="Demo ISLE Site Troubleshooting" class="md-nav__link">
+      Demo ISLE Site Troubleshooting
     </a>
   </li>
 
@@ -739,8 +740,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Warning about Installing on Redhat" class="md-nav__link">
-      Warning about Installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Warning about Installing on Red Hat" class="md-nav__link">
+      Warning about Installing on Red Hat
     </a>
   </li>
 
@@ -811,7 +812,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08_about/about/" title="About ISLE" class="md-nav__link">
+    <a href="../../08_about/about_isle/" title="About ISLE" class="md-nav__link">
       About ISLE
     </a>
   </li>
@@ -823,7 +824,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08_about/contributing_to_ISLE/" title="Contributing to ISLE" class="md-nav__link">
+    <a href="../../08_about/about_contributing_to_ISLE/" title="Contributing to ISLE" class="md-nav__link">
       Contributing to ISLE
     </a>
   </li>
@@ -884,18 +885,9 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#known-working-operating-systems-distributions" title="Known Working Operating Systems / Distributions" class="md-nav__link">
-    Known Working Operating Systems / Distributions
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#production-server" title="Production Server" class="md-nav__link">
@@ -942,18 +934,27 @@
               
                 
                 
-                <h1 id="hardware-requirements">Hardware Requirements</h1>
-<p>The ISLE <strong>host server</strong> can be a laptop or workstation, physical server, virtual machine (VM) or cloud service. An SSH connection with a user that has root or admin privileges is necessary. If an IT department is providing the server environment, please see the <a href="../../07_appendices/sample-it-department-request/">Sample IT Department Request Letter</a> for sample language to use in requesting the server.</p>
-<h2 id="known-working-operating-systems-distributions">Known Working Operating Systems / Distributions</h2>
+                  <h1>Hardware Requirements</h1>
+                
+                <!--- Hardware Requirements --->
+
+<p>The ISLE host server can be a laptop or workstation, physical server, virtual machine (VM) or cloud service. An SSH connection with a user that has root or admin privileges is necessary. If an IT department is providing the server environment, please see the <a href="../../07_appendices/sample-it-department-request/">Sample IT Department Request Letter</a> for requesting the server.</p>
+<p><strong>Known working operating systems / distributions</strong></p>
 <ul>
-<li>Ubuntu 18.04 LTS</li>
-<li>Ubuntu 16.04 LTS</li>
+<li>Ubuntu 18.04 LTS (also: Ubuntu 16.04 LTS)</li>
 <li>CentOS 7.x</li>
 <li>MacOS</li>
-<li>Windows 10 (for Demo ISLE Site only)</li>
-<li>Red Hat Enterprise Linux (RHEL) -
-<em>Please read this <a href="../../07_appendices/redhat/">Warning about Installing on Redhat</a>. Currently RHEL does not support Docker Community Edition (CE), although Docker Enterprise Edition (Docker EE) can be used.</em></li>
+<li>Windows 10 Professional or Enterprise (for Demo ISLE Site only)</li>
+<li>(Please read the <a href="../../07_appendices/redhat/">Warning about Installing on Red Hat</a>)</li>
 </ul>
+<p><strong>Please select your hardware environment:</strong></p>
+<ul>
+<li><a href="#production-server">Production Server</a></li>
+<li><a href="#staging-server">Staging Server</a></li>
+<li><a href="#development-server">Development Server</a></li>
+<li><a href="#demo-isle-site">Demo ISLE Site</a></li>
+</ul>
+<hr />
 <h2 id="production-server">Production Server</h2>
 <p>Below are the recommended minimum specifications for a production server. The server can be a local physical server, a VM, or on a hosted platform such as Amazon's AWS or Google's GCP.  </p>
 <ul>
@@ -988,6 +989,8 @@ image-services:
     - JAVA_MIN_MEM=128M
 </code></pre>
 
+<p><strong>Please continue by selecting: <a href="../software-dependencies/">Software Dependencies</a>.</strong></p>
+<hr />
 <h2 id="staging-server">Staging Server</h2>
 <p>Below are the recommended minimum specifications for a staging server. The server can be a local physical server, a VM, or on a hosted platform such as Amazon's AWS or Google's GCP.  </p>
 <ul>
@@ -997,6 +1000,8 @@ image-services:
 <li>Sufficient HD or attached storage to hold your collection</li>
 <li>30 - 50GB for the Server OS &amp; overhead</li>
 </ul>
+<p><strong>Please continue by selecting: <a href="../software-dependencies/">Software Dependencies</a>.</strong></p>
+<hr />
 <h2 id="development-server">Development Server</h2>
 <p>Below are the recommended minimum specifications for a development server. The server can be a local physical server, a VM, or on a hosted platform such as Amazon's AWS or Google's GCP.  </p>
 <ul>
@@ -1006,6 +1011,8 @@ image-services:
 <li>Sufficient HD or attached storage to hold your collection</li>
 <li>30 - 50GB for the Server OS &amp; overhead</li>
 </ul>
+<p><strong>Please continue by selecting: <a href="../software-dependencies/">Software Dependencies</a>.</strong></p>
+<hr />
 <h2 id="demo-isle-site">Demo ISLE Site</h2>
 <p>Below are the recommended specifications for a laptop or desktop running a TEST version of ISLE:</p>
 <ul>
@@ -1015,6 +1022,8 @@ image-services:
 <li>128 - 500GB for the Desktop OS</li>
 <li>Sufficient HD or attached storage to hold a small test collection (depending on your testing ~5-10GB for objects and their derivatives)</li>
 </ul>
+<p><strong>Please continue by selecting: <a href="../software-dependencies/">Software Dependencies</a>.</strong></p>
+<hr />
                 
                   
                 

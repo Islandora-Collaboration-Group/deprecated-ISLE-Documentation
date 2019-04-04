@@ -73,7 +73,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#warning" tabindex="1" class="md-skip">
+      <a href="../../#local-url" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -328,22 +328,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#warning" title="WARNING" class="md-nav__link">
-    WARNING
+  <a href="#local-url" title="Local URL" class="md-nav__link">
+    Local URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingest-sample-objects" title="Ingest Sample Objects" class="md-nav__link">
-    Ingest Sample Objects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#users-and-passwords" title="Users and Passwords" class="md-nav__link">
-    Users and Passwords
+  <a href="#docker-containers-passwords" title="Docker Containers: Passwords" class="md-nav__link">
+    Docker Containers: Passwords
   </a>
   
     <nav class="md-nav">
@@ -391,6 +384,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#7-portainer" title="7. Portainer" class="md-nav__link">
+    7. Portainer
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -404,6 +404,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../demo_troubleshooting/" title="Demo ISLE Site Troubleshooting" class="md-nav__link">
+      Demo ISLE Site Troubleshooting
+    </a>
   </li>
 
         
@@ -771,8 +783,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/redhat/" title="Warning about Installing on Redhat" class="md-nav__link">
-      Warning about Installing on Redhat
+    <a href="../../07_appendices/redhat/" title="Warning about Installing on Red Hat" class="md-nav__link">
+      Warning about Installing on Red Hat
     </a>
   </li>
 
@@ -843,7 +855,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08_about/about/" title="About ISLE" class="md-nav__link">
+    <a href="../../08_about/about_isle/" title="About ISLE" class="md-nav__link">
       About ISLE
     </a>
   </li>
@@ -855,7 +867,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../08_about/contributing_to_ISLE/" title="Contributing to ISLE" class="md-nav__link">
+    <a href="../../08_about/about_contributing_to_ISLE/" title="Contributing to ISLE" class="md-nav__link">
       Contributing to ISLE
     </a>
   </li>
@@ -921,22 +933,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#warning" title="WARNING" class="md-nav__link">
-    WARNING
+  <a href="#local-url" title="Local URL" class="md-nav__link">
+    Local URL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ingest-sample-objects" title="Ingest Sample Objects" class="md-nav__link">
-    Ingest Sample Objects
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#users-and-passwords" title="Users and Passwords" class="md-nav__link">
-    Users and Passwords
+  <a href="#docker-containers-passwords" title="Docker Containers: Passwords" class="md-nav__link">
+    Docker Containers: Passwords
   </a>
   
     <nav class="md-nav">
@@ -984,6 +989,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#7-portainer" title="7. Portainer" class="md-nav__link">
+    7. Portainer
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1008,26 +1020,17 @@
                 
                   <h1>Demo ISLE Site Resources</h1>
                 
-                <h3 id="warning">WARNING</h3>
-<p>Do not use an IP e.g. <code>https://10.10.10.130</code> to view the Drupal site, login etc as somethings won't work e.g. Large Images using the OpenSeadragon Viewer.</p>
-<p>Please always use the <a href="https://isle.localdomain">https://isle.localdomain</a> domain to view the site, login etc</p>
+                <h3 id="local-url">Local URL</h3>
+<p>Always use the <code>https://isle.localdomain</code> domain to view and log in to a local site. (Do not use an IP address, such as <code>https://10.10.10.130 or https://127.0.0.01</code> as some components may not function correctly.)</p>
 <hr />
-<h3 id="ingest-sample-objects">Ingest Sample Objects</h3>
-<p>Courtesy of the <a href="https://github.com/Islandora-Collaboration-Group/icg_information">Islandora Collaboration Group</a> there is a sample set of objects and corresponding metadata (examples organized by solution pack, including zips for quicker bulk ingestion) that can be used to test ingest.</p>
+<h3 id="docker-containers-passwords">Docker Containers: Passwords</h3>
 <ul>
-<li><a href="https://github.com/Islandora-Collaboration-Group/islandora-sample-objects">https://github.com/Islandora-Collaboration-Group/islandora-sample-objects</a></li>
+<li><code>islandora</code> user on the ISLE host server uses <code>islandora</code> as the password.</li>
 </ul>
-<p>You are free to clone this repository to your local laptop or desktop and ingest as required.</p>
-<p>If you are not familiar with ingest, one can follow instructions <a href="https://wiki.duraspace.org/display/ISLANDORA/How+to+Add+an+Item+to+a+Digital+Collection">here</a> or start with the <a href="https://wiki.duraspace.org/display/ISLANDORA/Getting+Started+with+Islandora">Getting Started with Islandora section</a> of the official Islandora documentation.</p>
-<hr />
-<h3 id="users-and-passwords">Users and Passwords</h3>
+<!--- TODO this IP information conflicts with our statement to always use the `https://isle.localdomain` domain. Requires clarification. --->
+
 <ul>
-<li>
-<p><code>islandora</code> user on the ISLE host server uses <code>islandora</code> as the password.</p>
-</li>
-<li>
-<p>Some of the information below is for accessing the non Drupal site admin panels and resources only. (optional). In this context, <code>hostip</code> below can mean either</p>
-<ul>
+<li>Some of the information below is for accessing the non Drupal site admin panels and resources only. (optional). In this context, <code>hostip</code> below can mean either<ul>
 <li>the IP address e.g. <code>http://10.10.10.130</code> of the Vagrant or Non-Vagrant Host VM (<em>CentOS / Ubuntu</em>)</li>
 <li>the IP address e.g. <code>127.0.0.1</code> for <code>Docker for Mac</code></li>
 </ul>
@@ -1378,6 +1381,9 @@
 </tr>
 </tbody>
 </table>
+<ul>
+<li>The Proxy Control Panel is available at <a href="https://admin.isle.localdomain">admin.isle.localdomain</a>.  No username/password are required.  This is unsafe for production environments.</li>
+</ul>
 <hr />
 <h4 id="6-image-services">6. Image Services</h4>
 <table>
@@ -1452,6 +1458,11 @@
 </tr>
 </tbody>
 </table>
+<hr />
+<h4 id="7-portainer">7. Portainer</h4>
+<ul>
+<li>Portainer (a Docker control panel) is available at <a href="http://portainer.isle.localdomain">portainer.isle.localdomain</a>. No username/password are required.  This is unsafe for production environments.</li>
+</ul>
                 
                   
                 
@@ -1487,13 +1498,13 @@
           </a>
         
         
-          <a href="../../03_installation_new_site/new_site_installation_single/" title="New Site Installation: Single ISLE Environment" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../demo_troubleshooting/" title="Demo ISLE Site Troubleshooting" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                New Site Installation: Single ISLE Environment
+                Demo ISLE Site Troubleshooting
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
