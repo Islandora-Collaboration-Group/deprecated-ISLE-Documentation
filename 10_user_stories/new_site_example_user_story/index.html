@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -395,8 +397,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -645,8 +647,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -892,7 +894,9 @@
                 
                   <h1>New Site Example User Story</h1>
                 
-                <h2 id="building-a-new-islandora-site-using-isle-sample-user-story">building a New Islandora Site Using ISLE - Sample User Story</h2>
+                <!--- PAGE_TITLE --->
+
+<h2 id="building-a-new-islandora-site-using-isle-sample-user-story">building a New Islandora Site Using ISLE - Sample User Story</h2>
 <p>Sam wants to spin up Islandora on an Ubuntu Linux server she has in the institutional data center. She accesses the server using ssh and determines that it meets the <a href="../../01_installation_host_server/hardware-requirements/">Hardware Requirements</a> (basically - has enough processor, memory, and storage space).</p>
 <p>Sam already has a domain name she wants to use for this Islandora instance - https://islandoratest.university.edu (note: this is a made up sample url) and has requested the DNS update from IT so the name resolves to the IP address of her server.</p>
 <p>Next Sam follows the <a href="../01_installation_host_server/software-dependencies/#ubuntu">Software Dependencies</a> instructions to setup the Ubuntu server to be a host for ISLE (install some software including docker, download/clone the ISLE repository, create and configure a Linux user for islandora).</p>

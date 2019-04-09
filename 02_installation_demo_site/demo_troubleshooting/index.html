@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -442,8 +444,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -656,8 +658,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -910,12 +912,14 @@
                 
                   <h1>Demo ISLE Site Troubleshooting</h1>
                 
-                <p><strong>Please select a topic:</strong></p>
+                <!--- Demo ISLE Site Troubleshooting --->
+
+<p><strong>Please select a topic:</strong></p>
 <ul>
 <li><a href="#port-conflicts">Port Conflicts</a></li>
 <li><a href="#non-running-docker-containers">Non-Running Docker Containers</a></li>
 </ul>
-<h3 id="port-conflicts">Port Conflicts</h3>
+<h2 id="port-conflicts">Port Conflicts</h2>
 <p>If you encounter an error like this:</p>
 <p><code>Error starting userland proxy: Bind for 0.0.0.0:xxxx failed: port is already allocated</code></p>
 <p>then ISLE may have encountered a conflict with the <code>xxxx</code> port identified in the error message.</p>
@@ -937,7 +941,7 @@
 </li>
 </ul>
 <p>Once your web server(s) have been disabled, resume the ISLE install process by repeating your last installation command, presumably <code>docker-compose up -d</code>.</p>
-<h3 id="non-running-docker-containers">Non-Running Docker Containers</h3>
+<h2 id="non-running-docker-containers">Non-Running Docker Containers</h2>
 <p>If you don't see all containers running, then stop the running containers with <code>docker-compose down</code> and start the containers one at a time following the instructions below:</p>
 <ul>
 <li>

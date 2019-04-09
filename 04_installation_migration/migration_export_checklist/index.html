@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -401,8 +403,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -730,8 +732,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -1058,7 +1060,9 @@
                 
                   <h1>Migration Export Checklist</h1>
                 
-                <p>This section is a checklist of materials to <strong>COPY</strong> from the current running Islandora Production server(s) to the appropriate storage location / directory in order to build your ISLE instance.</p>
+                <!--- Migration Export Checklist --->
+
+<p>This section is a checklist of materials to <strong>COPY</strong> from the current running Islandora Production server(s) to the appropriate storage location / directory in order to build your ISLE instance.</p>
 <p><strong>Please Note:</strong> <em>Ubuntu / Debian style paths are used for all examples file locations below, endusers might have different locations for these files HOWEVER the file and directory names etc should be roughly the same.</em></p>
 <p><strong>Caution</strong>: While the ISLE Project recommends use of export methods or tools such as rsync, scp etc., it assumes that endusers are familiar with them and are aware of possible dangers of improperly exporting or copying production data. Ensure adequate backups of any production system(s) are made prior to any attempts. If you are not familiar or are uncomfortable with these processes, it is highly advisable to work with an appropriate IT resource.</p>
 <p><strong>Finally also please note:</strong> Instructions from this checklist and the <a href="../migration_installation_guide/">Migration Installation Guide</a> may call for you to <strong>COPY</strong> data from your running Islandora environment to a newly created folder: <code>yourdomain-data</code> on your ISLE Host Server or <code>current_prod_islandora_config</code> on your local machine. You will then work from these copies for future steps.</p>
@@ -1436,7 +1440,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../migration_installation_guide/" title="Migration Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../migration_installation_guide/" title="Migration Installation Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1445,7 +1449,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Migration Guide
+                Migration Installation Guide
               </span>
             </div>
           </a>

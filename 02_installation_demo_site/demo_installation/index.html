@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -484,8 +486,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -698,8 +700,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -1018,7 +1020,7 @@
 <p>Enable the Demo ISLE Site to be viewed locally as: <code>https://isle.localdomain</code></p>
 <ul>
 <li>
-<p>Please use these instructions for <a href="../../07_appendices/editing-the-hosts-file/">Editing the "/etc/hosts" File</a>.</p>
+<p>Please use these instructions to <a href="../../07_appendices/edit-the-hosts-file/">Edit the "/etc/hosts" File</a>.</p>
 </li>
 <li>
 <p>After completing the above, please continue below with <em>Step 2: Launch Process</em>.</p>
@@ -1027,33 +1029,26 @@
 <hr />
 <h3 id="step-2-launch-process">Step 2: Launch Process</h3>
 <ul>
-<li>In terminal (shell) or PowerShell navigate to your ISLE project directory. You may already be in this directory if you are coming from the <a href="../../01_installation_host_server/software-dependencies/">Software Requirements Guide</a>.</li>
-</ul>
-<p>The following steps below are for all users (<em>Vagrant, VM, non Vagrant and Docker for MacOS, Windows and Ubuntu Desktop users alike.</em>)</p>
-<p>The install times stated below for each container are highly dependent on the enduser's available Internet bandwidth and could take more or less time accordingly.</p>
-<ul>
-<li>Within the open terminal, run:</li>
+<li>Open a <code>terminal</code> (Windows: open <code>PowerShell</code>)</li>
+<li>Navigate to your ISLE project directory. (You may already be in this directory if you are coming from the <a href="../../01_installation_host_server/software-dependencies/">Software Dependencies</a>.)</li>
+<li>Download and start all ISLE Docker images (<em>~6 GB of data may take 5-10 minutes</em>):</li>
 </ul>
 <pre><code>docker-compose up -d
 </code></pre>
 
 <ul>
-<li>
-<p>This is going to download and start all ISLE Docker images (<em>roughly 6 GB of data so it may take a little while depending on your Internet connection</em>)</p>
-</li>
-<li>
-<p>To check if the containers are running: <code>docker ps</code> (shows only running containers)</p>
-<ul>
-<li>If you don't see all containers try: <code>docker ps -a</code> (shows all containers running or not)</li>
+<li>After the above process is completed:<ul>
+<li>View only the running containers: <code>docker ps</code></li>
+<li>View all containers (both those running and stopped): <code>docker ps -a</code></li>
+<li><strong>If any <code>isle-</code> containers are NOT running, then use <a href="../demo_troubleshooting/">Demo ISLE Site Troubleshooting</a> to solve before continuing below.</strong> <!---TODO: This could be confusing if (a) there are other, non-ISLE containers, or (b) the isle-varnish container is installed but intentionally not running ---></li>
 </ul>
 </li>
 </ul>
-<p><strong>If all containers are NOT running, then proceed to the Troubleshooting section first before advancing to the "Install script on Apache container" section below</strong></p>
 <hr />
 <h3 id="step-3-run-install-script">Step 3: Run Install Script</h3>
-<p>This build process may take 10 - 20 minutes (<em>depending on system and internet speeds</em>)</p>
+<p>This process may take 10 - 20 minutes (<em>depending on system and internet speeds</em>)</p>
 <ul>
-<li>Run the following install site script on the Apache container by copying and pasting this command:</li>
+<li>Run the install site script on the Apache container by copying and pasting this command:</li>
 </ul>
 <pre><code>docker exec -it isle-apache-ld bash /utility-scripts/isle_drupal_build_tools/isle_islandora_installer.sh
 </code></pre>
@@ -1090,7 +1085,7 @@
 <hr />
 <h3 id="step-4-test-the-site">Step 4: Test the Site</h3>
 <ul>
-<li>Enter this URL <code>https://isle.localdomain</code> into your web browser.
+<li>In your web browser, enter this URL: <code>https://isle.localdomain</code>
 <!--- TODO: Add error message and how to proceed (click 'Advanced...') ---></li>
 <li>Note: You may see an SSL error warning that the site is unsafe. It is safe, it simply uses "self-signed" SSL certs. Ignore the error and proceed to the site.</li>
 <li>Log in to the local Islandora site:<ul>
@@ -1098,7 +1093,6 @@
 <li>Password: <code>isle</code></li>
 </ul>
 </li>
-<li>(<a href="../demo_resources/">Demo ISLE Site Resources</a> contains lists of passwords for Docker containers.)</li>
 </ul>
 <hr />
 <h3 id="step-5-ingest-sample-objects">Step 5: Ingest Sample Objects</h3>
@@ -1111,7 +1105,7 @@
 
 <ul>
 <li>Follow these ingestion instructions <a href="https://wiki.duraspace.org/display/ISLANDORA/How+to+Add+an+Item+to+a+Digital+Collection">How to Add an Item to a Digital Collection</a></li>
-<li>(<a href="https://wiki.duraspace.org/display/ISLANDORA/Getting+Started+with+Islandora">Getting Started with Islandora</a> contains explanations about content models, collections, and datastreams.</li>
+<li>(Note: <a href="https://wiki.duraspace.org/display/ISLANDORA/Getting+Started+with+Islandora">Getting Started with Islandora</a> contains explanations about content models, collections, and datastreams.)</li>
 <li>After ingesting content, you will need to add an Islandora Simple Search block to the Drupal structure. (The default search box will only search Drupal content, not Islandora content.)<ul>
 <li>Select from the menu: <code>Structure &gt; Blocks &gt; Islandora Simple Search</code></li>
 <li>Select: <code>Sidebar Second</code></li>
@@ -1123,7 +1117,7 @@
 <hr />
 <h3 id="step-6-additional-resources">Step 6: Additional Resources</h3>
 <ul>
-<li><a href="../demo_resources/">Demo ISLE Site Resources</a> contains passwords for the Docker containers.</li>
+<li><a href="../demo_resources/">Demo ISLE Site Resources</a> contains Docker container passwords and URLs for administrator tools.</li>
 <li><a href="../demo_troubleshooting/">Demo ISLE Site Troubleshooting</a> contains help for port conflicts, non-running Docker containers, etc.</li>
 </ul>
                 

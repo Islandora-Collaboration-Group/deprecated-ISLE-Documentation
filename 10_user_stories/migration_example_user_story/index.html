@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -395,8 +397,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -645,8 +647,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -892,7 +894,9 @@
                 
                   <h1>Migration Example User Story</h1>
                 
-                <h3 id="migrating-an-islandora-site-to-isle-sample-user-story">Migrating an Islandora Site to ISLE: Sample User Story...</h3>
+                <!--- PAGE_TITLE --->
+
+<h3 id="migrating-an-islandora-site-to-isle-sample-user-story">Migrating an Islandora Site to ISLE: Sample User Story...</h3>
 <p>Laverne's college archive runs an Islandora site on a server in the college IT data center. The site was installed and set up by a colleague who has since left. Some components are outdated and the work of maintaining the server and software stack is taking up a lot of Laverne's time. She's decided to try migrating the site to a new one built with ISLE.</p>
 <p>She begins by requesting a second server from IT - based on the [System_Requirements]. IT prefers not to give clients root-level access so they agree to make Laverne a user called islandora according to the [Host_Server_Setup] instructions and provide her with the SSH login instructions. The new server has attached storage large enough to hold a copy of the existing Fedora data store from the old server.</p>
 <p>Additionally, Laverne requests a new URL for the ISLE-based Islandora site "https://digital.university-college.edu" and ensures that IT has created DNS records so that this URL directs to the new server.</p>

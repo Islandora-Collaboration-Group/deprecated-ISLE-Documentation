@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -395,8 +397,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -611,8 +613,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -851,7 +853,9 @@
               
                 
                 
-                <h1 id="opening-a-terminalshell-inside-a-running-container">Opening a Terminal/Shell Inside a Running Container</h1>
+                <!--- PAGE_TITLE --->
+
+<h1 id="opening-a-terminalshell-inside-a-running-container">Opening a Terminal/Shell Inside a Running Container</h1>
 <p>At times you may find it necessary to open a terminal window or 'shell' inside a running container.  In ISLE this will usually involve the 'Apache' container.</p>
 <p>In a terminal window on your <strong>host</strong>, enter <code>docker ps</code> to show a list of all running containers.  Each container's NAME should appear in the right-most column of the output.  In an <em>isle.localdomain</em> environment the name of the Apache container will be <code>isle-apache-ld</code>.  In other configurations the container name may be different.</p>
 <p>Use <code>docker exec -it isle-apache-ld bash</code>, where 'isle-apache-ld' represents the name of the target container, to open a bash shell inside the isle-apache-ld container.  No password will be required.  If successful, your terminal prompt will look something like this: <code>root@dd9ee02aa718:/#</code>.</p>

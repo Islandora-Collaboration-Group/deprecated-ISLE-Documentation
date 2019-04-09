@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -336,8 +338,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-add-your-user-to-the-docker-group_1" title="Step 4: Add your user to the docker group" class="md-nav__link">
-    Step 4: Add your user to the docker group
+  <a href="#step-4-add-your-user-to-the-docker-group_1" title="Step 4: Add Your User to the docker Group" class="md-nav__link">
+    Step 4: Add Your User to the docker Group
   </a>
   
 </li>
@@ -590,8 +592,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -804,8 +806,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -1103,8 +1105,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-add-your-user-to-the-docker-group_1" title="Step 4: Add your user to the docker group" class="md-nav__link">
-    Step 4: Add your user to the docker group
+  <a href="#step-4-add-your-user-to-the-docker-group_1" title="Step 4: Add Your User to the docker Group" class="md-nav__link">
+    Step 4: Add Your User to the docker Group
   </a>
   
 </li>
@@ -1222,16 +1224,16 @@
 <h3 id="step-1-install-server-prerequisites-and-git">Step 1: Install Server Prerequisites and Git</h3>
 <ul>
 <li>
-<p>Open a terminal on your local laptop or workstation and ssh to the server / VM:</p>
+<p>Open a terminal on your local laptop or workstation and ssh to the server or VM.</p>
 </li>
 <li>
-<p>You need to become root first</p>
+<p>You must have <code>root</code> level permissions.</p>
+<ul>
+<li>If you are not already <code>root</code>, enter either <code>sudo -s</code> or <code>sudo su</code> to become root.</li>
+</ul>
 </li>
 <li>
-<p>If you are not already root, use either <code>sudo -s</code> or <code>sudo su</code> to become root.</p>
-</li>
-<li>
-<p>Update and Install the following required software:</p>
+<p>Update and install the following required software:</p>
 </li>
 </ul>
 <pre><code> apt-get update &amp;&amp; upgrade
@@ -1270,24 +1272,27 @@
 
 <h3 id="step-3-install-docker-compose">Step 3: Install Docker-Compose</h3>
 <ul>
-<li>Copy and paste the command below</li>
+<li>Copy and paste the command below.
+<!--- Why do we hardcode this version of docker-compose? Is there a way to get the latest stable release instead? Or do we create a list of software versions to update periodically? Note: This occurs 2 times in this file. ---></li>
 </ul>
 <pre><code>curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose &amp;&amp; chmod +x /usr/local/bin/docker-compose
 </code></pre>
 
 <ul>
-<li>Test the Installation</li>
+<li>Test the Installation.</li>
 </ul>
 <pre><code>docker-compose --version
 </code></pre>
 
-<p><strong>Example output:</strong></p>
-<p><code>docker-compose version 1.23.1 ...</code></p>
+<ul>
+<li><strong>Example output:</strong>
+<code>docker-compose version 1.23.1, build 1110ad01</code></li>
+</ul>
 <h3 id="step-4-add-your-user-to-the-docker-group">Step 4: Add Your User to the <code>docker</code> Group</h3>
-<p>This will allow your user to run docker commands, including the ones required to launch the entire ISLE stack.</p>
+<p>Allow your user to run Docker commands and to launch the entire ISLE stack.</p>
 <ul>
 <li>
-<p>If you are still <code>root</code> (<code>whoami</code>) type <code>exit</code> to become your normal user.</p>
+<p>If you are still <code>root</code> (<code>whoami</code>), type <code>exit</code> to become your normal user.</p>
 </li>
 <li>
 <p>Add yourself to the <code>docker</code> group.</p>
@@ -1297,11 +1302,11 @@
 </code></pre>
 
 <ul>
-<li>Disconnect <code>exit</code> and reconnect for your effective groups to update.</li>
+<li>Type <code>exit</code> and then reconnect (this allows your effective groups to update).</li>
 </ul>
 <h3 id="step-5-clone-isle-repository">Step 5: Clone ISLE Repository</h3>
 <p><strong>Please note:</strong> The location you clone the repository to becomes your project directory. It can be located anywhere and will include your configuration and log output of the containers.</p>
-<p>Please run these steps as your user.</p>
+<p>Please run these steps as your normal user (not <code>root</code>):</p>
 <ul>
 <li>Clone the repository.</li>
 </ul>
@@ -1320,23 +1325,23 @@
 <li><a href="../../02_installation_demo_site/demo_installation/">Demo ISLE Site Installation</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_single/">New Site Installation: Single ISLE Environment</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_multiple/">New Site Installation: Multiple ISLE Environments</a></li>
-<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Guide to ISLE</a></li>
+<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Installation Guide</a></li>
 </ul>
 <hr />
 <h2 id="centos">CentOS</h2>
 <h3 id="step-1-install-server-prerequisites-and-git_1">Step 1: Install Server Prerequisites and Git</h3>
 <ul>
 <li>
-<p>Open a terminal on your local laptop or workstation and ssh to the server / VM:</p>
+<p>Open a terminal on your local laptop or workstation and ssh to the server or VM.</p>
 </li>
 <li>
-<p>You need to become root first</p>
+<p>You must have <code>root</code> level permissions.</p>
+<ul>
+<li>If you are not already <code>root</code>, enter either <code>sudo -s</code> or <code>sudo su</code> to become root.</li>
+</ul>
 </li>
 <li>
-<p>If you are not already root, use either <code>sudo -s</code> or <code>sudo su</code> to become root.</p>
-</li>
-<li>
-<p>Add the RHEL/CENTOS epel-release package repository first</p>
+<p>Add the CentOS/RHEL epel-release package repository.</p>
 </li>
 </ul>
 <pre><code>yum install -y epel-release
@@ -1366,24 +1371,26 @@
 
 <h3 id="step-3-install-docker-compose_1">Step 3: Install Docker-Compose</h3>
 <ul>
-<li>Copy and paste the command below</li>
+<li>Copy and paste the command below.</li>
 </ul>
 <pre><code>curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose &amp;&amp; chmod +x /usr/local/bin/docker-compose
 </code></pre>
 
 <ul>
-<li>Test the Installation</li>
+<li>Test the Installation.</li>
 </ul>
 <pre><code>docker-compose --version
 </code></pre>
 
-<p><strong>Example output:</strong>
-<code>docker-compose version 1.23.1 ...</code></p>
-<h3 id="step-4-add-your-user-to-the-docker-group_1">Step 4: Add your user to the <code>docker</code> group</h3>
-<p>This will allow your user to run docker commands, including the ones required to launch the entire ISLE stack.</p>
+<ul>
+<li><strong>Example output:</strong>
+<code>docker-compose version 1.23.1, build 1110ad01</code></li>
+</ul>
+<h3 id="step-4-add-your-user-to-the-docker-group_1">Step 4: Add Your User to the <code>docker</code> Group</h3>
+<p>Allow your user to run Docker commands and to launch the entire ISLE stack.</p>
 <ul>
 <li>
-<p>If you are still <code>root</code> (<code>whoami</code>) type <code>exit</code> to become your normal user.</p>
+<p>If you are still <code>root</code> (<code>whoami</code>), type <code>exit</code> to become your normal user.</p>
 </li>
 <li>
 <p>Add yourself to the <code>docker</code> group.</p>
@@ -1393,11 +1400,11 @@
 </code></pre>
 
 <ul>
-<li>Disconnect <code>exit</code> and reconnect for your effective groups to update.</li>
+<li>Type <code>exit</code> and then reconnect (this allows your effective groups to update).</li>
 </ul>
 <h3 id="step-5-clone-isle-repository_1">Step 5: Clone ISLE Repository</h3>
 <p><strong>Please note:</strong> The location you clone the repository to becomes your project directory. It can be located anywhere and will include your configuration and log output of the containers.</p>
-<p>Please run these steps as your user.</p>
+<p>Please run these steps as your normal user (not <code>root</code>):</p>
 <ul>
 <li>Clone the repository.</li>
 </ul>
@@ -1416,7 +1423,7 @@
 <li><a href="../../02_installation_demo_site/demo_installation/">Demo ISLE Site Installation</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_single/">New Site Installation: Single ISLE Environment</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_multiple/">New Site Installation: Multiple ISLE Environments</a></li>
-<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Guide to ISLE</a></li>
+<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Installation Guide</a></li>
 </ul>
 <hr />
 <h2 id="mac">Mac</h2>
@@ -1487,7 +1494,7 @@ git version 2.15.1
 </ul>
 <h3 id="step-3-clone-isle-repository">Step 3: Clone ISLE Repository</h3>
 <p><strong>Please note:</strong> The location you clone the repository to becomes your project directory. It can be located anywhere and will include your configuration and log output of the containers.</p>
-<p>Please run these steps as your user.</p>
+<p>Please run these steps as your normal user (not <code>root</code>):</p>
 <ul>
 <li>Clone the repository.</li>
 </ul>
@@ -1515,7 +1522,7 @@ git version 2.15.1
 <li><a href="../../02_installation_demo_site/demo_installation/">Demo ISLE Site Installation</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_single/">New Site Installation: Single ISLE Environment</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_multiple/">New Site Installation: Multiple ISLE Environments</a></li>
-<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Guide to ISLE</a></li>
+<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Installation Guide</a></li>
 </ul>
 <hr />
 <h2 id="windows">Windows</h2>
@@ -1631,7 +1638,7 @@ git version 2.15.1
 <li><a href="../../02_installation_demo_site/demo_installation/">Demo ISLE Site Installation</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_single/">New Site Installation: Single ISLE Environment</a></li>
 <li><a href="../../03_installation_new_site/new_site_installation_multiple/">New Site Installation: Multiple ISLE Environments</a></li>
-<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Guide to ISLE</a></li>
+<li><a href="../../04_installation_migration/migration_installation_guide/">Migration Installation Guide</a></li>
 </ul>
                 
                   

@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -449,18 +451,19 @@
     Config Directory
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proxy-directory" title="Proxy Directory" class="md-nav__link">
-    Proxy Directory
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-file-docker-composeyml" title="Edit File docker-compose.yml" class="md-nav__link">
+    Edit File docker-compose.yml
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-directory" title="Proxy Directory" class="md-nav__link">
+    Proxy Directory
+  </a>
   
 </li>
       
@@ -524,8 +527,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -738,8 +741,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -1033,18 +1036,19 @@
     Config Directory
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#proxy-directory" title="Proxy Directory" class="md-nav__link">
-    Proxy Directory
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-file-docker-composeyml" title="Edit File docker-compose.yml" class="md-nav__link">
+    Edit File docker-compose.yml
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-directory" title="Proxy Directory" class="md-nav__link">
+    Proxy Directory
+  </a>
   
 </li>
       
@@ -1076,7 +1080,7 @@
                 
                 <!--- New Site Installation: Single ISLE Environment --->
 
-<p><em>Expectations:  It may take at least a minimum of <strong>4 - 6 hours or more</strong> to read this documentation and complete this installation. Please proceed slowly.</em></p>
+<p><em>Expectations:  It may take at least <strong>4 - 6 hours or more</strong> to read this documentation and complete this installation. Please proceed slowly.</em></p>
 <p>This guide documents how an enduser can spin up and install a single ISLE / Islandora environment tailored to use only one unique domain / URL and one ISLE environment.</p>
 <p>A new ISLE / Islandora environment can include the option to create an un-themed Drupal website and empty Fedora repository for endusers to develop code, perform ingests, edit metadata, update fields in SOLR indexing all essential in ultimately creating a new ISLE production site.</p>
 <p>While this checklist will attempt to point out most of the usage challenges or pitfalls, ISLE assumes no responsibility or liability in this matter should an enduser have customizations beyond what this guide outlines.</p>
@@ -1091,7 +1095,7 @@
 <p>Host Server that conforms to the specifications outlined in the <a href="../../01_installation_host_server/hardware-requirements/">Hardware Requirements</a></p>
 </li>
 <li>
-<p>This new site guide is designed for a single ISLE Host server that has already followed the appropriate setup and configuration instructions in the <a href="../..#new-isle">New ISLE Site section</a> of the guide.</p>
+<p>This new site guide is designed for a single ISLE Host server that has already followed the appropriate setup and configuration instructions in the <a href="../..#new-isle">New ISLE Site</a> section of the guide.</p>
 </li>
 <li>
 <p>Instructions below also assume a MacOS or Linux laptop or workstation to be used in conjunction with the ISLE Host Server for deploying configs, code, files etc. Windows users may have to adjust / swap out various tools as needed.</p>
@@ -1322,7 +1326,31 @@
 <h2 id="config-directory">Config Directory</h2>
 <p>The config directory has many purposes like holding customized configuration files mounted to specific containers (which we have no covered here), but for a single simple site we only use it to hold our proxy configs and as a place to store our SSL Certificate and Key.</p>
 <hr />
-<h3 id="proxy-directory">Proxy Directory</h3>
+<h2 id="edit-file-docker-composeyml">Edit File <code>docker-compose.yml</code></h2>
+<p><strong>For Production and Staging Servers Only:</strong> Open the <code>docker-compose.yml</code> file and modify the environment variables called JAVA_MAX_MEM and JAVA_MIN_MEM for fedora, solr, and image-services.</p>
+<pre><code class="yaml">fedora:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=256M
+...
+
+solr:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=256M
+...
+
+image-services:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=128M
+</code></pre>
+
+<hr />
+<h2 id="proxy-directory">Proxy Directory</h2>
 <p>If need be, please refer to the <strong>Systems</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <p>The <code>proxy</code> subdirectory contains all specific configurations necessary for the Traefik proxy to function properly with your changes.</p>
 <p>If need be, please refer to the <strong>SSL certificate</strong> section of the <a href="../../glossary/">Glossary</a> for relevant terms to help guide installation.</p>

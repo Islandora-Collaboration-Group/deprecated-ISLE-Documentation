@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -395,8 +397,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -611,8 +613,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -910,7 +912,9 @@
               
                 
                 
-                <h1 id="installing-a-module-with-composer">Installing a Module with Composer</h1>
+                <!--- PAGE_TITLE --->
+
+<h1 id="installing-a-module-with-composer">Installing a Module with Composer</h1>
 <p><em>Note: There is always more than one way to do things, like installing a module, with Docker.  This is just one of many approaches for installing a module using Composer.</em></p>
 <p><em>Composer</em> is a PHP package/dependency manager employed in Drupal 8 and many other PHP-based applications.  Some Drupal 7, and subsequently Islandora 7.x, modules may also employ <em>Composer</em> to assist with installation and module management.  </p>
 <p><em>Composer</em> is included, or 'baked in', to ISLE's Apache container image.  You can open a shell inside a running ISLE Apache container (<a href="../open-terminal-in-running-container/">see these instructions for opening a terminal ina container</a> to use it.  When you open a shell inside the Apache container you'll initially be logged in as 'root'; however, <em>Composer</em> should not be run as 'root' so once the shell is open you should switch to the <em>islandora</em> user.  Do this by entering <code>sudo su islandora</code>, and your prompt should change to something like this: <code>islandora@dd9ee02aa718:/$</code>.  You can confirm that Composer is installed and accessible by entering <code>composer --version</code>, and you should see something like this in response: <code>Composer version 1.6.3 2018-01-31 16:28:17</code>.</p>

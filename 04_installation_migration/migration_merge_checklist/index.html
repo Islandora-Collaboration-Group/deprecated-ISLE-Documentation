@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -401,8 +403,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -757,8 +759,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -1112,7 +1114,9 @@
                 
                   <h1>Migration Merge Checklist</h1>
                 
-                <p>This section is to serve as a new checklist for the editing or merging of the copied Islandora Production server(s) data and config files to the appropriate config directory on the enduser's local laptop and ultimately copied / deployed back to the new ISLE Host Server.</p>
+                <!--- Migration Merge Checklist --->
+
+<p>This section is to serve as a new checklist for the editing or merging of the copied Islandora Production server(s) data and config files to the appropriate config directory on the enduser's local laptop and ultimately copied / deployed back to the new ISLE Host Server.</p>
 <p>The suggested workflow is for endusers to review the Production file(s) first, make note of any settings and then make appropriate edits within the <code>yourdomain-config</code> directory to change values, add passwords or usernames etc on your local laptop with the ultimate goal of checking all results into a git repository for deploy later on the ISLE Host server.</p>
 <p>The only change is that unless otherwise directed e.g. Apache <code>html</code> and Fedora <code>data</code>. all changes should be made on the local laptop in the <code>yourdomain-config</code> directory.</p>
 <p>Please note as per the migration guide instructions the name of this directory shouldn't literally be "yourdomain-config" or "yourdomain-data" so replace "yourdomain" with the name of your intended Islandora site's domain.</p>

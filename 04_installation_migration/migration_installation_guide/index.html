@@ -38,7 +38,7 @@
     
     
       
-        <title>Migration Guide - Islandora Enterprise (ISLE)</title>
+        <title>Migration Installation Guide - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -73,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#this-section-of-documentation-is-a-work-in-progress" tabindex="1" class="md-skip">
+      <a href="../../#expectations-it-may-take-at-least-8-hours-or-more-to-read-this-documentation-and-complete-this-installation-and-depending-on-access-to-resources-may-take-several-days-please-proceed-slowly" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -99,7 +101,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Migration Guide
+                Migration Installation Guide
               </span>
             
           
@@ -406,18 +408,22 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Migration Guide
+        Migration Installation Guide
       </label>
     
-    <a href="./" title="Migration Guide" class="md-nav__link md-nav__link--active">
-      Migration Guide
+    <a href="./" title="Migration Installation Guide" class="md-nav__link md-nav__link--active">
+      Migration Installation Guide
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -482,6 +488,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-file-docker-composeyml" title="Edit File docker-compose.yml" class="md-nav__link">
+    Edit File docker-compose.yml
+  </a>
   
 </li>
       
@@ -773,8 +786,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -990,6 +1003,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1053,6 +1068,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-file-docker-composeyml" title="Edit File docker-compose.yml" class="md-nav__link">
+    Edit File docker-compose.yml
+  </a>
   
 </li>
       
@@ -1142,9 +1164,9 @@
               
                 
                 
-                  <h1>Migration Guide</h1>
-                
-                <p>=======</p>
+                <!--- Migration Installation Guide --->
+
+<h1 id="expectations-it-may-take-at-least-8-hours-or-more-to-read-this-documentation-and-complete-this-installation-and-depending-on-access-to-resources-may-take-several-days-please-proceed-slowly"><em>Expectations:  It may take at least <strong>8 hours or more</strong> to read this documentation and complete this installation, and depending on access to resources, may take several days. Please proceed slowly.</em></h1>
 <h2 id="this-section-of-documentation-is-a-work-in-progress">THIS SECTION OF DOCUMENTATION IS A WORK IN PROGRESS.</h2>
 <p>This Migration guide will help you migrate your existing production Islandora environment to an ISLE environment for easily maintaining Islandora. This guide will walk you through how to identify and copy your institution's Islandora data and files (including your data volume, Drupal site or sites, and commonly customized xml and xslt files) to your ISLE framework.</p>
 <p>For additional help, please post a message to the <a href="https://groups.google.com/forum/#!forum/islandora-isle">Islandora ISLE Google group</a>. This <a href="../../glossary/">Glossary</a> defines terms used in this documentation.</p>
@@ -1157,7 +1179,7 @@
 <p>You understand that all directions in this guide depend on the type of local computer used to connect via browser to Islandora. The instructions below assume a MacOS or Linux laptop or workstation to be used in conjunction with the ISLE Host Server for deploying configs, code, files etc. Windows users may have to adjust / swap out various tools as needed.</p>
 </li>
 <li>
-<p>A host server that conforms to the specifications outlined in - and has followed the appropriate setup and configuration instructions in - the <a href="../01_installation_host_server">New ISLE Site section</a> of the guide.</p>
+<p>A host server that conforms to the specifications outlined in - and has followed the appropriate setup and configuration instructions in - the <a href="../01_installation_host_server">New ISLE Site</a> section of the guide.</p>
 </li>
 <li>
 <p>You have disk space on - or mounted to - the host server large enough to store a <strong>copy</strong> of your fedora data store</p>
@@ -1375,6 +1397,30 @@
 </li>
 </ul>
 <p><strong>Please note:</strong> Much of the file is already with comments guiding the enduser to key areas or files to edit or modify accordingly.</p>
+<hr />
+<h2 id="edit-file-docker-composeyml">Edit File <code>docker-compose.yml</code></h2>
+<p><strong>For Production and Staging Servers Only:</strong> Open the <code>docker-compose.yml</code> file and modify the environment variables called JAVA_MAX_MEM and JAVA_MIN_MEM for fedora, solr, and image-services.</p>
+<pre><code class="yaml">fedora:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=256M
+...
+
+solr:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=256M
+...
+
+image-services:
+  ...
+  environment:
+    - JAVA_MAX_MEM=2048M
+    - JAVA_MIN_MEM=128M
+</code></pre>
+
 <hr />
 <h2 id="final-steps">Final Steps</h2>
 <ul>

@@ -58,6 +58,8 @@
     
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
+      <link rel="stylesheet" href="../../extra.css">
+    
     
   </head>
   
@@ -395,8 +397,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Guide" class="md-nav__link">
-      Migration Guide
+    <a href="../../04_installation_migration/migration_installation_guide/" title="Migration Installation Guide" class="md-nav__link">
+      Migration Installation Guide
     </a>
   </li>
 
@@ -609,8 +611,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../07_appendices/editing-the-hosts-file/" title="Editing the "/etc/hosts" File" class="md-nav__link">
-      Editing the "/etc/hosts" File
+    <a href="../../07_appendices/edit-the-hosts-file/" title="Edit the "/etc/hosts" File" class="md-nav__link">
+      Edit the "/etc/hosts" File
     </a>
   </li>
 
@@ -846,8 +848,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installs-software-dependencies-and-tools-including" title="Installs Software Dependencies and Tools Including" class="md-nav__link">
-    Installs Software Dependencies and Tools Including
+  <a href="#installs-software-dependencies-and-tools" title="Installs Software Dependencies and Tools" class="md-nav__link">
+    Installs Software Dependencies and Tools
   </a>
   
 </li>
@@ -1000,7 +1002,9 @@
                 
                   <h1>Maintainer ansible guide</h1>
                 
-                <p>You have the choice of using Ansible to deploy the Docker Host server dependencies instead of performing manual commands on either a CentOS or Ubuntu OS. The Ansible script and configuration files can be found in the root folder of the ISLE git repository in a directory named <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/ansible">ansible</a>. Additionally, the Ansible script is designed to detect the chosen operating system and then install the appropriate dependencies with minimal user interaction or prior configuration.</p>
+                <!--- PAGE_TITLE --->
+
+<p>You have the choice of using Ansible to deploy the Docker Host server dependencies instead of performing manual commands on either a CentOS or Ubuntu OS. The Ansible script and configuration files can be found in the root folder of the ISLE git repository in a directory named <a href="https://github.com/Islandora-Collaboration-Group/ISLE/tree/master/ansible">ansible</a>. Additionally, the Ansible script is designed to detect the chosen operating system and then install the appropriate dependencies with minimal user interaction or prior configuration.</p>
 <p>Ansible is an free open source automation platform / tool which runs on Linux, Mac or BSD, doesn’t use local or remote agents and is relatively easy to setup. Ansible can help with server configuration management, application deployment, task automation and IT orchestration (<em>running tasks in sequence on several different servers or devices</em>).</p>
 <p>If you are not familiar with the Ansible, it is recommended to start with their documentation.</p>
 <ul>
@@ -1069,7 +1073,7 @@
 <tbody>
 <tr>
 <td><code>dependencies</code></td>
-<td><em>Installs software dependencies &amp; tools as described above</em></td>
+<td><em>Installs software dependencies and tools</em></td>
 </tr>
 <tr>
 <td><code>users_groups</code></td>
@@ -1093,7 +1097,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="installs-software-dependencies-and-tools-including">Installs Software Dependencies and Tools Including</h4>
+<h4 id="installs-software-dependencies-and-tools">Installs Software Dependencies and Tools</h4>
 <p>The Ansible script will deploy the following to the ISLE Host server:</p>
 <table>
 <thead>
