@@ -1345,7 +1345,7 @@ isle-host-server | SUCCESS =&gt; {
 <p>Ansible will start displaying output within the terminal. If any turn red and the script terminates, please review the above settings and connectivity to the server. Attempt to rerun the script.</p>
 <h3 id="qc-review-checklist">QC Review Checklist</h3>
 <p>To ensure a successful deploy to the ISLE Server, please review the following to ensure that the deploy to the Islandora Host server was successful.</p>
-<p>Open a terminal window on the Ansible control laptop /workstation and <code>ssh</code> into the Islandora Host server using the appropriate enduser account setup prior to the deploy.</p>
+<p>Open a terminal window on the Ansible control laptop /workstation and <code>ssh</code> into the Islandora Host server using the appropriate end user account setup prior to the deploy.</p>
 <p><strong>Example</strong>:</p>
 <p><code>ssh enduser@isle-prod-project.institution</code></p>
 <hr />
@@ -1453,7 +1453,7 @@ drwxr-xr-x. 4 islandora islandora   50 Jan 17 09:17 solr
 <h3 id="walkthrough-using-ansible-on-a-macos-control-machine">Walkthrough: Using Ansible on a MacOS Control Machine</h3>
 <ul>
 <li>
-<p>To install <code>Ansible</code> on the enduser's MacOS laptop / workstation.</p>
+<p>To install <code>Ansible</code> on the end user's MacOS laptop / workstation.</p>
 <ul>
 <li>
 <p>Install Ansible via Python pip</p>
@@ -1489,7 +1489,7 @@ host_local_macos_isle_localdomain ansible_connection=ssh ansible_ssh_user=vagran
 
 <ul>
 <li>
-<p><strong>Line 13</strong> in the <code>ansible/host_vars/host_local_macos_isle_localdomain.yml</code> file will need to be edited with the correct path to the enduser's id_rsa.pub  file. Change the <code>enduser</code> value to the real username. (<em>assumes the</em> <code>id_rsa.pub</code> <em>file exists!</em>)</p>
+<p><strong>Line 13</strong> in the <code>ansible/host_vars/host_local_macos_isle_localdomain.yml</code> file will need to be edited with the correct path to the end user's id_rsa.pub  file. Change the <code>enduser</code> value to the real username. (<em>assumes the</em> <code>id_rsa.pub</code> <em>file exists!</em>)</p>
 </li>
 <li>
 <p><strong>Line 3</strong> in the <code>ansible/docker_install.yml</code> file will need to be edited, change the value of <code>isle-prod-project.institution</code> to <code>host_local_macos_isle_localdomain</code></p>
