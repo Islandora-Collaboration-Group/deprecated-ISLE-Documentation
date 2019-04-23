@@ -38,7 +38,7 @@
     
     
       
-        <title>Documentation Style Guide - Islandora Enterprise (ISLE)</title>
+        <title>Maintainer docs editing online - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#documentation-style-guide" tabindex="1" class="md-skip">
+      <a href="../../#overview" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Documentation Style Guide
+                Maintainer docs editing online
               </span>
             
           
@@ -714,6 +714,42 @@
 
 
   <li class="md-nav__item">
+    <a href="../maintainer_docs_mkdocs/" title="Docs: MkDocs" class="md-nav__link">
+      Docs: MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintainer_docs_spell_checker/" title="Docs: Spell Checker" class="md-nav__link">
+      Docs: Spell Checker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintainer_docs_style_guide/" title="Docs: Style Guide" class="md-nav__link">
+      Docs: Style Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../maintainer_release_process/" title="Release Process" class="md-nav__link">
       Release Process
     </a>
@@ -780,51 +816,68 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#site-theme" title="Site Theme" class="md-nav__link">
-    Site Theme
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#navigate-to-online-isle-documentation-repository" title="Navigate to Online ISLE-Documentation Repository" class="md-nav__link">
+    Navigate to Online ISLE-Documentation Repository
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#css-overrides" title="CSS Overrides" class="md-nav__link">
-    CSS Overrides
+        
+          <li class="md-nav__item">
+  <a href="#edit-existing-pages" title="Edit Existing Pages" class="md-nav__link">
+    Edit Existing Pages
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#links" title="Links" class="md-nav__link">
-    Links
+        
+          <li class="md-nav__item">
+  <a href="#adding-new-pages" title="Adding New Pages" class="md-nav__link">
+    Adding New Pages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-mkdocs" title="Updating mkdocs" class="md-nav__link">
+    Updating mkdocs
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" title="Tables" class="md-nav__link">
-    Tables
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-changes" title="Commit Changes" class="md-nav__link">
+    Commit Changes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#headers-follow-the-apa-style-guide-for-capitalization-of-all-important-words" title="Headers: Follow the APA Style Guide for Capitalization of All Important Words" class="md-nav__link">
-    Headers: Follow the APA Style Guide for Capitalization of All Important Words
+        
+          <li class="md-nav__item">
+  <a href="#create-pull-request-for-review" title="Create Pull Request for Review" class="md-nav__link">
+    Create Pull Request for Review
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#terms-we-use" title="Terms We Use" class="md-nav__link">
-    Terms We Use
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -845,46 +898,133 @@
               
                 
                 
-                <h1 id="documentation-style-guide">Documentation Style Guide</h1>
-<h2 id="site-theme">Site Theme</h2>
+                  <h1>Maintainer docs editing online</h1>
+                
+                <!--- PAGE_TITLE --->
+
+<h2 id="overview">Overview</h2>
 <ul>
-<li><a href="https://www.mkdocs.org/user-guide/styling-your-docs/#built-in-themes">MdDocs Themes</a></li>
+<li>Navigate to online ISLE-Documentation repository</li>
+<li>Edit existing pages</li>
+<li>Adding new pages<ul>
+<li>Updating <code>mkdocs.yml</code></li>
+</ul>
+</li>
+<li>Commit changes using a new branch</li>
+<li>Create pull request for review</li>
+</ul>
+<p><strong>Please note:</strong> You'll need to create separate pull requests for each type of change whether editing or adding new pages with a <code>mkdocs.yml</code> file update. Using the online editor means you can only do one thing at a time.</p>
+<p>If you need to edit more than one file or want to create more than one new page of content, it is recommended to instead follow the steps contained within the <a href="../maintainer_docs_editing_local/">Documentation Editing - Local</a> Guide.</p>
+<hr />
+<h3 id="navigate-to-online-isle-documentation-repository">Navigate to Online ISLE-Documentation Repository</h3>
+<ul>
+<li>In a web browser navigate to <a href="https://github.com/Islandora-Collaboration-Group/ISLE-Documentation">https://github.com/Islandora-Collaboration-Group/ISLE-Documentation</a></li>
 </ul>
 <hr />
-<h2 id="css-overrides">CSS Overrides</h2>
+<h3 id="edit-existing-pages">Edit Existing Pages</h3>
 <ul>
-<li>The <code>extra.css</code> file overrides some basic CSS styles.</li>
+<li>
+<p>Click into the <code>docs</code> directory and navigate to the appropriate <code>.md</code> file you would like to edit.</p>
+</li>
+<li>
+<p>Once the file has been selected, you should see on the right hand side of the page, a navigation bar that will display <code>Raw | Blame | History</code>, computer monitor icon, a pen / pencil icon and a trashcan icon. Click the pen / pencil icon to edit the file.</p>
+</li>
+<li>
+<p>The page should change indicating that it can now be edited.</p>
+</li>
+<li>
+<p>Make the appropriate edits as needed.</p>
+</li>
+<li>
+<p>When finished and ready to "save" the changes, follow the instructions immediately in the <code>Commit changes</code> section below.</p>
+</li>
 </ul>
 <hr />
-<h2 id="links">Links</h2>
+<h3 id="adding-new-pages">Adding New Pages</h3>
+<p><strong>Please note:</strong> If you are adding new pages to the Documentation, in addition to creating the new page, you'll need to edit the <code>mkdocs.yml</code> (YAML) file at the root (base) of the ISLE-Documentation project directory in order for the page to show up in the documentation after adding the new page.</p>
+<p>The example used below is how to create a new documentation page that will be about building giant ISLE robots with the title of "Building Giant ISLE Robots" and be located in the Development section.</p>
 <ul>
-<li>Please use the destination page title as the name of the link</li>
-<li>Example: <a href="../../02_installation_site/site_installation/">Demo ISLE Site Installation</a></li>
+<li>
+<p>Click into the <code>docs/05_maintainer_docs</code> directory</p>
+</li>
+<li>
+<p>On the right hand side of the page, a navigation bar that will display <code>Create new file | Upload files | Find File History</code>, click the <code>Create new file</code> button.</p>
+</li>
+<li>
+<p>In the empty <code>Name your file...</code> field at the top of the page, enter <code>maintainer_building_giant_robots.md</code></p>
+</li>
+<li>
+<p>Enter the appropriate content to the page.</p>
+</li>
+<li>
+<p>When finished and ready to "save" the changes, follow the instructions immediately in the <code>Commit changes</code> section below.</p>
+</li>
 </ul>
 <hr />
-<h2 id="tables">Tables</h2>
-<p>Sections within a section that is specific to a certain type of circumstance should be put in a TABLE
-| For Windows Users only |
-| :-------------      |
-| You may be prompted by Windows to: |
-| - Share the C drive with Docker.  Click Okay or Allow.|
-| - Enter your username and password. Do this.|</p>
-<hr />
-<h2 id="headers-follow-the-apa-style-guide-for-capitalization-of-all-important-words">Headers: Follow the APA Style Guide for Capitalization of All Important Words</h2>
+<h4 id="updating-mkdocs">Updating <code>mkdocs</code></h4>
+<p>If you have added a new page to the Documentation, you'll need to edit the <code>mkdocs.yml</code> (YAML) file at the root (base) of the ISLE-Documentation project directory in order for the page to show up in the documentation.</p>
 <ul>
-<li>H1: Page Title</li>
-<li>H2: Main Subheaders</li>
-<li>H3: Subheaders found within "Main Subheaders"</li>
+<li>
+<p>Click into the <code>mkdocs.yml</code> file.</p>
+</li>
+<li>
+<p>Once the file has been selected, you should see on the right hand side of the page, a navigation bar that will display <code>Raw | Blame | History</code>, computer monitor icon, a pen / pencil icon and a trashcan icon. Click the pen / pencil icon to edit the file.</p>
+</li>
+<li>
+<p>The page should change indicating that it can now be edited.</p>
+</li>
+<li>
+<p>Make the appropriate edits as needed.</p>
+</li>
+</ul>
+<p>In order for <code>mkdocs</code> to understand that there is a new page and page title to display in the rendered documentation, one must use the YAML code convention (syntax) to enter.</p>
+<p><strong>YAML Code Convention Breakdown:</strong></p>
+<ul>
+<li>
+<p>'Page Title': '/section/filename.md'</p>
+</li>
+<li>
+<p>Within the <code>Maintainer Docs</code> section of the open <code>mkdocs.yml</code> file, add this new line in the appropriate order.</p>
+</li>
+</ul>
+<p><code>- 'Building Giant ISLE Robots': '05_maintainer_docs/maintainer_building_giant_robots.md'</code></p>
+<pre><code>- 'Maintainer Docs':
+  - 'Building Giant ISLE Robots': '05_maintainer_docs/maintainer_building_giant_robots.md'
+  - 'Contributing to Project': '05_maintainer_docs/maintainer_contributing_to_project.md'
+  - 'Documentation Overview': '05_maintainer_docs/maintainer_docs_overview.md'
+</code></pre>
+
+<ul>
+<li>When finished and ready to "save" the changes, follow the instructions immediately in the <code>Commit changes</code> section below.</li>
 </ul>
 <hr />
-<h2 id="terms-we-use">Terms We Use</h2>
+<h3 id="commit-changes">Commit Changes</h3>
 <ul>
-<li>Demo ISLE Site</li>
-<li>New ISLE Site</li>
-<li>Migrate to ISLE Site</li>
-<li>Update ISLE Site</li>
+<li>When finished editing, adding or updating, scroll down to the <code>Commit changes</code> section.</li>
+<li>
+<p>In the first empty field, enter a short description of the file edited e.g. <code>Update glossary.md</code></p>
+</li>
+<li>
+<p>In the second larger empty field, enter a larger description of the edits
+  made to the file. Two to five sentences should suffice.</p>
+</li>
+<li>
+<p>Once finished, select the second radio button at the bottom</p>
+<ul>
+<li>Its label displays: <code>Create a new branch for this commit and start a pull request</code></li>
+<li>Change the branch name as needed or leave as the default.</li>
+<li>Click the green <code>Propose File Change</code></li>
 </ul>
-<hr />
+</li>
+</ul>
+<p><strong>DO NOT</strong> SELECT THE 1ST RADIO BUTTON - <code>Commit directly to the master branch</code> as this will cause issues though it is selected by default.</p>
+<h3 id="create-pull-request-for-review">Create Pull Request for Review</h3>
+<p>The "Open a pull request" page should now appear along with text like <code>The change you just made was written to a new branch named githubusername-docs-fix2. Create a pull request below to propose these changes.</code></p>
+<ul>
+<li>The first and second text fields may contain part of the short description. Either keep the default text or change accordingly.</li>
+<li>Click the green <code>Create pull request</code> button.</li>
+</ul>
+<p>This pull request should now appear in the <a href="https://github.com/Islandora-Collaboration-Group/ISLE-Documentation/pulls">Pull Requests</a> section of the ISLE repository, ready for review, commentary or inclusion by the ISLE Maintainers.</p>
                 
                   
                 
@@ -924,6 +1064,8 @@
       <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
       <script>app.initialize({version:"1.0",url:{base:"../.."}})</script>
+      
+        <script src="../../extra.js"></script>
       
     
     

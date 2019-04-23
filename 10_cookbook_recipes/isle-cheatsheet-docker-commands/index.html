@@ -912,6 +912,42 @@
 
 
   <li class="md-nav__item">
+    <a href="../../05_maintainer_docs/maintainer_docs_mkdocs/" title="Docs: MkDocs" class="md-nav__link">
+      Docs: MkDocs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05_maintainer_docs/maintainer_docs_spell_checker/" title="Docs: Spell Checker" class="md-nav__link">
+      Docs: Spell Checker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05_maintainer_docs/maintainer_docs_style_guide/" title="Docs: Style Guide" class="md-nav__link">
+      Docs: Style Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../05_maintainer_docs/maintainer_release_process/" title="Release Process" class="md-nav__link">
       Release Process
     </a>
@@ -1234,14 +1270,6 @@
 </ul>
 <h3 id="remove-containers">Remove Containers</h3>
 <ul>
-<li>Remove All: Stop and remove all containers and all volumes<ul>
-<li><code>docker-compose down -v</code></li>
-</ul>
-</li>
-<li>WARNING! This will remove all stopped containers, all networks not used by a container, all images that lack an associated container, and all build cache.<ul>
-<li><code>docker system prune --all</code></li>
-</ul>
-</li>
 <li>Delete an (unused) volume<ul>
 <li>usage: <code>docker volume rm [VOLUME_NAME]</code></li>
 <li>example: <code>docker volume rm isle_fed-data</code></li>
@@ -1252,7 +1280,15 @@
 <li>example: <code>docker rm isle_fed-data</code></li>
 </ul>
 </li>
-<li>WARNING! This will remove ALL containers on the machine!<ul>
+<li><strong>WARNING!</strong> Never run this command in production. Never ever. ONLY consider doing this on your Demo Local machine. This command will delete all Docker containers AND all attached Docker Volumes (TBD: does this remove only-running or running-and-stopped containers). This command will not delete your git repository or the paths or contents of your bind mounts.<ul>
+<li><code>docker-compose down -v</code></li>
+</ul>
+</li>
+<li><strong>WARNING!</strong>! This will remove all stopped containers, all networks not used by a container, all images that lack an associated container, and all build cache.<ul>
+<li><code>docker system prune --all</code></li>
+</ul>
+</li>
+<li><strong>WARNING!</strong>! This will remove ALL containers on the machine!<ul>
 <li><code>docker rm $(docker ps -a -q)</code></li>
 </ul>
 </li>
@@ -1338,7 +1374,7 @@
 <li><code>docker-compose stop</code></li>
 </ul>
 </li>
-<li>WARNING! This will remove: all stopped containers; etc.<ul>
+<li><strong>WARNING!</strong> This will remove: all stopped containers; etc.<ul>
 <li><code>docker system prune --all</code></li>
 </ul>
 </li>
@@ -1445,6 +1481,8 @@
       <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
       <script>app.initialize({version:"1.0",url:{base:"../.."}})</script>
+      
+        <script src="../../extra.js"></script>
       
     
     
