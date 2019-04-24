@@ -793,6 +793,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#verifying-changes" title="Verifying changes" class="md-nav__link">
+    Verifying changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#interactive-commands" title="Interactive commands" class="md-nav__link">
     Interactive commands
   </a>
@@ -949,6 +956,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#verifying-changes" title="Verifying changes" class="md-nav__link">
+    Verifying changes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#interactive-commands" title="Interactive commands" class="md-nav__link">
     Interactive commands
   </a>
@@ -994,20 +1008,36 @@
   * Using <a href="https://brew.sh/">Homebrew</a>
     * <code>brew install aspell</code></p>
 <h2 id="setting-up-aspell-word-list-for-islandora-isle">Setting up Aspell "word list" for Islandora &amp; ISLE</h2>
-<p>[content pending]</p>
+<ul>
+<li>Check if you already have an existing Aspell "word list" called ".aspell.en.pws" in your home directory.</li>
+<li>Note: that this file starts with a "period" and my be hidden by default in your OS.</li>
+<li>Back up existing "~/.aspell.en.pws" file if you want to preserve data, or skip this step if you are OK with overwriting existing data.</li>
+<li>Go to the ISLE documentation repository.</li>
+<li>Copy the current Aspell "word list" (.aspell.en.pws) that was created for the ISLE/Islandora project from the docs directory into your home directory.</li>
+<li>Note: Make sure to back up any existing ".aspell.en.pws" before copying if you want to avoid losing your previous word list data.</li>
+</ul>
 <h2 id="running-aspell">Running Aspell</h2>
 <h3 id="manually-running-aspell-on-a-single-file">Manually running Aspell on a single file</h3>
 <p><code>aspell check --dont-backup example.md</code></p>
 <h3 id="batch-running-aspell-on-all-md-files">Batch running Aspell on all .md files</h3>
 <p><code>for f in $(find . -iname '*.md'); do aspell check --dont-backup $f; done;</code></p>
+<h3 id="verifying-changes">Verifying changes</h3>
+<ul>
+<li>Since we are using the Aspell <code>--dont-backup</code> flag, Aspell will make changes to the files themselves.</li>
+<li>We can then use <code>git status</code> and <code>git diff file_name</code> to verify what was changed by Aspell before committing changes back to the repo.</li>
+</ul>
 <h3 id="interactive-commands">Interactive commands</h3>
 <p>Common interactive commands used:
-<em> i = ignore a word
-</em> I = ignore all occurrences
- of a word in the current file.
-* a = add word to Aspell "word list"</p>
+<em> i = Ignore a word.
+</em> I = Ignore all occurrences of a word in the current file.
+<em> a = add word to Aspell "word list" (~/.aspell.en.pws).
+</em> 1 to 10 = Used to select a suggested word to replace selected word.</p>
 <h2 id="updating-aspell-word-list-after-checking-spellings">Updating Aspell "word list" after checking spellings</h2>
-<p>[content pending]</p>
+<ul>
+<li>Copy the existing "~/.aspell.en.pws" file in your home directory to the ISLE documentation repo.</li>
+<li>Commit the change(s) to the Aspell word list file.</li>
+<li>Submit a pull request with your changes to be considered by the project committers.</li>
+</ul>
                 
                   
                 
