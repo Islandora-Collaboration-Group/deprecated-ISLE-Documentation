@@ -688,6 +688,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#stop-and-remove-containers" title="Stop and Remove Containers" class="md-nav__link">
+    Stop and Remove Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pull-containers" title="Pull Containers" class="md-nav__link">
     Pull Containers
   </a>
@@ -702,20 +709,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shell-into-docker-container" title="Shell Into Docker Container" class="md-nav__link">
-    Shell Into Docker Container
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-service" title="Docker Service" class="md-nav__link">
-    Docker Service
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#remove-volumes" title="Remove Volumes" class="md-nav__link">
     Remove Volumes
   </a>
@@ -725,6 +718,20 @@
           <li class="md-nav__item">
   <a href="#remove-containers" title="Remove Containers" class="md-nav__link">
     Remove Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-into-docker-container" title="Shell Into Docker Container" class="md-nav__link">
+    Shell Into Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-service" title="Docker Service" class="md-nav__link">
+    Docker Service
   </a>
   
 </li>
@@ -1071,6 +1078,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#stop-and-remove-containers" title="Stop and Remove Containers" class="md-nav__link">
+    Stop and Remove Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pull-containers" title="Pull Containers" class="md-nav__link">
     Pull Containers
   </a>
@@ -1085,20 +1099,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shell-into-docker-container" title="Shell Into Docker Container" class="md-nav__link">
-    Shell Into Docker Container
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-service" title="Docker Service" class="md-nav__link">
-    Docker Service
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#remove-volumes" title="Remove Volumes" class="md-nav__link">
     Remove Volumes
   </a>
@@ -1108,6 +1108,20 @@
           <li class="md-nav__item">
   <a href="#remove-containers" title="Remove Containers" class="md-nav__link">
     Remove Containers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-into-docker-container" title="Shell Into Docker Container" class="md-nav__link">
+    Shell Into Docker Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-service" title="Docker Service" class="md-nav__link">
+    Docker Service
   </a>
   
 </li>
@@ -1258,7 +1272,11 @@
 </li>
 <li><code>docker stop $(docker ps -a -q)</code> # Stop all running and stopped containers</li>
 </ul>
-<h3 id="pull-containers"><a href="[https://docs.docker.com/compose/reference/pull/">Pull Containers</a></h3>
+<h3 id="stop-and-remove-containers"><a href="https://docs.docker.com/compose/reference/down/">Stop and Remove Containers</a></h3>
+<ul>
+<li><code>docker-compose down</code> # Stops containers and removes containers and networks for services defined in the Compose file</li>
+</ul>
+<h3 id="pull-containers"><a href="https://docs.docker.com/compose/reference/pull/">Pull Containers</a></h3>
 <ul>
 <li><code>docker-compose pull</code> # Pull down all images from Docker Hub</li>
 <li><code>docker pull [GROUP]/[REPO]</code> # Pull one specific image from Docker Hub<ul>
@@ -1266,9 +1284,23 @@
 </ul>
 </li>
 </ul>
-<h3 id="up-containers"><a href="[https://docs.docker.com/compose/reference/up/">Up Containers</a></h3>
+<h3 id="up-containers"><a href="https://docs.docker.com/compose/reference/up/">Up Containers</a></h3>
 <ul>
 <li><code>docker-compose up -d</code> # Launch all containers for this service</li>
+</ul>
+<h3 id="remove-volumes"><a href="https://docs.docker.com/engine/reference/commandline/volume_rm/">Remove Volumes</a></h3>
+<ul>
+<li><code>docker volume rm [VOLUME_NAME]</code> # Remove one or more volumes. You cannot remove a volume that is in use by a container.<ul>
+<li>example: <code>docker volume rm isle_fed-data</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="remove-containers"><a href="https://docs.docker.com/engine/reference/commandline/rm/">Remove Containers</a></h3>
+<ul>
+<li><code>docker rm [CONTAINER_NAME(S)]</code> # Remove one or more containers<ul>
+<li>example: <code>docker rm isle_fed-data</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="shell-into-docker-container"><a href="https://docs.docker.com/v17.12/engine/reference/commandline/exec/">Shell Into Docker Container</a></h3>
 <ul>
@@ -1286,20 +1318,6 @@
 <li><code>sudo service docker status</code> # Show Docker Status</li>
 <li><code>sudo /bin/systemctl restart docker.service</code> # Restart Docker Service</li>
 <li><code>sudo service docker restart</code> # Restart Docker Service (alternate)</li>
-</ul>
-<h3 id="remove-volumes"><a href="https://docs.docker.com/engine/reference/commandline/volume_rm/">Remove Volumes</a></h3>
-<ul>
-<li><code>docker volume rm [VOLUME_NAME]</code> # Remove one or more volumes. You cannot remove a volume that is in use by a container.<ul>
-<li>example: <code>docker volume rm isle_fed-data</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="remove-containers"><a href="https://docs.docker.com/engine/reference/commandline/rm/">Remove Containers</a></h3>
-<ul>
-<li><code>docker rm [CONTAINER_NAME(S)]</code> # Remove one or more containers<ul>
-<li>example: <code>docker rm isle_fed-data</code></li>
-</ul>
-</li>
 </ul>
 <h3 id="watching-docker-logs"><a href="https://docs.docker.com/engine/reference/commandline/logs/">Watching Docker Logs</a></h3>
 <ul>
