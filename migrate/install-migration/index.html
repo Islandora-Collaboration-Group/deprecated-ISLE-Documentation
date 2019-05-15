@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../install/install-one-environment/" title="4. New ISLE Installation" class="md-nav__link">
-      4. New ISLE Installation
+    <a href="../../install/install-server/" title="4. Remote Server ISLE Installation" class="md-nav__link">
+      4. Remote Server ISLE Installation
     </a>
   </li>
 
@@ -316,13 +316,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-section-of-documentation-is-a-work-in-progress" title="THIS SECTION OF DOCUMENTATION IS A WORK IN PROGRESS." class="md-nav__link">
-    THIS SECTION OF DOCUMENTATION IS A WORK IN PROGRESS.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
     Assumptions / Prerequisites
   </a>
@@ -330,19 +323,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#detailed-steps" title="Detailed Steps" class="md-nav__link">
-    Detailed Steps
+  <a href="#this-section-is-in-development-please-come-back-soon" title="THIS SECTION IS IN DEVELOPMENT. PLEASE COME BACK SOON." class="md-nav__link">
+    THIS SECTION IS IN DEVELOPMENT. PLEASE COME BACK SOON.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrate-only-finding-usernames-and-passwords" title="Migrate Only: Finding Usernames and Passwords" class="md-nav__link">
+    Migrate Only: Finding Usernames and Passwords
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-private-code-repository" title="Create Private Code Repository" class="md-nav__link">
-    Create Private Code Repository
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#create-data-storage-directory" title="Create Data Storage Directory" class="md-nav__link">
@@ -365,22 +358,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#docker-env-file" title="Docker .env File:" class="md-nav__link">
-    Docker .env File:
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edit-file-docker-composeyml" title="Edit File docker-compose.yml" class="md-nav__link">
-    Edit File docker-compose.yml
-  </a>
   
 </li>
       
@@ -982,13 +961,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-section-of-documentation-is-a-work-in-progress" title="THIS SECTION OF DOCUMENTATION IS A WORK IN PROGRESS." class="md-nav__link">
-    THIS SECTION OF DOCUMENTATION IS A WORK IN PROGRESS.
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#assumptions-prerequisites" title="Assumptions / Prerequisites" class="md-nav__link">
     Assumptions / Prerequisites
   </a>
@@ -996,19 +968,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#detailed-steps" title="Detailed Steps" class="md-nav__link">
-    Detailed Steps
+  <a href="#this-section-is-in-development-please-come-back-soon" title="THIS SECTION IS IN DEVELOPMENT. PLEASE COME BACK SOON." class="md-nav__link">
+    THIS SECTION IS IN DEVELOPMENT. PLEASE COME BACK SOON.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrate-only-finding-usernames-and-passwords" title="Migrate Only: Finding Usernames and Passwords" class="md-nav__link">
+    Migrate Only: Finding Usernames and Passwords
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-private-code-repository" title="Create Private Code Repository" class="md-nav__link">
-    Create Private Code Repository
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#create-data-storage-directory" title="Create Data Storage Directory" class="md-nav__link">
@@ -1031,22 +1003,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#docker-env-file" title="Docker .env File:" class="md-nav__link">
-    Docker .env File:
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edit-file-docker-composeyml" title="Edit File docker-compose.yml" class="md-nav__link">
-    Edit File docker-compose.yml
-  </a>
   
 </li>
       
@@ -1137,14 +1095,14 @@
                 
                 
                 <h1 id="migrate-to-isle-environment">Migrate to ISLE Environment</h1>
-<p><em>Expectations:  It may take at least <strong>8 hours or more</strong> to read this documentation and complete this installation, and depending on access to resources, may take several days. Please proceed slowly.</em></p>
-<h2 id="this-section-of-documentation-is-a-work-in-progress">THIS SECTION OF DOCUMENTATION IS A WORK IN PROGRESS.</h2>
+<p><em>Expectations:  It may take at least <strong>8 hours or more</strong> to read this documentation and complete this installation. Please proceed slowly.</em></p>
 <p>This will help you migrate your existing production Islandora 7.x environment to an ISLE environment for easily maintaining Islandora. This documentation will help you identify and copy your institution's preexisting Islandora data, files, and themes (including your data volume, Drupal site(s) and theme(s), and commonly customized xml and xslt files) to your ISLE environment.</p>
 <p>Please post questions to the public <a href="https://groups.google.com/forum/#!forum/islandora-isle">Islandora ISLE Google group</a>, or subscribe to receive emails. The <a href="../../appendices/glossary/">Glossary</a> defines terms used in this documentation.</p>
+<hr />
 <h2 id="assumptions-prerequisites">Assumptions / Prerequisites</h2>
 <ul>
 <li>
-<p>You have already completed the <a href="../../install/host-hardware-requirements/">Hardware Requirements</a> and the <a href="../../install/host-software-dependencies/">Software Dependencies</a> for your host server(s), and the <a href="../../install/install-one-environment/">New ISLE Installation</a>. </p>
+<p>You have already completed the <a href="../../install/host-hardware-requirements/">Hardware Requirements</a>, <a href="../../install/host-software-dependencies/">Software Dependencies</a> for your host server, and <a href="../../install/install-server/">Remote Server ISLE Installation</a>. </p>
 </li>
 <li>
 <p>SSL Certificates: Use the <a href="../../appendices/configuring-lets-encrypt/">Let's Encrypt guide</a> to generate SSL Certificates or ask your IT resource to provision <a href="../../appendices/glossary/#systems">SSL Certificates</a> for the web domain.</p>
@@ -1153,11 +1111,31 @@
 <p><strong>Never ever share or post your .env files publicly.</strong> The .env and tomcat.env files ("Docker Environment files") are your primary resources for customizing your ISLE stack. These .env files contain passwords and usernames and must be treated with the utmost care.</p>
 </li>
 <li>
-<p>You have disk space on - or mounted to - the host server large enough to store a <strong>copy</strong> of your fedora data store</p>
+<p>You have disk space on - or mounted to - the host server large enough to store a <strong>full copy</strong> of your fedora data store.</p>
 </li>
 <li>
-<p>You also have adequate storage space available for the ISLE host server to accommodate a working copy of a production Islandora's associated configurations and data.</p>
+<p>You have sufficient storage available for the ISLE host server to accommodate a working copy of a production Islandora's associated configurations and data.</p>
 </li>
+</ul>
+<hr />
+<h2 id="this-section-is-in-development-please-come-back-soon">THIS SECTION IS IN DEVELOPMENT. PLEASE COME BACK SOON.</h2>
+<!-- OLD STUFF
+**ON your local laptop / workstation:**
+* Create a directory named `yourdomain-config` (where "yourdomain" is your server domain name)
+     * Example:  `project-name.yourdomain.edu-config`
+* Copy all the contents of the ISLE directory to the newly created directory
+* `cd` into the newly copied and renamed `yourdomain-config` directory and type:
+    * `git init`
+    * _Initiates this directory as a code repository._
+* Type: `git remote add NameOfYourRepository URLofYourRepository`
+    * Connects your local repository to the remote you set up in the above steps.
+    * **NOTE:** replace "NameOfYourRepository" and "URLofYourRepository" with the name of your repository and its URL
+* You are now ready to perform the customization edits in this directory (you can use a text editor of choice now don't have to stay in terminal - just locate the folder in the finder and open file in text editor)
+-->
+
+<hr />
+<h2 id="migrate-only-finding-usernames-and-passwords">Migrate Only: Finding Usernames and Passwords</h2>
+<ul>
 <li>
 <p>You have usernames and passwords for key parts of your current Islandora production environment which will be used <strong>for</strong> the migration. The next steps will walk you through finding this information.</p>
 <ol>
@@ -1224,61 +1202,6 @@
 </li>
 </ul>
 <p><strong>Finally also please note:</strong> Instructions from this guide and it's associated checklists call for you to <strong>COPY</strong> data from your current production Islandora environment to your ISLE Host Server or local computer. You work from these copies to build your ISLE environment. In some cases, you'll need to copy configurations down to your local computer (<code>Local ISLE config laptop</code>) and merge contents as directed. In other cases, due to the size of the data e.g. Fedora data you will copy directly to the ISLE Host server (<code>Remote ISLE Host server</code>). You will note where you have stored copies of files/data in a docker-compose.yml file. You will store your configured files in a git repository and use that to deploy to the ISLE host server.</p>
-<h2 id="detailed-steps">Detailed Steps</h2>
-<ul>
-<li>
-<p>Setup a Private Code Repository</p>
-<ul>
-<li>Most of the work in this guide involves careful editing of the various configuration and settings files that customize the pieces of Islandora (database, repository, web-server, etc...).</li>
-<li>Doing this work in a code repository makes it easier to correct errors and to repeat the process for additional servers without needing to replicate all the work.</li>
-<li>Since the edits will include things like passwords, it's important to make this a private repository.</li>
-</ul>
-</li>
-<li>
-<p>Customizing for your Environment</p>
-<ul>
-<li>Many of the steps below describe adding the domain name or other specific bits of information into files or appending those bits to file names.</li>
-<li>In these cases this guide will call out the customization point AND provide an example - it's important not to literally copy paste the example!</li>
-<li>Your best guide for these customizations are the source files from your currently running Islandora environment.</li>
-</ul>
-</li>
-</ul>
-<h3 id="create-private-code-repository">Create Private Code Repository</h3>
-<p><strong>ON your local laptop / workstation:</strong></p>
-<ul>
-<li>
-<p>On the repository of your choice (GitHub, GitLab, Bitbucket, etc.) create a PRIVATE remote git repository - see the specific code repository documentation online for setup instructions.</p>
-</li>
-<li>
-<p>Open a terminal - navigate to <code>/opt/ISLE</code> or where you cloned the ISLE directory on your local workstation.</p>
-</li>
-<li>
-<p>Create a directory named <code>yourdomain-config</code> (where "yourdomain" is your server domain name)</p>
-<ul>
-<li>Example:  <code>digital-collections.yourdomain.com-config</code></li>
-</ul>
-</li>
-<li>
-<p>Copy all the contents of the ISLE directory to the newly created directory</p>
-</li>
-<li>
-<p><code>cd</code> into the newly copied and renamed <code>yourdomain-config</code> directory and type:</p>
-<ul>
-<li><code>git init</code></li>
-<li><em>Initiates this directory as a code repository.</em></li>
-</ul>
-</li>
-<li>
-<p>Type: <code>git remote add NameOfYourRepository URLofYourRepository</code></p>
-<ul>
-<li>Connects your local repository to the remote you set up in the above steps.</li>
-<li><strong>NOTE:</strong> replace "NameOfYourRepository" and "URLofYourRepository" with the name of your repository and its URL</li>
-</ul>
-</li>
-<li>
-<p>You are now ready to perform the customization edits in this directory (you can use a text editor of choice now don't have to stay in terminal - just locate the folder in the finder and open file in text editor)</p>
-</li>
-</ul>
 <h3 id="create-data-storage-directory">Create Data Storage Directory</h3>
 <p>This area will be where all current Islandora production data is to be stored. This includes the Apache <code>/var/www/html</code> directory and the appropriate Fedora <code>/usr/local/fedora/data</code> subdirectories outlined below.</p>
 <p><strong>ON your ISLE Host server:</strong></p>
@@ -1286,14 +1209,14 @@
 <li>
 <p>Create a directory named <code>yourdomain-data</code> (where "yourdomain" is your server domain name)</p>
 <ul>
-<li>Example:  <code>digital-collections.yourdomain.com-data</code></li>
+<li>Example:  <code>project-name.yourdomain.edu-data</code></li>
 </ul>
 </li>
 <li>
 <p>Ensure that the islandora user has ownership and permissions to access this data.</p>
 <ul>
 <li>
-<p><code>chown -Rv islandora:islandora ~/digital-collections.yourdomain.com-data</code></p>
+<p><code>chown -Rv islandora:islandora ~/project-name.yourdomain.edu-data</code></p>
 </li>
 <li>
 <p>Please note this path may change depending on how your ISLE host server storage area is setup.</p>
@@ -1319,7 +1242,7 @@
 <li>
 <p>To be even more clear, after following the checklist, you should now have two nearly identical <code>/config</code> subdirectories</p>
 <ul>
-<li><strong>A.</strong> copied from the cloned ISLE repository and renamed with your domain e.g. <code>yourdomain-config or digital-collections.yourdomain.com-config</code></li>
+<li><strong>A.</strong> copied from the cloned ISLE repository and renamed with your domain e.g. <code>yourdomain-config or project-name.yourdomain.edu-config</code></li>
 <li><strong>B.</strong> copied from your currently running Islandora environment. e.g. <code>current_prod_islandora_config</code></li>
 </ul>
 </li>
@@ -1340,41 +1263,6 @@
 <li>Compare and merge the Solr files: <code>stopwords</code></li>
 <li>Compare and merge the Fedora GSearch Islandora Transform (XSLTs) folder of files: <code>islandora_transforms</code></li>
 </ul>
-<h3 id="docker-env-file">Docker .env File:</h3>
-<p>=======</p>
-<ul>
-<li>
-<p>Edit the .env file and change the values of COMPOSE_PROJECT_NAME, BASE_DOMAIN, and CONTAINER_SHORT_ID. e.g. for a production site you may use:</p>
-<p><code>COMPOSE_PROJECT_NAME=isleproduction</code></p>
-<p><code>BASE_DOMAIN=mydomain.edu</code></p>
-<p><code>CONTAINER_SHORT_ID=prod</code></p>
-</li>
-</ul>
-<p><strong>Please note:</strong> Much of the file is already with comments guiding the end user to key areas or files to edit or modify accordingly.</p>
-<hr />
-<h2 id="edit-file-docker-composeyml">Edit File <code>docker-compose.yml</code></h2>
-<p><strong>For Production and Staging Servers Only:</strong> Open the <code>docker-compose.yml</code> file and modify the environment variables called JAVA_MAX_MEM and JAVA_MIN_MEM for fedora, solr, and image-services.</p>
-<pre><code class="yaml">fedora:
-  ...
-  environment:
-    - JAVA_MAX_MEM=2048M
-    - JAVA_MIN_MEM=256M
-...
-
-solr:
-  ...
-  environment:
-    - JAVA_MAX_MEM=2048M
-    - JAVA_MIN_MEM=256M
-...
-
-image-services:
-  ...
-  environment:
-    - JAVA_MAX_MEM=2048M
-    - JAVA_MIN_MEM=128M
-</code></pre>
-
 <hr />
 <h2 id="final-steps">Final Steps</h2>
 <ul>

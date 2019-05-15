@@ -239,8 +239,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../install/install-one-environment/" title="4. New ISLE Installation" class="md-nav__link">
-      4. New ISLE Installation
+    <a href="../../install/install-server/" title="4. Remote Server ISLE Installation" class="md-nav__link">
+      4. Remote Server ISLE Installation
     </a>
   </li>
 
@@ -1172,10 +1172,10 @@
 <p>Within the <code>sites-enabled</code> directory, rename the files <code>newsite-sample-ssl.conf</code> and <code>newsite-sample.conf</code> to your domain names - example:</p>
 <ul>
 <li>
-<p><code>digital-collections.example.edu_ssl.conf</code></p>
+<p><code>project-name.yourdomain.edu_ssl.conf</code></p>
 </li>
 <li>
-<p><code>digital-collections.example.edu.conf</code></p>
+<p><code>project-name.yourdomain.edu.conf</code></p>
 </li>
 </ul>
 </li>
@@ -1183,10 +1183,10 @@
 <p>Edit the previously named <code>newsite-sample.conf</code> file and change lines 3 and 4 to point to the location of your apache logs on the container - example:</p>
 <ul>
 <li>
-<p><code>ErrorLog /var/log/apache2/digital-collections.example.edu.ssl.error.log</code></p>
+<p><code>ErrorLog /var/log/apache2/project-name.yourdomain.edu.ssl.error.log</code></p>
 </li>
 <li>
-<p><code>CustomLog /var/log/apache2/digital-collections.example.edu.ssl.access.log combined</code></p>
+<p><code>CustomLog /var/log/apache2/project-name.yourdomain.edu.ssl.access.log combined</code></p>
 </li>
 </ul>
 </li>
@@ -1194,10 +1194,10 @@
 <p>Edit the previously named <code>newsite-sample-ssl.conf</code> file and change lines 4 and 5 to point to the location of your apache logs on the container - example:</p>
 <ul>
 <li>
-<p><code>ErrorLog /var/log/apache2/digital-collections.example.edu.ssl.error.log</code></p>
+<p><code>ErrorLog /var/log/apache2/project-name.yourdomain.edu.ssl.error.log</code></p>
 </li>
 <li>
-<p><code>CustomLog /var/log/apache2/digital-collections.example.edu.ssl.access.log combined</code></p>
+<p><code>CustomLog /var/log/apache2/project-name.yourdomain.edu.ssl.access.log combined</code></p>
 </li>
 </ul>
 </li>
@@ -1570,7 +1570,7 @@ SSLCertificateKeyFile /certs/newsite-sample-key.pem
 <p>If need be, please refer to the <strong>Systems</strong> section of the <a href="../../appendices/glossary/">Glossary</a> for relevant terms to help guide installation.</p>
 <p>This directory and service will not exist on any current islandora production systems.</p>
 <ul>
-<li>Please follow the <a href="../../install/install-one-environment/">New ISLE Installation</a>, <code>### Proxy Directory</code> section, lines 317 - 395.</li>
+<li>Please follow the <a href="../../install/install-server/">Remote Server ISLE Installation</a>, <code>### Proxy Directory</code> section, lines 317 - 395.</li>
 </ul>
                 
                   
