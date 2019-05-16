@@ -263,8 +263,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-edit-file-etchosts-to-view-isle-locally-on-workstation-browser" title="Step 1: Edit File /etc/hosts to View ISLE Locally on Workstation Browser" class="md-nav__link">
-    Step 1: Edit File /etc/hosts to View ISLE Locally on Workstation Browser
+  <a href="#step-1-edit-etchosts-file" title="Step 1: Edit /etc/hosts File" class="md-nav__link">
+    Step 1: Edit /etc/hosts File
   </a>
   
 </li>
@@ -604,8 +604,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../appendices/redhat/" title="Warning about Installing on Red Hat" class="md-nav__link">
-      Warning about Installing on Red Hat
+    <a href="../../appendices/redhat/" title="Warning about Red Hat Install" class="md-nav__link">
+      Warning about Red Hat Install
     </a>
   </li>
 
@@ -907,8 +907,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-edit-file-etchosts-to-view-isle-locally-on-workstation-browser" title="Step 1: Edit File /etc/hosts to View ISLE Locally on Workstation Browser" class="md-nav__link">
-    Step 1: Edit File /etc/hosts to View ISLE Locally on Workstation Browser
+  <a href="#step-1-edit-etchosts-file" title="Step 1: Edit /etc/hosts File" class="md-nav__link">
+    Step 1: Edit /etc/hosts File
   </a>
   
 </li>
@@ -976,18 +976,18 @@
 <p><em>Expectations:  It takes an average of <strong>45 minutes</strong> to read this documentation and complete this installation.</em></p>
 <p>This Demo ISLE Installation creates an Islandora environment on your workstation that you can view locally in your browser as <code>https://isle.localdomain</code>. This process includes an un-themed Drupal website and an empty Fedora repository so you may ingest test objects, add or edit metadata, update fields in SOLR indexing, develop code, and otherwise "kick the tires" on ISLE.</p>
 <p>Please post questions to the public <a href="https://groups.google.com/forum/#!forum/islandora-isle">Islandora ISLE Google group</a>, or subscribe to receive emails. The <a href="../../appendices/glossary/">Glossary</a> defines terms used in this documentation.</p>
-<h3 id="assumptions-prerequisites">Assumptions / Prerequisites</h3>
+<h2 id="assumptions-prerequisites">Assumptions / Prerequisites</h2>
 <ul>
 <li>This Demo ISLE Installation is intended for a local workstation.</li>
 </ul>
 <hr />
-<h3 id="step-1-edit-file-etchosts-to-view-isle-locally-on-workstation-browser">Step 1: Edit File <code>/etc/hosts</code> to View ISLE Locally on Workstation Browser</h3>
-<p>Enable the Demo ISLE Installation to be viewed locally as: <code>https://isle.localdomain</code></p>
+<h2 id="step-1-edit-etchosts-file">Step 1: Edit <code>/etc/hosts</code> File</h2>
+<p>Enable the Demo ISLE Installation to be viewed locally on workstation browser as: <code>https://isle.localdomain</code>.</p>
 <ul>
 <li>Please use these instructions to <a href="../install-demo-edit-hosts-file/">Edit the "/etc/hosts" File</a>.</li>
 </ul>
 <hr />
-<h3 id="step-2-launch-process">Step 2: Launch Process</h3>
+<h2 id="step-2-launch-process">Step 2: Launch Process</h2>
 <ul>
 <li>Open a <code>terminal</code> (Windows: open <code>PowerShell</code>)</li>
 <li>Navigate to your ISLE project directory. (You may already be in this directory if you are coming from the <a href="../host-software-dependencies/">Software Dependencies</a>.)</li>
@@ -1000,12 +1000,12 @@
 <li>After the above process is completed:<ul>
 <li>View only the running containers: <code>docker ps</code></li>
 <li>View all containers (both those running and stopped): <code>docker ps -a</code></li>
-<li>All containers prefixed with <code>isle-</code> are expected to have a <code>STATUS</code> of <code>UP</code> (for x time). <strong>If any of these are not <code>UP</code>, then use <a href="../install-demo-troubleshooting/">Demo ISLE Installation: Troubleshooting</a> to solve before continuing below.</strong> <!---TODO: This could be confusing if (a) there are other, non-ISLE containers, or (b) the isle-varnish container is installed but intentionally not running, oe (c) older exited ISLE containers that maybe should be removed. ---></li>
+<li>All containers prefixed with <code>isle-</code> are expected to have a <code>STATUS</code> of <code>Up</code> (for x time). <strong>If any of these are not <code>UP</code>, then use <a href="../install-demo-troubleshooting/">Demo ISLE Installation: Troubleshooting</a> to solve before continuing below.</strong> <!---TODO: This could be confusing if (a) there are other, non-ISLE containers, or (b) the isle-varnish container is installed but intentionally not running, oe (c) older exited ISLE containers that maybe should be removed. ---></li>
 </ul>
 </li>
 </ul>
 <hr />
-<h3 id="step-3-run-install-script">Step 3: Run Install Script</h3>
+<h2 id="step-3-run-install-script">Step 3: Run Install Script</h2>
 <p>This process may take 10 - 20 minutes (<em>depending on system and internet speeds</em>)</p>
 <ul>
 <li>Run the install site script on the Apache container by copying and pasting this command:</li>
@@ -1043,7 +1043,7 @@
 <li><strong>Proceed only after this message appears:</strong> <code>Clearing Drupal Caches. 'all' cache was cleared.</code></li>
 </ul>
 <hr />
-<h3 id="step-4-test-the-site">Step 4: Test the Site</h3>
+<h2 id="step-4-test-the-site">Step 4: Test the Site</h2>
 <ul>
 <li>In your web browser, enter this URL: <code>https://isle.localdomain</code>
 <!--- TODO: Add error message and how to proceed (click 'Advanced...') ---></li>
@@ -1055,7 +1055,7 @@
 </li>
 </ul>
 <hr />
-<h3 id="step-5-ingest-sample-objects">Step 5: Ingest Sample Objects</h3>
+<h2 id="step-5-ingest-sample-objects">Step 5: Ingest Sample Objects</h2>
 <p>The Islandora Collaboration Group provides a set of <a href="https://github.com/Islandora-Collaboration-Group/islandora-sample-objects">Islandora Sample Objects</a> with corresponding metadata for testing Islandora's ingest process. These sample objects are organized by solution pack and are zipped for faster bulk ingestion.</p>
 <ul>
 <li>To download these sample objects, clone them to your computer's desktop:</li>
@@ -1075,13 +1075,13 @@
 </li>
 </ul>
 <hr />
-<h3 id="step-6-additional-resources">Step 6: Additional Resources</h3>
+<h2 id="step-6-additional-resources">Step 6: Additional Resources</h2>
 <ul>
 <li><a href="../install-demo-resources/">Demo ISLE Installation: Resources</a> contains Docker container passwords and URLs for administrator tools.</li>
 <li><a href="../install-demo-troubleshooting/">Demo ISLE Installation: Troubleshooting</a> contains help for port conflicts, non-running Docker containers, etc.</li>
 </ul>
 <hr />
-<h3 id="end-of-demo-isle-installation">End of Demo ISLE Installation.</h3>
+<h2 id="end-of-demo-isle-installation">End of Demo ISLE Installation.</h2>
                 
                   
                 

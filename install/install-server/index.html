@@ -282,8 +282,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-git-workflow" title="Setup GIT Workflow" class="md-nav__link">
-    Setup GIT Workflow
+  <a href="#step-1-setup-git-workflow" title="Step 1: Setup GIT Workflow" class="md-nav__link">
+    Step 1: Setup GIT Workflow
   </a>
   
     <nav class="md-nav">
@@ -309,22 +309,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-environment-files-env" title="Docker Environment Files (.env)" class="md-nav__link">
-    Docker Environment Files (.env)
+  <a href="#step-2-edit-the-docker-environment-files" title="Step 2: Edit the Docker Environment Files" class="md-nav__link">
+    Step 2: Edit the Docker Environment Files
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#master-section" title="Master Section" class="md-nav__link">
-    Master Section
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -658,8 +645,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../appendices/redhat/" title="Warning about Installing on Red Hat" class="md-nav__link">
-      Warning about Installing on Red Hat
+    <a href="../../appendices/redhat/" title="Warning about Red Hat Install" class="md-nav__link">
+      Warning about Red Hat Install
     </a>
   </li>
 
@@ -968,8 +955,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-git-workflow" title="Setup GIT Workflow" class="md-nav__link">
-    Setup GIT Workflow
+  <a href="#step-1-setup-git-workflow" title="Step 1: Setup GIT Workflow" class="md-nav__link">
+    Step 1: Setup GIT Workflow
   </a>
   
     <nav class="md-nav">
@@ -995,22 +982,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-environment-files-env" title="Docker Environment Files (.env)" class="md-nav__link">
-    Docker Environment Files (.env)
+  <a href="#step-2-edit-the-docker-environment-files" title="Step 2: Edit the Docker Environment Files" class="md-nav__link">
+    Step 2: Edit the Docker Environment Files
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#master-section" title="Master Section" class="md-nav__link">
-    Master Section
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1101,7 +1075,7 @@ You may also use this documentation to install ISLE on several host servers, vir
 <hr />
 <h2 id="this-section-is-in-development-please-come-back-soon">THIS SECTION IS IN DEVELOPMENT. PLEASE COME BACK SOON.</h2>
 <hr />
-<h2 id="setup-git-workflow">Setup GIT Workflow</h2>
+<h2 id="step-1-setup-git-workflow">Step 1: Setup GIT Workflow</h2>
 <h3 id="create-two-private-institutional-git-repositories">Create Two Private Institutional GIT Repositories</h3>
 <p>Note: Since public forks can’t be made private, we will duplicate (instead of forking) the repository to enable them to be private.</p>
 <ol>
@@ -1170,24 +1144,30 @@ upstream        https://github.com/Islandora-Collaboration-Group/ISLE.git (push)
 </ul>
 </li>
 </ul>
-<h2 id="docker-environment-files-env">Docker Environment Files (.env)</h2>
+<h2 id="step-2-edit-the-docker-environment-files">Step 2: Edit the Docker Environment Files</h2>
+<p>The .env and tomcat.env Docker files are located in the folder with the docker-compose.yml, and are key to configuring the ISLE stack to suit your needs.</p>
+<p>Edit <code>.env</code> (found in root of ISLE directory). For example, a production server might be described as:</p>
 <ul>
-<li>
-<p>Edit the .env file and change the values of COMPOSE_PROJECT_NAME, BASE_DOMAIN, and CONTAINER_SHORT_ID. e.g. for a production site you may use:</p>
-<p><code>COMPOSE_PROJECT_NAME=isleproduction</code></p>
-<p><code>BASE_DOMAIN=mydomain.edu</code></p>
-<p><code>CONTAINER_SHORT_ID=prod</code></p>
+<li><code>COMPOSE_PROJECT_NAME=isle-production</code><ul>
+<li>This variable is appended to Docker objects like volume and network names.</li>
+</ul>
+</li>
+<li><code>BASE_DOMAIN=mydomain.edu</code><ul>
+<li>This variable specifies your domain name.</li>
+</ul>
+</li>
+<li><code>CONTAINER_SHORT_ID=ld</code><ul>
+<li>Okay to leave this as is. Keep this variable short as it is appended to the end of all running containers.</li>
+</ul>
 </li>
 </ul>
-<p><strong>Please note:</strong> Much of the file is already with comments guiding the end user to key areas or files to edit or modify accordingly.</p>
-<h3 id="master-section">Master Section</h3>
-<pre><code>* COMPOSE_PROJECT_NAME to something unique (e.g. `COMPOSE_PROJECT_NAME=isle-production-collections`)
-  * This variable is appended to Docker objects like: volume names, network names.
-* BASE_DOMAIN to your domainname (e.g. `BASE_DOMAIN=project-name.yourdomain.edu`)
-  * This variable specifies your domain name!
-* CONTAINER_SHORT_ID to something unique (e.g. `CONTAINER_SHORT_ID=prod`).
-  * This variable is appended to the end of all running containers, keep it _short_!
-</code></pre>
+<p>Edit <code>tomcat.env</code> (found in root of ISLE directory). For example, a production server might be described as:</p>
+<ul>
+<li><code>TOMCAT_ADMIN_USER=admin</code></li>
+<li><code>TOMCAT_ADMIN_PASS=xxxxxxxxxxxxxx</code> (enter a secure password)</li>
+<li><code>TOMCAT_MANAGER_USER=manager</code></li>
+<li><code>TOMCAT_MANAGER_PASS=xxxxxxxxxxxxxx</code> (enter a secure password)</li>
+</ul>
 <!-- 
 TODO:
 
@@ -1208,7 +1188,7 @@ Explain how to setup bind mounts OR volumes? (are these docker volumes?)
 
 -->
 
-<p><a href="../../appendices/environment-files/">Environment Files</a> - Tables contain important user names that relate to mysql and fedora and drupal databases.</p>
+<p><a href="../../appendices/environment-files/">ISLE Environment Files</a> - This page lists all the .env variables and corresponding user names and passwords used throughout the Islandora stack.</p>
 <hr />
 <h2 id="config-directory">Config Directory</h2>
 <p>The config directory has many purposes like holding customized configuration files mounted to specific containers (which we have no covered here), but for a single simple site we only use it to hold our proxy configs and as a place to store our SSL Certificate and Key.</p>
@@ -1280,24 +1260,24 @@ image-services:
 <hr />
 <h2 id="spin-up-isle-containers">Spin up ISLE Containers!</h2>
 <ul>
-<li>
-<p>Run <code>docker-compose up -d</code></p>
-</li>
-<li>
-<p>Wait for the stack to completely initialize, about 5 minutes (typically much less).</p>
-</li>
-<li>
-<p>Run <code>docker exec -it isle-apache-&lt;CONTAINER_SHORT_ID&gt; bash /utility-scripts/isle_drupal_build_tools/isle_islandora_installer.sh</code></p>
-<ul>
-<li>Using the <CONTAINER_SHORT_ID> value from the .env file here (<em>typically: isle-apache-prod, or -stage, -dev, etc.</em>)</li>
+<li>Download and start all ISLE Docker images (<em>~6 GB of data may take 5-10 minutes</em>):</li>
 </ul>
-</li>
-<li>
-<p>Give this process 15 - 25 minutes (<em>depending on the speed of the ISLE Host server internet connection</em>)</p>
-</li>
-<li>
-<p>Check the newly created and running new site by opening a browser and navigating to your site domain e.g. <code>https://project-name.yourdomain.edu</code>, you should now see an un-themed Drupal site.</p>
-</li>
+<pre><code>docker-compose up -d
+</code></pre>
+
+<ul>
+<li>Wait for the stack to completely initialize.</li>
+</ul>
+<p>This process may take 10 - 20 minutes (<em>depending on system and internet speeds</em>)</p>
+<ul>
+<li>Run the install site script on the Apache container by copying and pasting this command:
+[TODO: A server install should not be told to run this script: we want the install to be persistent, not ephemeral.]</li>
+</ul>
+<pre><code>docker exec -it isle-apache-ld bash /utility-scripts/isle_drupal_build_tools/isle_islandora_installer.sh
+</code></pre>
+
+<ul>
+<li>Check the newly created and running new site by opening a browser and navigating to your site domain e.g. <code>https://project-name.yourdomain.edu</code>, you should now see an un-themed Drupal site.</li>
 </ul>
 <hr />
 <p>(Good points for somewhere else:)</p>

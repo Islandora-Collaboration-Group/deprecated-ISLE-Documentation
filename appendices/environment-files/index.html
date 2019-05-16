@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#the-isle-environment-files-and-settings" tabindex="1" class="md-skip">
+      <a href="../../#isle-environment-files" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -515,8 +515,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../redhat/" title="Warning about Installing on Red Hat" class="md-nav__link">
-      Warning about Installing on Red Hat
+    <a href="../redhat/" title="Warning about Red Hat Install" class="md-nav__link">
+      Warning about Red Hat Install
     </a>
   </li>
 
@@ -811,43 +811,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#master-section" title="Master Section" class="md-nav__link">
-    Master Section
+  <a href="#env-docker-environment-file" title=".env (Docker Environment File)" class="md-nav__link">
+    .env (Docker Environment File)
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-sql" title="Database (SQL)" class="md-nav__link">
+    Database (SQL)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islandora-drupal" title="Islandora (Drupal)" class="md-nav__link">
+    Islandora (Drupal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fedora-repository" title="Fedora Repository" class="md-nav__link">
+    Fedora Repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-services" title="Image Services" class="md-nav__link">
+    Image Services
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-section" title="Database Section" class="md-nav__link">
-    Database Section
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#islandora-drupal-section" title="Islandora (Drupal) Section" class="md-nav__link">
-    Islandora (Drupal) Section
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fedora-repository-section" title="Fedora Repository Section" class="md-nav__link">
-    Fedora Repository Section
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-services-section" title="Image Services Section" class="md-nav__link">
-    Image Services Section
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tomcatenv-applies-to-all-tomcat-instances" title="Tomcat.env Applies to All Tomcat Instances" class="md-nav__link">
-    Tomcat.env Applies to All Tomcat Instances
+  <a href="#tomcatenv-docker-environment-file" title="tomcat.env (Docker Environment File)" class="md-nav__link">
+    tomcat.env (Docker Environment File)
   </a>
   
 </li>
@@ -871,18 +877,24 @@
                 
                 <!--- PAGE_TITLE --->
 
-<h1 id="the-isle-environment-files-and-settings">The ISLE Environment Files and Settings</h1>
-<p>The .env and tomcat.env files located in the folder with the docker-comopse.yml are key to configuring the ISLE stack to suit your needs.</p>
-<p>Here are the variables and their job:</p>
-<h3 id="master-section">Master Section</h3>
-<pre><code>* COMPOSE_PROJECT_NAME to something unique (e.g. `COMPOSE_PROJECT_NAME=isle-production-collections`)
-  * This variable is appended to Docker objects like: volume names, network names.
-* BASE_DOMAIN to your domainname (e.g. `BASE_DOMAIN=project-name.yourdomain.edu`)
-  * This variable specifies your domain name!
-* CONTAINER_SHORT_ID to something unique (e.g. `CONTAINER_SHORT_ID=prod`).
-  * This variable is appended to the end of all running containers, keep it _short_!
-</code></pre>
-<h3 id="database-section">Database Section</h3>
+<h1 id="isle-environment-files">ISLE Environment Files</h1>
+<p>The .env and tomcat.env Docker files are located in the folder with the docker-compose.yml, and are key to configuring the ISLE stack to suit your needs. Here are the variables and their job:</p>
+<h2 id="env-docker-environment-file">.env (Docker Environment File)</h2>
+<ul>
+<li><code>COMPOSE_PROJECT_NAME=isle-production</code><ul>
+<li>This variable is appended to Docker objects like volume and network names.</li>
+</ul>
+</li>
+<li><code>BASE_DOMAIN=mydomain.edu</code><ul>
+<li>This variable specifies your domain name.</li>
+</ul>
+</li>
+<li><code>CONTAINER_SHORT_ID=ld</code><ul>
+<li>Okay to leave this as is. Keep this variable short as it is appended to the end of all running containers.</li>
+</ul>
+</li>
+</ul>
+<h3 id="database-sql">Database (SQL)</h3>
 <table>
 <thead>
 <tr>
@@ -925,7 +937,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="islandora-drupal-section">Islandora (Drupal) Section</h3>
+<h3 id="islandora-drupal">Islandora (Drupal)</h3>
 <table>
 <thead>
 <tr>
@@ -968,7 +980,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="fedora-repository-section">Fedora Repository Section</h3>
+<h3 id="fedora-repository">Fedora Repository</h3>
 <table>
 <thead>
 <tr>
@@ -1017,7 +1029,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="image-services-section">Image Services Section</h3>
+<h3 id="image-services">Image Services</h3>
 <table>
 <thead>
 <tr>
@@ -1044,7 +1056,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="tomcatenv-applies-to-all-tomcat-instances">Tomcat.env Applies to All Tomcat Instances</h3>
+<h2 id="tomcatenv-docker-environment-file">tomcat.env (Docker Environment File)</h2>
 <table>
 <thead>
 <tr>
@@ -1076,6 +1088,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Return to <a href="../../install/install-server/">Remote Server ISLE Installation</a>.</strong></p>
                 
                   
                 
