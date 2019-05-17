@@ -359,6 +359,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../data-persistence/" title="Data Persistence in Docker" class="md-nav__link">
+      Data Persistence in Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -515,13 +527,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
     
-    <label class="md-nav__link" for="nav-5-8">
+    <label class="md-nav__link" for="nav-5-9">
       User Stories
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-8">
+      <label class="md-nav__title" for="nav-5-9">
         User Stories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -574,8 +586,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../configuring-lets-encrypt/" title="Using Let's Encrypt with ISLE" class="md-nav__link">
-      Using Let's Encrypt with ISLE
+    <a href="../configuring-lets-encrypt/" title="Let's Encrypt: Free SSL Certificates" class="md-nav__link">
+      Let's Encrypt: Free SSL Certificates
     </a>
   </li>
 
@@ -1077,7 +1089,7 @@ a server you connected to via ssh (REMOTE).</p>
 <p><strong>domain</strong> - A domain name is your website name for the IP address where Internet users can access your website. A domain name is used for finding and identifying computers on the Internet. Computers use IP addresses, which are a series of numbers. However, it is difficult for humans to remember strings of numbers. Because of this, domain names were developed and used to identify entities on the Internet rather than using IP addresses. <a href="https://en.wikipedia.org/wiki/Domain_name">Learn more about domains here</a> or <a href="https://en.wikipedia.org/wiki/Fully_qualified_domain_name">here</a></p>
 </li>
 <li>
-<p><strong>dhparam</strong> - A script to create this file can be found in the <code>/config/isle-newsite-sample/proxy/config/ssl-certs</code> directory. This file is used in conjunction with the nginx reverse proxy on the <code>proxy</code> container to further secure the communication / traffic between the external network (ISLE Host) and the internal ISLE network (other four containers.) The Diffie–Hellman key exchange is an alternative to RSA-based key exchange using an ephemeral but slower Diffie-Hellman algorithm which generates session keys in such a way that only the two parties involved in the communication can obtain them. No one else can, even if they have access to the server's private key. After the session is complete, and both parties destroy the session keys, the only way to decrypt the communication is to break the session keys themselves. This protocol feature is known as Forward Secrecy. <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Learn more about Diffie-Hellman parameters</a></p>
+<p><strong>dhparam</strong> - A script to create this file can be found in the <code>/config/isle-sample/proxy/config/ssl-certs</code> directory. This file is used in conjunction with the nginx reverse proxy on the <code>proxy</code> container to further secure the communication / traffic between the external network (ISLE Host) and the internal ISLE network (other four containers.) The Diffie–Hellman key exchange is an alternative to RSA-based key exchange using an ephemeral but slower Diffie-Hellman algorithm which generates session keys in such a way that only the two parties involved in the communication can obtain them. No one else can, even if they have access to the server's private key. After the session is complete, and both parties destroy the session keys, the only way to decrypt the communication is to break the session keys themselves. This protocol feature is known as Forward Secrecy. <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Learn more about Diffie-Hellman parameters</a></p>
 </li>
 <li>
 <p><strong>environment</strong> - An ISLE environment can be a production, development or staging environment. However ISLE is flexible and can be named anything using any convention of the end user's desire, one is not forced to do the following. Following a recommended workflow of "code up, data down" for Islandora development typically:</p>
@@ -1105,39 +1117,31 @@ a server you connected to via ssh (REMOTE).</p>
 <li>
 <p><strong>SSH</strong> - is a cryptographic network protocol for operating network services securely over an unsecured network. The best known example application is for remote login to computer systems by users. <a href="https://en.wikipedia.org/wiki/Secure_Shell">Learn more about SSH</a></p>
 </li>
-<li>
-<p><strong>SSL certificates</strong> - files that digitally bind a cryptographic key to an organization’s web domain (URL). When installed on a web server, it can display a green padlock and <code>https</code> appears in the browser path which allow secure connections from a web server to a user's browser. Typically, SSL certificates are used to secure credit card transactions, data transfer and logins, and more. <a href="https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html">Learn more about SSL Certificates</a></p>
-<ul>
-<li>
-<p>These certificates are used in new or migrated ISLE sites by the <code>apache</code> &amp; <code>proxy</code> containers and copied into their respective new or migrated ISLE config directories.</p>
-</li>
-<li>
-<p>Read more about <a href="https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/">SSL Chaining</a></p>
-<ul>
-<li>
-<p>In order to provision a full chain SSL certificate for the <code>proxy</code> container config directory and usage.</p>
-<ul>
-<li>
-<p>Provision full chain cert for Nginx link 1: <a href="https://support.comodo.com/index.php?/comodo/Knowledgebase/Article/View/1091/0/certificate-installation--nginx">https://support.comodo.com/index.php?/comodo/Knowledgebase/Article/View/1091/0/certificate-installation--nginx</a></p>
-</li>
-<li>
-<p>Provision full chain cert for Nginx link 2: <a href="https://futurestud.io/tutorials/how-to-configure-nginx-ssl-certifcate-chain">https://futurestud.io/tutorials/how-to-configure-nginx-ssl-certifcate-chain</a></p>
-</li>
 </ul>
+<!-- TODO: Review SSL certificates and cut out obsolete stuff -->
+
+<ul>
+<li>
+<p><strong>SSL certificates</strong> - files that digitally bind a cryptographic key to an organization’s web domain (URL). To enable HTTPS on your website, you need to get a certificate (a type of file) from a Certificate Authority (CA). When installed on a web server, the browser will display a padlock icon and <code>https</code> will appear as the prefix to the URL to indicate a secure connection between the web server and user's browser. SSL certificates are used to secure credit card transactions, data transfer, logins, and more. </p>
+<ul>
+<li>
+<p>Generate SSL certificates by using ONE of the following methods:</p>
 </li>
 <li>
-<p>In order to determine if a <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatechainfile">SSL Certificate ChainFile</a> is warranted for your <code>apache</code> container config directory and usage. In most cases one can use the intermediate and root certs separately for the apache container.</p>
+<p>Ask your IT department to provision a complete <a href="https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/">SSL Certificate Chain</a>. On your Remote Server ISLE Installation you will place the SSL certificates into the <code>./ISLE/config/proxy/ssl-certs</code> directory. These SSL certificates are used by the <code>apache</code> &amp; <code>proxy</code> Docker containers.</p>
 </li>
+<li>
+<p>Use <a href="https://letsencrypt.org/">Let's Encrypt</a>, a free, automated, and open Certificate Authority for generating SSL certificates for your ISLE environment. In order to get a certificate for your website’s domain from Let’s Encrypt, you have to demonstrate control over the domain. With Let’s Encrypt, you do this using software that uses the ACME protocol, which typically runs on your web host. To begin, visit the <a href="../configuring-lets-encrypt/">Let's Encrypt: Free SSL Certificates</a> ISLE guide.</p>
+</li>
+<li>
+<p>Additional resources:</p>
+<ul>
+<li><a href="https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html">Why SSL? The Purpose of using SSL Certificates</a></li>
+<li><a href="https://futurestud.io/tutorials/how-to-configure-nginx-ssl-certifcate-chain">How to Configure Nginx SSL Certifcate Chain</a></li>
+<li>The <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatechainfile">SSLCertificateChainFile Directive</a> directive sets the optional all-in-one file where you can assemble the certificates of Certification Authorities (CA) which form the certificate chain of the server certificate. (e.g. <code>/certs/sample-interm.pem</code> used as an example in later documentation. This file may be <strong>optional</strong> in some setups but is generally recommended for use by the <code>apache</code> container when available.)</li>
+<li>The <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatefile">SSLCertificateFile Directive</a> directive points to a file with certificate data in PEM format. At a minimum, the file must include an end-entity (leaf) certificate. (e.g. <code>/certs/sample.pem</code> used as an example in later documentation. This file is required in all setups.)</li>
+<li>The <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatekeyfile">SSLCertificateKeyFile Directive</a> directive points to the PEM-encoded private key file for the server. If the contained private key is encrypted, the pass phrase dialog is forced at startup time. (e.g. <code>/certs/sample-key.pem</code> used as an example in later documentation. This file is required in all setups.)</li>
 </ul>
-</li>
-<li>
-<p>Read more about a <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatefile">SSL Certificate File</a>   e.g. <code>/certs/newsite-sample.pem</code> used as an example in later documentation. This file is required in all setups.</p>
-</li>
-<li>
-<p>Read more about a <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatechainfile">SSL Certificate ChainFile</a> e.g. <code>/certs/newsite-sample-interm.pem</code> used as an example in later documentation. This file may be <strong>optional</strong> in some setups but is generally recommended for use by the <code>apache</code> container when available.</p>
-</li>
-<li>
-<p>Read more about a <a href="https://httpd.apache.org/docs/2.4/mod/mod_ssl.html#sslcertificatekeyfile">SSL Certificate Key File</a> e.g. <code>/certs/newsite-sample-key.pem</code> used as an example in later documentation. This file is required in all setups.</p>
 </li>
 </ul>
 </li>
@@ -1185,7 +1189,7 @@ a server you connected to via ssh (REMOTE).</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../migrate/reindex-process/" title="Migration Reindex Process" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../data-persistence/" title="Data Persistence in Docker" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1194,7 +1198,7 @@ a server you connected to via ssh (REMOTE).</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Migration Reindex Process
+                Data Persistence in Docker
               </span>
             </div>
           </a>

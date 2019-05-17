@@ -38,7 +38,7 @@
     
     
       
-        <title>Using Let's Encrypt with ISLE - Islandora Enterprise (ISLE)</title>
+        <title>Let's Encrypt: Free SSL Certificates - Islandora Enterprise (ISLE)</title>
       
     
     
@@ -75,7 +75,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#using-lets-encrypt-with-isle" tabindex="1" class="md-skip">
+      <a href="../../#lets-encrypt-free-ssl-certificates" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -101,7 +101,7 @@
                 Islandora Enterprise (ISLE)
               </span>
               <span class="md-header-nav__topic">
-                Using Let's Encrypt with ISLE
+                Let's Encrypt: Free SSL Certificates
               </span>
             
           
@@ -361,6 +361,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../data-persistence/" title="Data Persistence in Docker" class="md-nav__link">
+      Data Persistence in Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../glossary/" title="Glossary" class="md-nav__link">
       Glossary
     </a>
@@ -446,13 +458,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
     
-    <label class="md-nav__link" for="nav-5-8">
+    <label class="md-nav__link" for="nav-5-9">
       User Stories
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-8">
+      <label class="md-nav__title" for="nav-5-9">
         User Stories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -514,11 +526,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Using Let's Encrypt with ISLE
+        Let's Encrypt: Free SSL Certificates
       </label>
     
-    <a href="./" title="Using Let's Encrypt with ISLE" class="md-nav__link md-nav__link--active">
-      Using Let's Encrypt with ISLE
+    <a href="./" title="Let's Encrypt: Free SSL Certificates" class="md-nav__link md-nav__link--active">
+      Let's Encrypt: Free SSL Certificates
     </a>
     
       
@@ -546,8 +558,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" title="Resources" class="md-nav__link">
-    Resources
+  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
+    Additional Resources
   </a>
   
 </li>
@@ -879,8 +891,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" title="Resources" class="md-nav__link">
-    Resources
+  <a href="#additional-resources" title="Additional Resources" class="md-nav__link">
+    Additional Resources
   </a>
   
 </li>
@@ -904,27 +916,23 @@
                 
                 <!--- PAGE_TITLE --->
 
-<h1 id="using-lets-encrypt-with-isle">Using Let's Encrypt with ISLE</h1>
-<p>Utilizing <a href="https://letsencrypt.org/">Let's Encrypt</a> for SSL certificates for your ISLE stack.</p>
-<p>Time required: approximately 30 minutes</p>
+<h1 id="lets-encrypt-free-ssl-certificates">Let's Encrypt: Free SSL Certificates</h1>
+<p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a free, automated, and open Certificate Authority for generating SSL certificates for your ISLE environment.</p>
+<p><em>Time required: approximately 30 minutes.</em></p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>An internet accessible ISLE server with a fully qualified domain name (FQDN).</li>
-<li>The FQDN set in your .env file's <code>BASE_DOMAIN</code> is the FQDN we're requesting SSL certificates.</li>
+<li>The FQDN set in your .env file's <code>BASE_DOMAIN</code> is the FQDN we're requesting for SSL certificates.</li>
 </ul>
 <h2 id="steps">Steps</h2>
-<p>On the server (host) hosting your ISLE instance</p>
-<p><em>Note:</em> These commands are run on a shell (terminal).</p>
 <p><em>Note:</em> You do <strong>not</strong> need to stop your stack to complete these steps.</p>
 <ol>
-<li>Change to the directory with your <code>docker-compose.yml</code></li>
-<li>Change to the <code>config/proxy</code> directory
-   <code>cd config/proxy</code></li>
-<li>Create a blank file called <code>acme.json</code>
-   <code>touch acme.json</code></li>
-<li>Modify the permissions of <code>acme.json</code> to be user read-write ONLY.
-   <code>chmod 600 acme.json</code></li>
-<li>Using your favorite text editor open <code>traefik.toml</code> (<em>note:</em> this file is in your <code>config/proxy</code> folder)</li>
+<li>Open a terminal on your local workstation and ssh to the server or VM <strong>that is hosting your ISLE environment</strong>.</li>
+<li>Change to the "ISLE" directory that contains the "docker-compose.yml": <code>cd /opt/ISLE</code></li>
+<li>Change to the "config/proxy" directory: <code>cd config/proxy</code></li>
+<li>Create a blank file called "acme.json": <code>touch acme.json</code></li>
+<li>Modify the permissions of "acme.json" to be user read-write ONLY: <code>chmod 600 acme.json</code></li>
+<li>Use a text editor (emacs, nano, vi, etc.) to open "traefik.toml" (<em>note:</em> this file is in your "config/proxy" folder)</li>
 <li>
 <p>Locate the following lines</p>
 <pre><code>[[entryPoints.https.tls.certificates]]  
@@ -955,13 +963,13 @@ onDemand = false
 <p>Save and close the file.</p>
 </li>
 <li>
-<p>Change back to the directory with your <code>docker-compose.yml</code> in terminal.</p>
+<p>Change back to the directory with your "docker-compose.yml" in terminal.</p>
 </li>
 <li>
-<p>Using your favorite text editor open <code>docker-compose.yml</code>.</p>
+<p>Use a text editor to open "docker-compose.yml".</p>
 </li>
 <li>
-<p>Locate the section for <code>traefik</code> and under the <code>volumes</code> area for <code>traefik</code> add:</p>
+<p>Locate the section for "traefik" and under the "volumes" area for "traefik" add:</p>
 <pre><code>- ./config/proxy/acme.json:/acme.json  ## Automated cert storage.
 </code></pre>
 </li>
@@ -969,14 +977,19 @@ onDemand = false
 <p>Save and close the file.</p>
 </li>
 <li>
-<p>Reload your ISLE instance by running <code>docker-compose up -d</code>.</p>
+<p>Reload your ISLE environment by running <code>docker-compose up -d</code>.</p>
 </li>
 <li>
 <p>Visit your website and inspect your certificates.</p>
 </li>
 </ol>
-<h2 id="resources">Resources</h2>
-<p>https://docs.traefik.io/user-guide/docker-and-lets-encrypt/</p>
+<hr />
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://docs.traefik.io/user-guide/docker-and-lets-encrypt/">Let's Encrypt &amp; Docker</a></li>
+</ul>
+<hr />
+<p><strong>Return to <a href="../../install/install-server/">Remote Server ISLE Installation</a>.</strong></p>
                 
                   
                 

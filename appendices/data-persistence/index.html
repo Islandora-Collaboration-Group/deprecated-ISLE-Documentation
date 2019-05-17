@@ -338,10 +338,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Appendices
@@ -352,6 +354,97 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Data Persistence in Docker
+      </label>
+    
+    <a href="./" title="Data Persistence in Docker" class="md-nav__link md-nav__link--active">
+      Data Persistence in Docker
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bind-mounts-vs-volumes" title="Bind mounts vs volumes:" class="md-nav__link">
+    Bind mounts vs volumes:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volumes" title="Volumes" class="md-nav__link">
+    Volumes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-mounts" title="Bind Mounts" class="md-nav__link">
+    Bind Mounts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-should-be-persisted-this-way" title="What should be persisted this way?" class="md-nav__link">
+    What should be persisted this way?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-should-not-be-persisted" title="What should NOT be persisted?" class="md-nav__link">
+    What should NOT be persisted?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-should-i-use-bind-mounts-or-volumes" title="Which should I use, bind mounts or volumes?" class="md-nav__link">
+    Which should I use, bind mounts or volumes?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -444,13 +537,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
     
-    <label class="md-nav__link" for="nav-5-8">
+    <label class="md-nav__link" for="nav-5-9">
       User Stories
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-8">
+      <label class="md-nav__title" for="nav-5-9">
         User Stories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -503,8 +596,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../configuring-lets-encrypt/" title="Using Let's Encrypt with ISLE" class="md-nav__link">
-      Using Let's Encrypt with ISLE
+    <a href="../configuring-lets-encrypt/" title="Let's Encrypt: Free SSL Certificates" class="md-nav__link">
+      Let's Encrypt: Free SSL Certificates
     </a>
   </li>
 
@@ -876,9 +969,9 @@
                 
                 
                 <h1 id="data-persistence-in-docker">Data Persistence in Docker</h1>
-<p><strong>Please note this is a simplified explanation of how Docker stores data in relation to a typical ISLE installation. This document assumes the use of the docker-compose command and docker-compose.yml, though there are other ways to specify how docker uses volumes and bind mounts.  For more complete descriptions of bind mounts and volumes, and their management, please see the official docker documentation.</strong></p>
+<p><strong>Please note this is a simplified explanation of how Docker stores data in relation to a typical ISLE installation.</strong> This document assumes the use of the docker-compose command and docker-compose.yml, though there are other ways to specify how docker uses volumes and bind mounts.  For more complete descriptions of bind mounts and volumes, and their management, please see the official docker documentation.</p>
 <p><strong>Data</strong>, in this context, can include digital objects, files, logs, code, or information stored in mysql, solr, or fedora.  Essentially, anything typically written to or read from disk in some format, is data. </p>
-<p>By default, each time a docker container is brought up using a command like <code>docker-compose up -d</code> the container is recreated using the base container image. When a process in the container creates or changes a file (for example, an apache log file) those changes only exist while the container is running.  If the container is brought down and back up again, it is recreated using the base image, which will not include the apache log. In order to preserve certain data--for example, the Fedora datastore, Drupal’s database and files, etc, ISLE uses volumes and/or bind mounts defined in 'docker-compose.yml'.  </p>
+<p>Each time a docker container is brought up using a command like <code>docker-compose up -d</code> the container is recreated using the base container image. When a process in the container creates or changes a file (for example, an apache log file) those changes only exist while the container is running.  If the container is brought down and back up again, it is recreated using the base image, which will not include the apache log. In order to preserve certain data--for example, the Fedora datastore, Drupal’s database and files, etc, ISLE uses volumes and/or bind mounts defined in 'docker-compose.yml'.  </p>
 <p>Data written to volumes and bind mounts are different to other data in Docker in two important ways: </p>
 <ul>
 <li>It is persistent, so it will survive when there is an update to the base ISLE docker images</li>
@@ -925,6 +1018,41 @@ apache-data:/var/www/html
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../migrate/reindex-process/" title="Migration Reindex Process" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Migration Reindex Process
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../glossary/" title="Glossary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Glossary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

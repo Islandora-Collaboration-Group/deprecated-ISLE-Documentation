@@ -507,6 +507,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../appendices/data-persistence/" title="Data Persistence in Docker" class="md-nav__link">
+      Data Persistence in Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../appendices/glossary/" title="Glossary" class="md-nav__link">
       Glossary
     </a>
@@ -592,13 +604,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
     
-    <label class="md-nav__link" for="nav-5-8">
+    <label class="md-nav__link" for="nav-5-9">
       User Stories
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-8">
+      <label class="md-nav__title" for="nav-5-9">
         User Stories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -651,8 +663,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../appendices/configuring-lets-encrypt/" title="Using Let's Encrypt with ISLE" class="md-nav__link">
-      Using Let's Encrypt with ISLE
+    <a href="../../appendices/configuring-lets-encrypt/" title="Let's Encrypt: Free SSL Certificates" class="md-nav__link">
+      Let's Encrypt: Free SSL Certificates
     </a>
   </li>
 
@@ -1166,10 +1178,10 @@
 </li>
 </ul>
 <h3 id="apache-sites-enabled">Apache - Sites-Enabled</h3>
-<p>Please note that endusers will take values from the <code>site.conf</code> file and flow the information as needed into the to be renamed <code>newsite-sample-ssl.conf</code> &amp; <code>newsite-sample.conf</code> files accordingly with the domain name of your choice. This file will not be copied to yourdomain-config/apache/ for any usage.</p>
+<p>Please note that endusers will take values from the <code>site.conf</code> file and flow the information as needed into the to be renamed <code>sample-ssl.conf</code> &amp; <code>sample.conf</code> files accordingly with the domain name of your choice. This file will not be copied to yourdomain-config/apache/ for any usage.</p>
 <ul>
 <li>
-<p>Within the <code>sites-enabled</code> directory, rename the files <code>newsite-sample-ssl.conf</code> and <code>newsite-sample.conf</code> to your domain names - example:</p>
+<p>Within the <code>sites-enabled</code> directory, rename the files <code>sample-ssl.conf</code> and <code>sample.conf</code> to your domain names - example:</p>
 <ul>
 <li>
 <p><code>project-name.yourdomain.edu_ssl.conf</code></p>
@@ -1180,7 +1192,7 @@
 </ul>
 </li>
 <li>
-<p>Edit the previously named <code>newsite-sample.conf</code> file and change lines 3 and 4 to point to the location of your apache logs on the container - example:</p>
+<p>Edit the previously named <code>sample.conf</code> file and change lines 3 and 4 to point to the location of your apache logs on the container - example:</p>
 <ul>
 <li>
 <p><code>ErrorLog /var/log/apache2/project-name.yourdomain.edu.ssl.error.log</code></p>
@@ -1191,7 +1203,7 @@
 </ul>
 </li>
 <li>
-<p>Edit the previously named <code>newsite-sample-ssl.conf</code> file and change lines 4 and 5 to point to the location of your apache logs on the container - example:</p>
+<p>Edit the previously named <code>sample-ssl.conf</code> file and change lines 4 and 5 to point to the location of your apache logs on the container - example:</p>
 <ul>
 <li>
 <p><code>ErrorLog /var/log/apache2/project-name.yourdomain.edu.ssl.error.log</code></p>
@@ -1202,11 +1214,11 @@
 </ul>
 </li>
 <li>
-<p>Edit the previously named <code>newsite-sample-ssl.conf</code> file and change lines 12, 13 and 14 to point to the location of your certs on the <code>apache</code> container - example:</p>
+<p>Edit the previously named <code>sample-ssl.conf</code> file and change lines 12, 13 and 14 to point to the location of your certs on the <code>apache</code> container - example:</p>
 <p>```</p>
-<pre><code>SSLCertificateFile  /certs/newsite-sample.pem
-SSLCertificateChainFile /certs/newsite-sample-interm.pem
-SSLCertificateKeyFile /certs/newsite-sample-key.pem
+<pre><code>SSLCertificateFile  /certs/sample.pem
+SSLCertificateChainFile /certs/sample-interm.pem
+SSLCertificateKeyFile /certs/sample-key.pem
 </code></pre>
 <p>```</p>
 </li>
@@ -1281,21 +1293,21 @@ SSLCertificateKeyFile /certs/newsite-sample-key.pem
 <p>There can be up to 2 - 3 files involved in this process.</p>
 <ul>
 <li>
-<p>1 x SSL Certificate Key File e.g. <code>newsite-sample-key.pem</code></p>
+<p>1 x SSL Certificate Key File e.g. <code>sample-key.pem</code></p>
 <ul>
 <li>This file is required.</li>
 <li>Please also note that the file extensions can also be: <code>.key</code> or <code>.pem</code></li>
 </ul>
 </li>
 <li>
-<p>1 x SSL Certificate File e.g. <code>newsite-sample.pem</code></p>
+<p>1 x SSL Certificate File e.g. <code>sample.pem</code></p>
 <ul>
 <li>This file is required.</li>
 <li>Please also note that the file extensions can also be: <code>.cer</code>, <code>.crt</code> or <code>.pem</code></li>
 </ul>
 </li>
 <li>
-<p>1 x SSL Certificate Chain File e.g. <code>newsite-sample-interm.pem</code></p>
+<p>1 x SSL Certificate Chain File e.g. <code>sample-interm.pem</code></p>
 <ul>
 <li>This file may be <strong>optional</strong> in some setups but is generally recommended for use by the <code>apache</code> container when available.</li>
 <li>It will not be used by the <code>proxy</code> container.</li>

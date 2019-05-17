@@ -480,6 +480,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../appendices/data-persistence/" title="Data Persistence in Docker" class="md-nav__link">
+      Data Persistence in Docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../appendices/glossary/" title="Glossary" class="md-nav__link">
       Glossary
     </a>
@@ -565,13 +577,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
     
-    <label class="md-nav__link" for="nav-5-8">
+    <label class="md-nav__link" for="nav-5-9">
       User Stories
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-8">
+      <label class="md-nav__title" for="nav-5-9">
         User Stories
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -624,8 +636,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../appendices/configuring-lets-encrypt/" title="Using Let's Encrypt with ISLE" class="md-nav__link">
-      Using Let's Encrypt with ISLE
+    <a href="../../appendices/configuring-lets-encrypt/" title="Let's Encrypt: Free SSL Certificates" class="md-nav__link">
+      Let's Encrypt: Free SSL Certificates
     </a>
   </li>
 
@@ -1039,7 +1051,7 @@
                 <h1 id="migration-export-checklist">Migration Export Checklist</h1>
 <p>This section is a checklist of materials to <strong>COPY</strong> from the current running Islandora Production server(s) to the appropriate storage location / directory in order to build your ISLE instance.</p>
 <p><strong>Please Note:</strong> <em>Ubuntu / Debian style paths are used for all examples file locations below, end users might have different locations for these files HOWEVER the file and directory names etc should be roughly the same.</em></p>
-<p><strong>Caution</strong>: While the ISLE Project recommends use of export methods or tools such as rsync, scp etc., it assumes that end users are familiar with them and are aware of possible dangers of improperly exporting or copying production data. Ensure adequate backups of any production system(s) are made prior to any attempts. If you are not familiar or are uncomfortable with these processes, it is highly advisable to work with an appropriate IT resource.</p>
+<p><strong>Caution</strong>: While the ISLE Project recommends use of export methods or tools such as rsync, scp etc., it assumes that end users are familiar with them and are aware of possible dangers of improperly exporting or copying production data. Ensure adequate backups of any production system(s) are made prior to any attempts. If you are not familiar or are uncomfortable with these processes, it is highly advisable to work with an appropriate IT department.</p>
 <p><strong>Finally also please note:</strong> Instructions from this checklist and the <a href="../install-migration/">Migrate to ISLE Environment</a> may call for you to <strong>COPY</strong> data from your running Islandora environment to a newly created folder: <code>yourdomain-data</code> on your ISLE Host Server or <code>current_prod_islandora_config</code> on your local machine. You will then work from these copies for future steps.</p>
 <p>In some cases, you'll need to copy configurations down to your machine and merge contents as directed. (<em>if necessary</em>) In other cases, due to the size of the data e.g. Fedora data you will copy production data to the ISLE Host server (<code>ISLE Host server</code>) instead of your local machine.</p>
 <ul>
@@ -1302,7 +1314,7 @@
 <h4 id="mysql-notes">MySQL Notes</h4>
 <ul>
 <li>
-<p><em>Drupal website databases can have a multitude of names and conventions. Confer with the appropriate IT resources for your institution's database naming conventions.</em></p>
+<p><em>Drupal website databases can have a multitude of names and conventions. Confer with the appropriate IT departments for your institution's database naming conventions.</em></p>
 </li>
 <li>
 <p><em>CLI == Command line</em></p>
@@ -1323,7 +1335,7 @@
 </ul>
 <h4 id="mysql-tools-for-export">MySQL Tools for Export</h4>
 <p>Here are a few pieces of documentation specific for the tasks above.</p>
-<p><strong>Caution</strong>: While the ISLE Project recommends use of export methods or tools such as mysqldump etc., it assumes that end users are familiar with them and are aware of possible dangers of improperly exporting or copying production data. Ensure adequate backups of any production system(s) are made prior to any attempts. If you are not familiar or are uncomfortable with these processes, it is highly advisable to work with an appropriate IT resource.</p>
+<p><strong>Caution</strong>: While the ISLE Project recommends use of export methods or tools such as mysqldump etc., it assumes that end users are familiar with them and are aware of possible dangers of improperly exporting or copying production data. Ensure adequate backups of any production system(s) are made prior to any attempts. If you are not familiar or are uncomfortable with these processes, it is highly advisable to work with an appropriate IT department.</p>
 <ul>
 <li><a href="https://dev.mysql.com/doc/">Official MySQL documentation</a><ul>
 <li><a href="https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html">mysqldump console utility documentation</a></li>
