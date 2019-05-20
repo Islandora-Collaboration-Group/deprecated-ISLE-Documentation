@@ -1,10 +1,4 @@
 # ISLE Documentation
 
-ISLE is a collaborative project that addresses two of the most significant pain-points in Islandora: installation and maintenance. ISLE uses Docker containers to largely automate the process of Islandora installation and maintenance, while enabling persisting customizations.
-
-* https://islandora-collaboration-group.github.io/ISLE-Documentation/
-
-## ISLE Repositories
-* ISLE: https://github.com/Islandora-Collaboration-Group/ISLE
-* ISLE Documentation: https://github.com/Islandora-Collaboration-Group/ISLE-Documentation
-* ISLE Development (bleeding edge version): https://github.com/Islandora-Collaboration-Group/ISLE-Development
+The ISLE Documentation has been merged into the core ISLE repository. Please view the link below:
+https://github.com/Islandora-Collaboration-Group/ISLE
